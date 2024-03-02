@@ -1,6 +1,6 @@
 <?php
 include 'Parsedown.php';
-$pagename = 'home';
+$pagename = 'markdown';
 $subpage = false;
 $subpageFolderName = '';
 $layout = 'page.php';

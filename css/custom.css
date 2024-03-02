@@ -47,3 +47,19 @@ h1.herotext {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+.stickynav {
+	/* Properties for the bar itself */
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+	z-index: 99;
+	
+	/* Bar coloration and spacing */
+	background-color: rgba(50,50,50,255);
+	border: 1px solid rgba(15,15,15,255);
+	padding: 10px;
+	
+	/* Default Text stuff */
+	color: #fff;
+}

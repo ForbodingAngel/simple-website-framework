@@ -20,6 +20,7 @@
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/custom.css">
 
 	<!-- Favicon
@@ -30,6 +31,8 @@
 		<div class="hero">
 			<h1 class="herotext">Glendora Window and Screen</h1>
 		</div>
+
 	</div>
+<?php include 'navigation.php' ?>
 <?php include $layout; ?>
 <?php include 'footer.php' ?>
