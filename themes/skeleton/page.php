@@ -12,14 +12,13 @@
 		<div class="row">
 			<div class="one-half column">
 				<?php
-					if ($subpage == false) {
-						$filename = "pages/" . $pagename . ".md";
-					} else {
-						$filename = "pages/" .$subpageFolderName . "/" . $pagename . ".md";
-					}
+					//echo $pagename;
+					//echo '<br>';
+					$filename = "./pages/" . $pagename . ".md";
+					//echo $filename;
 					$output = file_get_contents($filename);
 					$parsedown = new Parsedown;
-					// $parsedown->setSafeMode(true); // Enable this line if you want to sanitize input (HTML will not be rendered
+					// $parsedown->setSafeMode(true); // Enable this line if you want to sanitize HTML input (HTML will not be rendered)
 
 					echo $parsedown->text($output);
 				?>

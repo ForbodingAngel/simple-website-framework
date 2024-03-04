@@ -1,3 +1,4 @@
+<!-- layout:page.php -->
 <hr>
 
 ---
@@ -6,6 +7,8 @@
 ## h2 Heading
 ### h3 Heading
 #### h4 Heading
+<!-- layout:page.php -->
+
 ##### h5 Heading
 ###### h6 Heading
 
