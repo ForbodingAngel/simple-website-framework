@@ -38,7 +38,9 @@
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/responsivegridsystem.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="themes/<?php echo $theme; ?>/navigation.css">
 	<link rel="stylesheet" href="themes/<?php echo $theme; ?>/custom.css">
 
 	<!-- Favicon
@@ -46,10 +48,15 @@
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	
 	<div class="header">
+	<?php if ($pagename == "home") { ?>
 		<div class="hero">
 			<h1 class="herotext">Glendora Window and Screen</h1>
 		</div>
-
+	<?php } else { ?>
+		<div class="herosmall">
+			<h1 class="herotext">Glendora Window and Screen</h1>
+		</div>
+	<?php } ?>
 	</div>
 	
 <?php 
