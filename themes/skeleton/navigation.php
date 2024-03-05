@@ -2,7 +2,7 @@
 	<div id="navcontainer">
 		<nav>
 			<ul>
-				<li><a href="#">Home</a></li>
+				<li><a href="Home">Home</a></li>
 				<li><a href="#">WordPress</a>
 				<!-- First Tier Drop Down -->
 				<ul>
@@ -16,7 +16,7 @@
 				<ul>
 					<li><a href="#">Resources</a></li>
 					<li><a href="#">Links</a></li>
-					<li><a href="#">Tutorials</a>
+					<li><a href="markdown">Tutorials</a>
 				  <!-- Second Tier Drop Down -->
 					<ul>
 						<li><a href="#">HTML/CSS</a></li>

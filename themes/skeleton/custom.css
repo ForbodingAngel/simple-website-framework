@@ -29,6 +29,7 @@ img {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-color: rgba(50,50,50,255);
 	width: 100vmax;
 	max-width: 100%;
 	height: 100vmin;
@@ -40,6 +41,7 @@ img {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-color: rgba(50,50,50,255);
 	width: 100vmax;
 	max-width: 100%;
 	height: 25vmin;
@@ -57,22 +59,6 @@ h1.herotext {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
-
-.stickynav {
-	/* Properties for the bar itself */
-	position: -webkit-sticky; /* Safari */
-	position: sticky;
-	top: 0;
-	z-index: 99;
-	
-	/* Bar coloration and spacing */
-	background-color: rgba(50,50,50,255);
-	border: 1px solid rgba(15,15,15,255);
-	padding: 10px;
-	
-	/* Default Text stuff */
-	color: #fff;
 }
 
 .content {

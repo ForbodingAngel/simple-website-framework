@@ -47,7 +47,7 @@
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	
-	<div class="header">
+	<div class="header">	
 	<?php if ($pagename == "home") { ?>
 		<div class="hero">
 			<h1 class="herotext">Glendora Window and Screen</h1>
@@ -59,20 +59,31 @@
 	<?php } ?>
 	</div>
 	
-<?php 
-	/* This is a catchall, just in case. There is also another catchall in the page layout file, just in case this one doesn't do the trick. */
-	if (!file_exists("pages/" . $pagename .".md")) { 
-		$pagename = "404"; 
-	}
-	/* This looks for and html comment in your markdown file that defines what layout file to use. The format is simply: <!-- layout:page.php --> */
-	$markdownContent = file_get_contents("pages/" . $pagename .".md"); 
-	$pattern = '/<!-- layout:(.*?) -->/';
-	// Match the pattern in the Markdown content
-	if (preg_match($pattern, $markdownContent, $matches)) {
-		// Extract the layout file from the matched pattern
-		$layout = trim($matches[1]);
-	}
-?>
+	<?php
+		/* This looks for and html comment in your markdown file that defines what layout file to use. The format is simply: <!-- pagetitle:My Page Title --> */
+		$markdownContent_pagetitle = file_get_contents("pages/" . $pagename .".md"); 
+		$pattern_pagetitle = '/<!-- pagetitle:(.*?) -->/';
+		// Match the pattern in the Markdown content
+		if (preg_match($pattern_pagetitle, $markdownContent_pagetitle, $matches_pagetitle)) {
+			// Extract the layout file from the matched pattern
+			$pagetitle = trim($matches_pagetitle[1]);
+		}
+	?>
+	
+	<?php 
+		/* This is a catchall, just in case. There is also another catchall in the page layout file, just in case this one doesn't do the trick. */
+		if (!file_exists("pages/" . $pagename .".md")) { 
+			$pagename = "404"; 
+		}
+		/* This looks for and html comment in your markdown file that defines what layout file to use. The format is simply: <!-- layout:page.php --> */
+		$markdownContent_layout = file_get_contents("pages/" . $pagename .".md"); 
+		$pattern_layout = '/<!-- layout:(.*?) -->/';
+		// Match the pattern in the Markdown content
+		if (preg_match($pattern_layout, $markdownContent_layout, $matches_layout)) {
+			// Extract the layout file from the matched pattern
+			$layout = trim($matches_layout[1]);
+		}
+	?>
 
 <?php if ($loadplugins == true) { include './plugins/plugins.php'; } ?>
 <?php include 'navigation.php' ?>
