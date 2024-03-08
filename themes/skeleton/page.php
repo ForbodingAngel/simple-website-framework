@@ -4,7 +4,7 @@
 		// BEGIN MARKDOWN PARSER //
 		// You must have this code block in every file that you want to parse a markdown file //
 		use function x\markdown\from as from_markdown;
-		use function x\markdown\to as to_markdown;
+		// use function x\markdown\to as to_markdown;
 		// END MARKDOWN PARSER //
 	?>
 
