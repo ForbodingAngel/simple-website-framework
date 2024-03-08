@@ -1,3 +1,4 @@
+/* Pageload Animations */
 body {
     animation: fadeIn 0.5s;
 }
@@ -6,6 +7,7 @@ body {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
+/* End Pageload Animations */
 
 /*
 .herotext {
@@ -25,7 +27,7 @@ body {
 
 .container {
 	width: 100%;
-}
+}Add t
 
 img {
 	width: 100%;
