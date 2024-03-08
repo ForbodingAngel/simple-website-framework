@@ -2,7 +2,7 @@
 	<div id="navcontainer">
 		<nav>
 			<ul>
-				<li><a href="Home">Home</a></li>
+				<li><a href="">Home</a></li>
 				<li><a href="#">WordPress</a>
 				<!-- First Tier Drop Down -->
 				<ul>

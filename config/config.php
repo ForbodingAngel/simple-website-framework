@@ -6,17 +6,21 @@
 	/*New Markdown Parser*/
 	require './required/PHP-Markdown-Parser/from.php';
 	require './required/PHP-Markdown-Parser/to.php';
-	
-	/*
-		<?php
-			// BEGIN MARKDOWN PARSER //
-			// You must have this code block in every file that you want to parse a markdown file //
-			use function x\markdown\from as from_markdown;
-			// use function x\markdown\to as to_markdown;
-			// END MARKDOWN PARSER //
-		?>
-	*/
+
+
+    function from_markdown(...$v) {
+        return x\markdown\from(...$v);
+    }
+
+    function to_markdown(...$v) {
+        return x\markdown\to(...$v);
+    }
 	
 	$theme = "skeleton";
 	$loadplugins = true;
+
+    /* This is a catchall, just in case. There is also another catchall in the page layout file, just in case this one doesn't do the trick. */
+    if (!file_exists("pages/" . $pagename .".md")) { 
+        $pagename = "404"; 
+    }
 ?>
