@@ -1,7 +1,7 @@
 /* Pageload Animations */
 body {
     animation: fadeIn 0.5s;
-    background: linear-gradient(to right, #edc58a 25%, #ffe2a6 100%);
+    background: linear-gradient(to bottom right, #fff1d5 25%, #edc58a 100%);
 }
 
 @keyframes fadeIn {
