@@ -53,6 +53,187 @@ nav ul li a {
     box-shadow: 0px 0px 1px #000;
 }
 
+/* Fun Label Colors */
+
+nav {
+  --labelcolor1: #3f56ac;
+  --labelcolor2: #d92626;
+  --labelcolor3: #3fabab;
+  --labelcolor4: #ab753f;
+  --labelcolor5: #753fab;
+  --labelcolor6: #248f24;
+  --labelcolor7: #d926d9;
+  --labelcolor8: #26acd9;
+  --labelcolor9: #d98026;
+  --labelcolor10: #d9d926;
+}
+
+
+nav ul li:nth-child(1) a {
+    border-top: 3px var(--labelcolor1) dashed;
+}
+ 
+nav ul li:nth-child(2) a {
+    border-top: 3px var(--labelcolor2) dashed;
+}
+
+nav ul li:nth-child(3) a {
+    border-top: 3px var(--labelcolor3) dashed;
+}
+
+nav ul li:nth-child(4) a {
+    border-top: 3px var(--labelcolor4) dashed;
+}
+
+nav ul li:nth-child(5) a {
+    border-top: 3px var(--labelcolor5) dashed;
+}
+
+nav ul li:nth-child(6) a {
+    border-top: 3px var(--labelcolor6) dashed;
+}
+
+nav ul li:nth-child(7) a {
+    border-top: 3px var(--labelcolor7) dashed;
+}
+
+nav ul li:nth-child(8) a {
+    border-top: 3px var(--labelcolor8) dashed;
+}
+
+nav ul li:nth-child(9) a {
+    border-top: 3px var(--labelcolor9) dashed;
+}
+
+nav ul li:nth-child(10) a {
+    border-top: 3px var(--labelcolor10) dashed;
+}
+
+/* 2nd Tier */
+nav ul ul li:nth-child(1) a {
+    border-top: 3px var(--labelcolor1) dashed;
+}
+ 
+nav ul ul li:nth-child(2) a {
+    border-top: 3px var(--labelcolor2) dashed;
+}
+
+nav ul ul li:nth-child(3) a {
+    border-top: 3px var(--labelcolor3) dashed;
+}
+
+nav ul ul li:nth-child(4) a {
+    border-top: 3px var(--labelcolor4) dashed;
+}
+
+nav ul ul li:nth-child(5) a {
+    border-top: 3px var(--labelcolor5) dashed;
+}
+
+nav ul ul li:nth-child(6) a {
+    border-top: 3px var(--labelcolor6) dashed;
+}
+
+nav ul ul li:nth-child(7) a {
+    border-top: 3px var(--labelcolor7) dashed;
+}
+
+nav ul ul li:nth-child(8) a {
+    border-top: 3px var(--labelcolor8) dashed;
+}
+
+nav ul ul li:nth-child(9) a {
+    border-top: 3px var(--labelcolor9) dashed;
+}
+
+nav ul ul li:nth-child(10) a {
+    border-top: 3px var(--labelcolor10) dashed;
+}
+
+/* 3nd Tier */
+nav ul ul ul li:nth-child(1) a {
+    border-top: 3px var(--labelcolor1) dashed;
+}
+ 
+nav ul ul ul li:nth-child(2) a {
+    border-top: 3px var(--labelcolor2) dashed;
+}
+
+nav ul ul ul li:nth-child(3) a {
+    border-top: 3px var(--labelcolor3) dashed;
+}
+
+nav ul ul ul li:nth-child(4) a {
+    border-top: 3px var(--labelcolor4) dashed;
+}
+
+nav ul ul ul li:nth-child(5) a {
+    border-top: 3px var(--labelcolor5) dashed;
+}
+
+nav ul ul ul li:nth-child(6) a {
+    border-top: 3px var(--labelcolor6) dashed;
+}
+
+nav ul ul ul li:nth-child(7) a {
+    border-top: 3px var(--labelcolor7) dashed;
+}
+
+nav ul ul ul li:nth-child(8) a {
+    border-top: 3px var(--labelcolor8) dashed;
+}
+
+nav ul ul ul li:nth-child(9) a {
+    border-top: 3px var(--labelcolor9) dashed;
+}
+
+nav ul ul ul li:nth-child(10) a {
+    border-top: 3px var(--labelcolor10) dashed;
+}
+
+/* 4th Tier - If you have more than 4 levels you are doing something very wrong. */
+nav ul ul ul ul li:nth-child(1) a {
+    border-top: 3px var(--labelcolor1) dashed;
+}
+ 
+nav ul ul ul ul li:nth-child(2) a {
+    border-top: 3px var(--labelcolor2) dashed;
+}
+
+nav ul ul ul ul li:nth-child(3) a {
+    border-top: 3px var(--labelcolor3) dashed;
+}
+
+nav ul ul ul ul li:nth-child(4) a {
+    border-top: 3px var(--labelcolor4) dashed;
+}
+
+nav ul ul ul ul li:nth-child(5) a {
+    border-top: 3px var(--labelcolor5) dashed;
+}
+
+nav ul ul ul ul li:nth-child(6) a {
+    border-top: 3px var(--labelcolor6) dashed;
+}
+
+nav ul ul ul ul li:nth-child(7) a {
+    border-top: 3px var(--labelcolor7) dashed;
+}
+
+nav ul ul ul ul li:nth-child(8) a {
+    border-top: 3px var(--labelcolor8) dashed;
+}
+
+nav ul ul ul ul li:nth-child(9) a {
+    border-top: 3px var(--labelcolor9) dashed;
+}
+
+nav ul ul ul ul li:nth-child(10) a {
+    border-top: 3px var(--labelcolor10) dashed;
+}
+/* END Fun Label Colors */
+ 
+
 nav a:hover { 
     color:#000;
 }
