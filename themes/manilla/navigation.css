@@ -38,7 +38,7 @@ nav ul li {
     box-shadow: 0px -1px 1px rgba(0,0,0,0.25) inset;
 }
 
-nav ul li a {
+nav ul li .menulabel {
     display:block;
     //font-family: sans-serif;
     background: linear-gradient(to bottom right, #fff 75%, #eee1d0 100%);
@@ -69,172 +69,172 @@ nav {
 }
 
 
-nav ul li:nth-child(1) a {
+nav ul li:nth-child(1) .menulabel {
     border-top: 3px var(--labelcolor1) dashed;
 }
  
-nav ul li:nth-child(2) a {
+nav ul li:nth-child(2) .menulabel {
     border-top: 3px var(--labelcolor2) dashed;
 }
 
-nav ul li:nth-child(3) a {
+nav ul li:nth-child(3) .menulabel {
     border-top: 3px var(--labelcolor3) dashed;
 }
 
-nav ul li:nth-child(4) a {
+nav ul li:nth-child(4) .menulabel {
     border-top: 3px var(--labelcolor4) dashed;
 }
 
-nav ul li:nth-child(5) a {
+nav ul li:nth-child(5) .menulabel {
     border-top: 3px var(--labelcolor5) dashed;
 }
 
-nav ul li:nth-child(6) a {
+nav ul li:nth-child(6) .menulabel {
     border-top: 3px var(--labelcolor6) dashed;
 }
 
-nav ul li:nth-child(7) a {
+nav ul li:nth-child(7) .menulabel {
     border-top: 3px var(--labelcolor7) dashed;
 }
 
-nav ul li:nth-child(8) a {
+nav ul li:nth-child(8) .menulabel {
     border-top: 3px var(--labelcolor8) dashed;
 }
 
-nav ul li:nth-child(9) a {
+nav ul li:nth-child(9) .menulabel {
     border-top: 3px var(--labelcolor9) dashed;
 }
 
-nav ul li:nth-child(10) a {
+nav ul li:nth-child(10) .menulabel {
     border-top: 3px var(--labelcolor10) dashed;
 }
 
 /* 2nd Tier */
-nav ul ul li:nth-child(1) a {
+nav ul ul li:nth-child(1) .menulabel {
     border-top: 3px var(--labelcolor1) dashed;
 }
  
-nav ul ul li:nth-child(2) a {
+nav ul ul li:nth-child(2) .menulabel {
     border-top: 3px var(--labelcolor2) dashed;
 }
 
-nav ul ul li:nth-child(3) a {
+nav ul ul li:nth-child(3) .menulabel {
     border-top: 3px var(--labelcolor3) dashed;
 }
 
-nav ul ul li:nth-child(4) a {
+nav ul ul li:nth-child(4) .menulabel {
     border-top: 3px var(--labelcolor4) dashed;
 }
 
-nav ul ul li:nth-child(5) a {
+nav ul ul li:nth-child(5) .menulabel {
     border-top: 3px var(--labelcolor5) dashed;
 }
 
-nav ul ul li:nth-child(6) a {
+nav ul ul li:nth-child(6) .menulabel {
     border-top: 3px var(--labelcolor6) dashed;
 }
 
-nav ul ul li:nth-child(7) a {
+nav ul ul li:nth-child(7) .menulabel {
     border-top: 3px var(--labelcolor7) dashed;
 }
 
-nav ul ul li:nth-child(8) a {
+nav ul ul li:nth-child(8) .menulabel {
     border-top: 3px var(--labelcolor8) dashed;
 }
 
-nav ul ul li:nth-child(9) a {
+nav ul ul li:nth-child(9) .menulabel {
     border-top: 3px var(--labelcolor9) dashed;
 }
 
-nav ul ul li:nth-child(10) a {
+nav ul ul li:nth-child(10) .menulabel {
     border-top: 3px var(--labelcolor10) dashed;
 }
 
 /* 3nd Tier */
-nav ul ul ul li:nth-child(1) a {
+nav ul ul ul li:nth-child(1) .menulabel {
     border-top: 3px var(--labelcolor1) dashed;
 }
  
-nav ul ul ul li:nth-child(2) a {
+nav ul ul ul li:nth-child(2) .menulabel {
     border-top: 3px var(--labelcolor2) dashed;
 }
 
-nav ul ul ul li:nth-child(3) a {
+nav ul ul ul li:nth-child(3) .menulabel {
     border-top: 3px var(--labelcolor3) dashed;
 }
 
-nav ul ul ul li:nth-child(4) a {
+nav ul ul ul li:nth-child(4) .menulabel {
     border-top: 3px var(--labelcolor4) dashed;
 }
 
-nav ul ul ul li:nth-child(5) a {
+nav ul ul ul li:nth-child(5) .menulabel {
     border-top: 3px var(--labelcolor5) dashed;
 }
 
-nav ul ul ul li:nth-child(6) a {
+nav ul ul ul li:nth-child(6) .menulabel {
     border-top: 3px var(--labelcolor6) dashed;
 }
 
-nav ul ul ul li:nth-child(7) a {
+nav ul ul ul li:nth-child(7) .menulabel {
     border-top: 3px var(--labelcolor7) dashed;
 }
 
-nav ul ul ul li:nth-child(8) a {
+nav ul ul ul li:nth-child(8) .menulabel {
     border-top: 3px var(--labelcolor8) dashed;
 }
 
-nav ul ul ul li:nth-child(9) a {
+nav ul ul ul li:nth-child(9) .menulabel {
     border-top: 3px var(--labelcolor9) dashed;
 }
 
-nav ul ul ul li:nth-child(10) a {
+nav ul ul ul li:nth-child(10) .menulabel {
     border-top: 3px var(--labelcolor10) dashed;
 }
 
 /* 4th Tier - If you have more than 4 levels you are doing something very wrong. */
-nav ul ul ul ul li:nth-child(1) a {
+nav ul ul ul ul li:nth-child(1) .menulabel {
     border-top: 3px var(--labelcolor1) dashed;
 }
  
-nav ul ul ul ul li:nth-child(2) a {
+nav ul ul ul ul li:nth-child(2) .menulabel {
     border-top: 3px var(--labelcolor2) dashed;
 }
 
-nav ul ul ul ul li:nth-child(3) a {
+nav ul ul ul ul li:nth-child(3) .menulabel {
     border-top: 3px var(--labelcolor3) dashed;
 }
 
-nav ul ul ul ul li:nth-child(4) a {
+nav ul ul ul ul li:nth-child(4) .menulabel {
     border-top: 3px var(--labelcolor4) dashed;
 }
 
-nav ul ul ul ul li:nth-child(5) a {
+nav ul ul ul ul li:nth-child(5) .menulabel {
     border-top: 3px var(--labelcolor5) dashed;
 }
 
-nav ul ul ul ul li:nth-child(6) a {
+nav ul ul ul ul li:nth-child(6) .menulabel {
     border-top: 3px var(--labelcolor6) dashed;
 }
 
-nav ul ul ul ul li:nth-child(7) a {
+nav ul ul ul ul li:nth-child(7) .menulabel {
     border-top: 3px var(--labelcolor7) dashed;
 }
 
-nav ul ul ul ul li:nth-child(8) a {
+nav ul ul ul ul li:nth-child(8) .menulabel {
     border-top: 3px var(--labelcolor8) dashed;
 }
 
-nav ul ul ul ul li:nth-child(9) a {
+nav ul ul ul ul li:nth-child(9) .menulabel {
     border-top: 3px var(--labelcolor9) dashed;
 }
 
-nav ul ul ul ul li:nth-child(10) a {
+nav ul ul ul ul li:nth-child(10) .menulabel {
     border-top: 3px var(--labelcolor10) dashed;
 }
 /* END Fun Label Colors */
  
 
-nav a:hover { 
+nav .menulabel:hover { 
     color:#000;
 }
 
@@ -265,11 +265,13 @@ nav ul ul li {
     position: relative;
     box-shadow: 1px 1px 2px #000;
     z-index: 9;
+    animation: fadeIn 0.5s;
 }
 
 /* Second, Third and more Tiers */
 nav ul ul ul {
     border-top: 2px solid #000;
+    animation: fadeIn 0.5s;
 }
 nav ul ul ul li {
     position: relative;
