@@ -1,5 +1,8 @@
+@charset "UTF-8";
+
 .stickynav {
 	/* Properties for the bar itself */
+    display: block;
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
 	top: 0;
@@ -7,7 +10,6 @@
 	
 	/* Bar coloration and spacing */
 	background-color: rgba(50,50,50,255);
-	border-top: 1px solid rgba(15,15,15,255);
     border-bottom: 3px solid #ffe2a6;
 	padding: 0px;
 	
@@ -17,7 +19,6 @@
 
 nav {
     margin: 0px;
-    padding-left: 10px;
 }
 
 nav ul {
@@ -30,8 +31,8 @@ nav ul {
 nav ul li {
     display:inline-block;
     padding: 7px 20px;
-    margin: 0px 0px;
-    background-color: #fff1d5;
+    margin: 0px 10px;
+    background: linear-gradient(to bottom right, #fff1d5 25%, #edc58a 100%);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     box-shadow: 2px -2px 2px #000;
@@ -42,7 +43,8 @@ nav ul li .menulabel {
     display:block;
     //font-family: sans-serif;
     background: linear-gradient(to bottom right, #fff 75%, #eee1d0 100%);
-    padding: 0px 20px;
+    text-align: center;
+    padding: 3px 20px;
     color:#000;
     font-size:16px;
     font-weight: bold;
@@ -108,129 +110,6 @@ nav ul li:nth-child(9) .menulabel {
 nav ul li:nth-child(10) .menulabel {
     border-top: 3px var(--labelcolor10) dashed;
 }
-
-/* 2nd Tier */
-nav ul ul li:nth-child(1) .menulabel {
-    border-top: 3px var(--labelcolor1) dashed;
-}
- 
-nav ul ul li:nth-child(2) .menulabel {
-    border-top: 3px var(--labelcolor2) dashed;
-}
-
-nav ul ul li:nth-child(3) .menulabel {
-    border-top: 3px var(--labelcolor3) dashed;
-}
-
-nav ul ul li:nth-child(4) .menulabel {
-    border-top: 3px var(--labelcolor4) dashed;
-}
-
-nav ul ul li:nth-child(5) .menulabel {
-    border-top: 3px var(--labelcolor5) dashed;
-}
-
-nav ul ul li:nth-child(6) .menulabel {
-    border-top: 3px var(--labelcolor6) dashed;
-}
-
-nav ul ul li:nth-child(7) .menulabel {
-    border-top: 3px var(--labelcolor7) dashed;
-}
-
-nav ul ul li:nth-child(8) .menulabel {
-    border-top: 3px var(--labelcolor8) dashed;
-}
-
-nav ul ul li:nth-child(9) .menulabel {
-    border-top: 3px var(--labelcolor9) dashed;
-}
-
-nav ul ul li:nth-child(10) .menulabel {
-    border-top: 3px var(--labelcolor10) dashed;
-}
-
-/* 3nd Tier */
-nav ul ul ul li:nth-child(1) .menulabel {
-    border-top: 3px var(--labelcolor1) dashed;
-}
- 
-nav ul ul ul li:nth-child(2) .menulabel {
-    border-top: 3px var(--labelcolor2) dashed;
-}
-
-nav ul ul ul li:nth-child(3) .menulabel {
-    border-top: 3px var(--labelcolor3) dashed;
-}
-
-nav ul ul ul li:nth-child(4) .menulabel {
-    border-top: 3px var(--labelcolor4) dashed;
-}
-
-nav ul ul ul li:nth-child(5) .menulabel {
-    border-top: 3px var(--labelcolor5) dashed;
-}
-
-nav ul ul ul li:nth-child(6) .menulabel {
-    border-top: 3px var(--labelcolor6) dashed;
-}
-
-nav ul ul ul li:nth-child(7) .menulabel {
-    border-top: 3px var(--labelcolor7) dashed;
-}
-
-nav ul ul ul li:nth-child(8) .menulabel {
-    border-top: 3px var(--labelcolor8) dashed;
-}
-
-nav ul ul ul li:nth-child(9) .menulabel {
-    border-top: 3px var(--labelcolor9) dashed;
-}
-
-nav ul ul ul li:nth-child(10) .menulabel {
-    border-top: 3px var(--labelcolor10) dashed;
-}
-
-/* 4th Tier - If you have more than 4 levels you are doing something very wrong. */
-nav ul ul ul ul li:nth-child(1) .menulabel {
-    border-top: 3px var(--labelcolor1) dashed;
-}
- 
-nav ul ul ul ul li:nth-child(2) .menulabel {
-    border-top: 3px var(--labelcolor2) dashed;
-}
-
-nav ul ul ul ul li:nth-child(3) .menulabel {
-    border-top: 3px var(--labelcolor3) dashed;
-}
-
-nav ul ul ul ul li:nth-child(4) .menulabel {
-    border-top: 3px var(--labelcolor4) dashed;
-}
-
-nav ul ul ul ul li:nth-child(5) .menulabel {
-    border-top: 3px var(--labelcolor5) dashed;
-}
-
-nav ul ul ul ul li:nth-child(6) .menulabel {
-    border-top: 3px var(--labelcolor6) dashed;
-}
-
-nav ul ul ul ul li:nth-child(7) .menulabel {
-    border-top: 3px var(--labelcolor7) dashed;
-}
-
-nav ul ul ul ul li:nth-child(8) .menulabel {
-    border-top: 3px var(--labelcolor8) dashed;
-}
-
-nav ul ul ul ul li:nth-child(9) .menulabel {
-    border-top: 3px var(--labelcolor9) dashed;
-}
-
-nav ul ul ul ul li:nth-child(10) .menulabel {
-    border-top: 3px var(--labelcolor10) dashed;
-}
 /* END Fun Label Colors */
  
 
@@ -238,52 +117,193 @@ nav .menulabel:hover {
     color:#000;
 }
 
-/* Hide Dropdowns by Default */
-nav ul ul {
+
+/* ------------------------------------------
+  NAVIGATION STYLES
+  (+ responsive-nav.css file is loaded in the <head>)
+--------------------------------------------- */
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav-collapse,
+.nav-collapse * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.nav-collapse,
+.nav-collapse ul {
+  list-style: none;
+  width: 100%;
+  float: left;
+}
+
+.nav-collapse li {
+  float: left;
+}
+
+@media screen and (min-width: 40em) {
+  .nav-collapse li {
+  }
+}
+
+.nav-collapse a {
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  background: #f4421a;
+  border-bottom: 1px solid white;
+  padding: 0.7em 1em;
+  float: left;
+}
+
+@media screen and (min-width: 40em) {
+  .nav-collapse a {
+    margin: 0;
+    padding: 1em;
+    float: left;
+    border-bottom: 0;
+  }
+}
+
+.nav-collapse ul ul a {
+  background: #ca3716;
+  padding-left: 2em;
+}
+
+@media screen and (min-width: 40em) {
+  .nav-collapse ul ul a {
     display: none;
-    position: absolute; 
-    top: 60px; /* the height of the main nav */
-}
-  
-/* Display Dropdowns on Hover */
-nav ul li:hover > ul {
-    display:inherit;
-    margin-top: -20px;
+  }
 }
 
-nav ul ul {
-    margin-left: -20px;
+
+/* ------------------------------------------
+  NAV TOGGLE STYLES
+--------------------------------------------- */
+
+@font-face {
+  font-family: "responsivenav";
+  src:url("../icons/responsivenav.eot");
+  src:url("../icons/responsivenav.eot?#iefix") format("embedded-opentype"),
+    url("../icons/responsivenav.ttf") format("truetype"),
+    url("../icons/responsivenav.woff") format("woff"),
+    url("../icons/responsivenav.svg#responsivenav") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
-  
-/* First Tier Dropdown */
-nav ul ul li {
-    width:170px;
-    float:none;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    display: list-item;
+
+.nav-toggle {
+  position: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  text-indent: -999px;
+  position: relative;
+  overflow: hidden;
+  width: 70px;
+  height: 55px;
+  float: right;
+}
+
+.nav-toggle:before {
+  color: #f4421a; /* Edit this to change the icon color */
+  font-family: "responsivenav", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 28px;
+  text-transform: none;
+  position: absolute;
+  content: "≡";
+  text-indent: 0;
+  text-align: center;
+  line-height: 55px;
+  speak: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav-toggle.active::before {
+  font-size: 24px;
+  content:"x";
+}
+
+
+
+
+
+
+
+
+/*! responsive-nav.js 1.0.39 by @arielsalminen */
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@media screen and (max-width: 800px) {
+    .nav-collapse li {
+      width: 100%;
+      display: block;
+    }
+    nav ul li {
+        margin: 0;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    
+}
+
+@media screen and (min-width: 800px) {
+  .js .nav-collapse {
     position: relative;
-    box-shadow: 1px 1px 2px #000;
-    z-index: 9;
-    animation: fadeIn 0.5s;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
 }
-
-/* Second, Third and more Tiers */
-nav ul ul ul {
-    border-top: 2px solid #000;
-    animation: fadeIn 0.5s;
-}
-nav ul ul ul li {
-    position: relative;
-    //top:-40px; 
-    //left:170px;
-    //border-top: 2px solid #000;
-}
-nav ul ul ul ul li {
-
-}
-
-  
-/* Change this in order to change the Dropdown symbol */
-li > a:after { content:  ' +'; }
-li > a:only-child:after { content: ''; }

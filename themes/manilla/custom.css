@@ -2,6 +2,7 @@
 body {
     animation: fadeIn 0.5s;
     background: linear-gradient(to bottom right, #fff1d5 25%, #edc58a 100%);
+    margin: 0;
 }
 
 @keyframes fadeIn {
@@ -54,49 +55,6 @@ a:hover::before {
 }
 
 
-/* Stacked paper effect */
-.container {
-    margin-top: 40px;
-    background: #fff;
-    padding: 30px;
-    position: relative;
-}
-
-.container,
-.container::before,
-.container::after {
-    /* Styles to distinguish sheets from one another */
-    box-shadow: 1px 1px 2px #000;
-    border: 1px solid rgba(0,0,0,0.25);
-}
-
-.container::before,
-.container::after {
-    content: "";
-    position: absolute;
-    height: 95%;
-    width: 99%;
-    background-color: #eee;
-}
-
-.container::before {
-    right: 15px;
-    top: 0;
-    transform: rotate(-1deg);
-    z-index: -1;
-    overflow: hidden;
-}
-
-.container::after {
-    top: 5px;
-    right: -5px;
-    transform: rotate(1deg);
-    z-index: -2;
-    overflow: hidden;
-}
-/* End Stacked Paper Effect*/
-
-
 img {
 	width: 100%;
 	max-width: 100%;
@@ -141,7 +99,20 @@ h1.herotext {
 	transform: translate(-50%, -50%);
 }
 
+.container {
+    //margin-top: 70px;
+    background: #fff;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0px 0px 5px #000;
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
 .content {
 	max-width: 960px;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
