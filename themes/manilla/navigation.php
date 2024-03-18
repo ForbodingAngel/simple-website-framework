@@ -1,14 +1,14 @@
 <div class="stickynav">
-	<div id="navcontainer">
+	
         <nav>
         <div class="stellarnav">
             <ul>
-                <li><a href=""><span class="menulabel">Home</span></a></li>
-                <li><a href="Markdown"><span class="menulabel">Markdown</span></a></li>
-                <li><a href="Jac"><span class="menulabel">Jac</span></a></li>
-                <li><a href=""><span class="menulabel">Item 4</span></a></li>
-                <li><a href=""><span class="menulabel">Item 5</span></a></li>
-                <li><a href=""><span class="menulabel">Item 6</span></a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="Markdown">Markdown</a></li>
+                <li><a href="Jac">Jac</a></li>
+                <li><a href="">Item 4</a></li>
+                <li><a href="">Item 5</a></li>
+                <li><a href="">Item 6</a></li>
             </ul>
         </div><!-- .stellarnav -->
         </nav>
@@ -43,7 +43,26 @@
         <script src="plugins/stellarnav-master/js/jquery-migrate-3.0.1.js"></script>
         
         
+
+    <div style="clear:both"></div>
+</div>
+
+<div class="pagetitlecontainer">
+    <div class="pagetitlecontent">
+        <div class="folder-tab">
+            <div class="menulabel">
+                <span class="pagename">
+                    <?php 
+                        if ($pagename == "home") {
+                            echo "Home";
+                        } else {
+                            echo ucwords($pagetitle);
+                        } 
+                    ?>
+                </span>
+            </div>
+        </div>
         <div style="clear:both"></div>
-	</div>
+    </div>
     <div style="clear:both"></div>
 </div>

@@ -1,6 +1,6 @@
 <!-- pagetitle:Jac is Awesome! -->
 
-<!-- layout:page.php -->
+<!-- layout:page-notitle.php -->
 
 # Jac is my Girlfriend. I love her very much!
 

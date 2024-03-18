@@ -1,161 +1,155 @@
-@charset "UTF-8";
-
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap')
 .stickynav {
-	/* Properties for the bar itself */
-    display: block;
-	position: -webkit-sticky; /* Safari */
-	position: sticky;
-	top: 0;
-	z-index: 99;
-	
-	/* Bar coloration and spacing */
-	background-color: rgba(50,50,50,255);
-    border-bottom: 3px solid #ffe2a6;
-	padding: 0px;
-	
-	/* Default Text stuff */
-	color: #fff;
+    /* Properties for the bar itself */
+     display: block;
+     position: -webkit-sticky;
+    /* Safari */
+     position: sticky;
+     top: 0;
+     z-index: 99;
+    /* Bar coloration and spacing */
+     background-color: rgba(50,50,50,255);
+     padding: 0px;
 }
-
-nav {
-    margin: 0px;
-}
-
-nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    position: relative;
-}
-  
-nav ul li {
-    display:inline-block;
-    padding: 12px 20px;
-    margin: 0px 0.25%;
-    background: linear-gradient(to bottom right, #fff1d5 25%, #edc58a 100%);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    box-shadow: 2px -2px 2px #000;
-    box-shadow: 0px -1px 1px rgba(0,0,0,0.25) inset;
-}
-
-nav ul li .menulabel {
-    display:inline-block;
-    //font-family: sans-serif;
-    background: linear-gradient(to bottom right, #fff 75%, #eee1d0 100%);
-    text-align: center;
-    padding: 3px 20px;
-    max-width: 100%;
-    color:#000;
-    font-size:16px;
-    font-weight: bold;
-    //line-height: 60px;
-    text-decoration:none;
-    border-radius: 2px;
-    border-top: 3px #3f56ac dashed;
-    box-shadow: 0px 0px 1px #000;
-}
-
-nav ul ul li {
-    display:inline-block;
-}
-
-/* Fun Label Colors */
-
-nav {
-  --labelcolor1: #3f56ac;
-  --labelcolor2: #d92626;
-  --labelcolor3: #3fabab;
-  --labelcolor4: #ab753f;
-  --labelcolor5: #753fab;
-  --labelcolor6: #248f24;
-  --labelcolor7: #d926d9;
-  --labelcolor8: #26acd9;
-  --labelcolor9: #d98026;
-  --labelcolor10: #d9d926;
+ .pagetitlecontainer {
+    /* Properties for the bar itself */
+     display: block;
+    /* Bar coloration and spacing */
+     background-color: rgba(50,50,50,255);
+     padding: 0px;
 }
 
 
-nav ul li:nth-child(1) .menulabel {
-    border-top: 3px var(--labelcolor1) dashed;
+/* Manilla folder tab */
+ .folder-tab {
+     height: 40px;
+     position: relative;
+     margin-bottom: 1px;
+     top: 1px;
+     background-color: #eee1d0;
+     left: 60px;
+     display: inline-block;
+     z-index: 2;
+     margin-right: 50px;
+     color: #A3B4C9;
+     //cursor: pointer;
 }
- 
-nav ul li:nth-child(2) .menulabel {
-    border-top: 3px var(--labelcolor2) dashed;
+ .folder-tab.selected, .folder-tab:hover {
+     z-index: 3;
+     //color: #788EAB;
+     //background-color: #FFF;
+}
+ .folder-tab.selected:before, .folder-tab:hover:before, .folder-tab.selected:after, .folder-tab:hover:after {
+     //background-color: #FFF;
+}
+ .folder-tab:before {
+     height: 41px;
+     width: 30px;
+     border-radius: 10px 10px 0px 0px;
+     background: linear-gradient(to bottom left, #eee1d0 25%, #f1d3a7 100%);
+     content: "";
+     position: absolute;
+     left: -20px;
+     top: 0px;
+     -webkit-transform: skewX(-20deg);
+     transform: skewX(-20deg);
+     z-index: -1;
+}
+ .folder-tab:after {
+     height: 41px;
+     width: 30px;
+     border-radius: 10px 10px 0px 0px;
+     background: linear-gradient(to bottom right, #eee1d0 25%, #f1d3a7 100%);
+     content: "";
+     position: absolute;
+     right: -20px;
+     top: 0px;
+     -webkit-transform: skewX(20deg);
+     transform: skewX(20deg);
+     z-index: -1;
+}
+ .folder-tab span {
+     display: inline-block;
+     margin-top: 7px;
+     margin-left: 8px;
+     margin-right: 8px;
+     //height: 36px;
+     //line-height: 40px;
+     z-index: 3;
 }
 
-nav ul li:nth-child(3) .menulabel {
-    border-top: 3px var(--labelcolor3) dashed;
+ .pagetitlecontainer {
+     background-color: rgba(50,50,50,1);
+     border-bottom: 3px solid #ffe2a6;
+     box-shadow: 0px 1px 1px rgba(50,50,50,0.5);
+     padding: 0px;
 }
 
-nav ul li:nth-child(4) .menulabel {
-    border-top: 3px var(--labelcolor4) dashed;
+.pagetitlecontent {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-nav ul li:nth-child(5) .menulabel {
-    border-top: 3px var(--labelcolor5) dashed;
+ .menulabel {
+     display:block;
+     background: linear-gradient(to bottom right, #fff 75%, #eee1d0 100%);
+     padding: 0px 20px;
+     margin-top: 7px;
+     color:#000;
+     border-radius: 2px;
+     border-top: 3px #3f56ac dashed;
+     box-shadow: 0px 0px 1px rgba(0,0,0,0.25);
 }
-
-nav ul li:nth-child(6) .menulabel {
-    border-top: 3px var(--labelcolor6) dashed;
+.menulabel .pagename {
+    
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+    
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3px;
 }
-
-nav ul li:nth-child(7) .menulabel {
-    border-top: 3px var(--labelcolor7) dashed;
-}
-
-nav ul li:nth-child(8) .menulabel {
-    border-top: 3px var(--labelcolor8) dashed;
-}
-
-nav ul li:nth-child(9) .menulabel {
-    border-top: 3px var(--labelcolor9) dashed;
-}
-
-nav ul li:nth-child(10) .menulabel {
-    border-top: 3px var(--labelcolor10) dashed;
-}
-/* END Fun Label Colors */
- 
-
-nav .menulabel:hover { 
-    color:#000;
-}
+/* End Manilla Folder Tab */
 
 
-/*
- * Stellarnav.js 2.5.0
- * Responsive, lightweight, multi-level dropdown menu.
- * Copyright (c) 2018 Vinny Moreira - http://vinnymoreira.com
- * Released under the MIT license
- */
+
+/* * Stellarnav.js 2.5.0 * Responsive, lightweight, multi-level dropdown menu. * Copyright (c) 2018 Vinny Moreira - http://vinnymoreira.com * Released under the MIT license */
 /* all nav */
-.stellarnav {
+ .stellarnav {
      position: relative;
      width: 100%;
      z-index: 9900;
      line-height: normal;
+     background-color: rgba(50,50,50,1)
 }
  .stellarnav a {
-     color: #000;
+     color: #fff;
 }
  .stellarnav ul {
      margin: 0;
      padding: 0;
-    /* text-align: center; */
-    /* Use text alignment here to control how the menu tabs are aligned */
+     text-align: center;
 }
  .stellarnav li {
      list-style: none;
      display: block;
+     margin: 0;
+     padding: 0;
      position: relative;
      line-height: normal;
      vertical-align: middle;
 }
  .stellarnav li a {
-    display: block;
+     padding: 15px;
+     display: block;
      text-decoration: none;
-     color: #000;
+     color: #ff;
      font-size: inherit;
      font-family: inherit;
      box-sizing: border-box;
@@ -163,17 +157,44 @@ nav .menulabel:hover {
      -moz-transition: all .3s ease-out;
      transition: all .3s ease-out;
 }
+
+/* Scrolling underline text effect */
+.stellarnav a {
+    position: relative;
+    text-decoration: none;
+}
+
+.stellarnav a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.stellarnav a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* END Scrolling underline text effect */
+
 /* main level */
  .stellarnav > ul > li {
      display: inline-block;
 }
-/* .stellarnav > ul > li > a {
+ .stellarnav > ul > li > a {
      padding: 20px 40px;
 }
- */
 /* first level dd */
  .stellarnav ul ul {
-     top: 50px;
+     top: auto;
      width: 220px;
      position: absolute;
      z-index: 9900;
@@ -247,7 +268,7 @@ nav .menulabel:hover {
      margin-left: 10px;
      border-left: 6px solid transparent;
      border-right: 6px solid transparent;
-     border-top: 6px solid #000;
+     border-top: 6px solid #FFF;
      display: inline-block;
 }
  .stellarnav li li.has-sub > a:after {
@@ -255,7 +276,7 @@ nav .menulabel:hover {
      float: right;
      border-top: 6px solid transparent;
      border-bottom: 6px solid transparent;
-     border-left: 6px solid #000;
+     border-left: 6px solid #FFF;
      position: relative;
      top: 4px;
 }
@@ -265,7 +286,7 @@ nav .menulabel:hover {
      border-left: 0;
      border-top: 6px solid transparent;
      border-bottom: 6px solid transparent;
-     border-right: 6px solid #000;
+     border-right: 6px solid #FFF;
 }
  .stellarnav.hide-arrows li.has-sub > a:after, .stellarnav.hide-arrows li li.has-sub > a:after, .stellarnav.hide-arrows li.drop-left li.has-sub > a:after {
      display: none;
@@ -287,7 +308,7 @@ nav .menulabel:hover {
      z-index: 9999;
      border: 0;
 }
- // .stellarnav.desktop li.has-sub a {
+ .stellarnav.desktop li.has-sub a {
      padding-right: 5px;
 }
  .stellarnav.desktop.hide-arrows li.has-sub a {
@@ -322,7 +343,7 @@ nav .menulabel:hover {
      display: block;
      width: 12px;
      height: 0px;
-     border-bottom: solid 3px #000;
+     border-bottom: solid 3px #777;
      position: absolute;
      top: 50%;
      transform: rotate(90deg);
@@ -334,7 +355,7 @@ nav .menulabel:hover {
      width: 12px;
      height: 0px;
      top: 50%;
-     border-bottom: solid 3px #000;
+     border-bottom: solid 3px #777;
      position: absolute;
 }
  .stellarnav li.open > a.dd-toggle .icon-plus {
@@ -367,7 +388,7 @@ nav .menulabel:hover {
      display: block;
      width: 12px;
      height: 0px;
-     border-bottom: solid 3px #000;
+     border-bottom: solid 3px #777;
      position: absolute;
      top: 50%;
      transform: rotate(45deg);
@@ -378,7 +399,7 @@ nav .menulabel:hover {
      width: 12px;
      height: 0px;
      top: 50%;
-     border-bottom: solid 3px #000;
+     border-bottom: solid 3px #777;
      position: absolute;
      transform: rotate(-45deg);
 }
@@ -398,13 +419,7 @@ nav .menulabel:hover {
  .stellarnav .menu-toggle, .stellarnav .call-btn-mobile, .stellarnav .location-btn-mobile, .stellarnav .close-menu {
      padding: 15px;
      box-sizing: border-box;
-     color: #000;
 }
-
- .stellarnav .menu-toggle {
-     color: #fff;
-}
-
  .stellarnav .menu-toggle span.bars {
      display: inline-block;
      margin-right: 7px;
@@ -416,7 +431,7 @@ nav .menulabel:hover {
      width: 15px;
      height: 2px;
      border-radius: 6px;
-     background: #fff;
+     background: #777;
      margin: 0 0 3px;
 }
  .stellarnav .full {
@@ -497,7 +512,7 @@ nav .menulabel:hover {
      padding: 15px;
 }
  .stellarnav.mobile ul {
-     background: rgba(221, 221, 221, 1);
+     /* background: rgba(221, 221, 221, 1); */
 }
  .stellarnav.mobile ul ul {
      position: relative;
@@ -518,6 +533,7 @@ nav .menulabel:hover {
      right: auto;
 }
  .stellarnav.mobile li a {
+     border-bottom: 1px solid rgba(255, 255, 255, .15);
 }
  .stellarnav.mobile > ul {
      border-top: 1px solid rgba(255, 255, 255, .15);
@@ -660,19 +676,6 @@ nav .menulabel:hover {
 /* mega dd */
 /* Fallback for slow javascript load */
  @media only screen and (max-width : 768px) {
-    nav ul li {
-        background: linear-gradient(to bottom right, #fff1d5 25%, #edc58a 100%);
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        margin: 0px;
-    }
-
-     nav ul li .menulabel {
-         display:block;
-     }
-     .stellarnav ul ul {
-         top: 0px;
-    }
      .stellarnav {
          overflow: hidden;
          display: block;

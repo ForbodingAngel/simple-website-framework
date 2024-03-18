@@ -1,5 +1,5 @@
 <!-- pagetitle:My Markdown Tutorial -->
-<!-- layout:page.php -->
+<!-- layout:page-notitle.php -->
 
 <hr>
 
