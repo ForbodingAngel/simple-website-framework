@@ -4,9 +4,9 @@
         <div class="stellarnav">
             <ul>
                 <li><a href="">Home</a></li>
-                <li><a href="Markdown">Markdown</a></li>
-                <li><a href="Jac">Jac</a></li>
-                <li><a href="">Item 4</a></li>
+                <li><a href="markdown">Markdown</a></li>
+                <li><a href="jac">Jac</a></li>
+                <li><a href="archives">Archives</a></li>
                 <li><a href="">Item 5</a></li>
                 <li><a href="">Item 6</a></li>
             </ul>
@@ -56,7 +56,9 @@
                         if ($pagename == "home") {
                             echo "Home";
                         } else {
-                            echo ucwords($pagetitle);
+                            if (isset ($pagetitle)) {
+								echo ucwords($pagetitle); 
+							}
                         } 
                     ?>
                 </span>

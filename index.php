@@ -16,7 +16,7 @@
 	/* This block of code determines the name of the requested page based on the value of $requestedPage. If $requestedPage is empty (i.e., the root URL is requested), the page name is set to "home". Otherwise, the page name is set to the value of $requestedPage. */
 		$pagename = "home";
 	} else {
-		$pagename = $requestedPage;
+		$pagename = strtolower($requestedPage);
 	}
 	
 	/* In summary, this code retrieves the requested URI, extracts the path component, and determines the name of the requested page based on the path. If no specific page is requested (e.g., accessing the root URL), it sets the page name to "home". */

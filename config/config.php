@@ -33,7 +33,6 @@
         $fontAwesome = true;
     }
 
-
     /* This is a catchall, just in case. There is also another catchall in the page layout file, just in case this one doesn't do the trick. */
     if (!file_exists("pages/" . $pagename .".md")) { 
         $pagename = "404"; 
