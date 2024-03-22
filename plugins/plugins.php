@@ -16,6 +16,27 @@ And we just concatenate as we go along.
 
 <?php /* Initialize the variable */ $pluginCalledBelowContent = ""; ?>
 
+<?php /* Add a class automatically to anchor links (Typically used for setting scroll-margin-top properties so that navigation bars don't cover the content */ ?>
+<?php if ($anchorLinkAutoClass == true) { ?>
+	<?php $anchorLinkAutoClassContent = '
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Get all anchor links
+			var anchorLinks = document.querySelectorAll("a");
+
+			// Loop through each anchor link
+			anchorLinks.forEach(function(link) {
+				// Add your desired class to each anchor link
+				link.classList.add("anchor-top-margin");
+			});
+		});
+	</script>
+	';
+	$pluginCalledBelowContent = $pluginCalledBelowContent . $anchorLinkAutoClassContent;
+	?>
+<?php } ?>
+
+
 <?php /* CSS Before and After Slider */ ?>
 <?php if ($beforeAndAfterSlider == true) { ?>
 	<?php $beforeAndAfterSliderContent = '

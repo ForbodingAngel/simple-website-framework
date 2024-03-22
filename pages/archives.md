@@ -1,2 +1,2 @@
-<!-- pagetitle:Posts testing page -->
+<!-- pagetitle:Post Archives -->
 <!-- layout:post-notitle.php -->

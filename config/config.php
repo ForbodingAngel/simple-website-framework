@@ -1,4 +1,7 @@
 <?php
+	
+	$WebsiteTitle = "Skeleton Website Framework";
+
 	/* Leaving these for posterity... Parsedown has issues with php8+, so I had to implement a newer parser. */	
 	//include './required/parsedown/Parsedown.php';
 	//include './required/parsedown/ParsedownExtra.php';
@@ -25,6 +28,9 @@
 
     if ($loadplugins == true) {
         /* Choose what plugins you want to load here */
+		
+		/* Add a class automatically to anchor links (Typically used for setting scroll-margin-top properties so that navigation bars don't cover the content */
+		$anchorLinkAutoClass = true;
         
         /* Before and After Image Slider */
         $beforeAndAfterSlider = true;

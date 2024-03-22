@@ -3,5 +3,6 @@
 </div>
 
 <?php echo $pluginCalledBelowContent; ?>
+<?php include 'navigation-options.php' ?>
 </body>
 </html>

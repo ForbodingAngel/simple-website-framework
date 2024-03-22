@@ -18,11 +18,32 @@
 		In summary, this HTML code sets the base URL for all relative URLs within the document to either http:// or https:// depending on the current protocol (http or https), followed by the host name from the request headers ($_SERVER['HTTP_HOST']). */
 	?>
 	
+	<?php
+		/* This looks for and html comment in your markdown file that defines what layout file to use. The format is simply: <!-- pagetitle:My Page Title --> */
+		$markdownContent_pagetitle = file_get_contents("pages/" . $pagename .".md"); 
+		$pattern_pagetitle = '/<!-- pagetitle:(.*?) -->/';
+		// Match the pattern in the Markdown content
+		if (preg_match($pattern_pagetitle, $markdownContent_pagetitle, $matches_pagetitle)) {
+			// Extract the layout file from the matched pattern
+			$pagetitle = trim($matches_pagetitle[1]);
+		}
+	?>
+	
+	<?php 
+		/* This looks for and html comment in your markdown file that defines what layout file to use. The format is simply: <!-- layout:page.php --> */
+		$markdownContent_layout = file_get_contents("pages/" . $pagename .".md"); 
+		$pattern_layout = '/<!-- layout:(.*?) -->/';
+		// Match the pattern in the Markdown content
+		if (preg_match($pattern_layout, $markdownContent_layout, $matches_layout)) {
+			// Extract the layout file from the matched pattern
+			$layout = trim($matches_layout[1]);
+		}
+	?>
 	
 	<!-- Basic Page Needs
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<meta charset="utf-8">
-	<title><?php echo ucwords($pagename); ?> - My Skeleton Website</title>
+	<title><?php if (isset($pagetitle)) { echo ucwords($pagetitle); } else { echo ucwords($pagename); } ?> - <?php echo $WebsiteTitle; ?></title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -57,28 +78,6 @@
 		</div>
 	<?php } ?>
 	</div>
-	
-	<?php
-		/* This looks for and html comment in your markdown file that defines what layout file to use. The format is simply: <!-- pagetitle:My Page Title --> */
-		$markdownContent_pagetitle = file_get_contents("pages/" . $pagename .".md"); 
-		$pattern_pagetitle = '/<!-- pagetitle:(.*?) -->/';
-		// Match the pattern in the Markdown content
-		if (preg_match($pattern_pagetitle, $markdownContent_pagetitle, $matches_pagetitle)) {
-			// Extract the layout file from the matched pattern
-			$pagetitle = trim($matches_pagetitle[1]);
-		}
-	?>
-	
-	<?php 
-		/* This looks for and html comment in your markdown file that defines what layout file to use. The format is simply: <!-- layout:page.php --> */
-		$markdownContent_layout = file_get_contents("pages/" . $pagename .".md"); 
-		$pattern_layout = '/<!-- layout:(.*?) -->/';
-		// Match the pattern in the Markdown content
-		if (preg_match($pattern_layout, $markdownContent_layout, $matches_layout)) {
-			// Extract the layout file from the matched pattern
-			$layout = trim($matches_layout[1]);
-		}
-	?>
 
 <?php if ($loadplugins == true) { include './plugins/plugins.php'; } ?>
 <?php include 'navigation.php' ?>
