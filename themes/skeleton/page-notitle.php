@@ -4,15 +4,6 @@
 	<!-- Primary Page Layout
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<div class="container">
-		<div class="pagetitle">
-		<?php if ($pagename != "home") { ?>
-			<?php if (isset($pagetitle)) { ?>
-				<h1><?php echo $pagetitle; ?></h1>
-			<?php } else { ?>	
-				<h1><?php echo ucwords($pagename); ?></h1>
-			<?php } ?>
-		<?php } ?>
-		</div>
 		<div class="content">
 			<div class="section group">
 					<?php

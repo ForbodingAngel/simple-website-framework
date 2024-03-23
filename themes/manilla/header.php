@@ -70,11 +70,11 @@
 	<div class="header">	
 	<?php if ($pagename == "home") { ?>
 		<div class="hero">
-			<h1 class="herotext">Glendora Window and Screen</h1>
+			<h1 class="herotext"><?php echo $WebsiteTitle; ?></h1>
 		</div>
 	<?php } else { ?>
 		<div class="herosmall">
-			<h1 class="herotext">Glendora Window and Screen</h1>
+			<h1 class="herotext"><?php echo $WebsiteTitle; ?></h1>
 		</div>
 	<?php } ?>
 	</div>

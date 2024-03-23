@@ -6,21 +6,29 @@
 
 <!-- thumbnail:desk-smartphone-mobile-table-coffee-wood.webp -->
 
-<!-- layout:page-notitle.php -->
+<!-- layout:page.php -->
 
 # Smoothscroll should be working now
 
 You'll want to just look at the source in this MD file. It shows how to do the anchor in markdown. Keep in mind that if you want to have link text on the anchor itself, just add text in the brackets.
 
+<div class="col span_6_of_12">
+
 This will result in no text[](posts/smoothscroll#notext){: #notext }:
 `[](posts/smoothscroll#notext){: #notext }`
+
+</div>
+
+<div class="col span_6_of_12">
 
 This will result in [Link Text](posts/smoothscroll#linktext){: #linktext }:
 `[Link Text](posts/smoothscroll#linktext){: #linktext }`
 
+</div>
 
 ![Random Picture of computer related crap](pages/posts/images/desk-smartphone-mobile-table-coffee-wood.webp)
 
+<div class="col span_2_of_12">
 
 Link List:
 
@@ -57,6 +65,8 @@ Link List:
 [Paragraph 14](posts/smoothscroll#14)
 
 [Paragraph 15](posts/smoothscroll#15)
+
+</div>
 
 [](posts/smoothscroll#1){: #1 }
 ## Paragraph 1

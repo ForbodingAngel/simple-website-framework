@@ -1,2 +1,2 @@
 <!-- pagetitle:Post Archives -->
-<!-- layout:post-notitle.php -->
+<!-- layout:post.php -->

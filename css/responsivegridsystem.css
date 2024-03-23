@@ -73,7 +73,8 @@ as soon as the screen size gets less than 480 pixels the columns stack and the m
 .col {
 	display: block;
 	float:left;
-	margin: 1% 0 1% 1.6%;
+	margin: 1% 0.25% 1% 0.25%;
+	/* margin: 1% 0 1% 1.6%; // These were the original values */
 }
 .col:first-child { margin-left: 0; }
 

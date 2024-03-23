@@ -6,7 +6,7 @@
 
 <!-- thumbnail:cssbeforeandaftersliderexample.gif -->
 
-<!-- layout:page-notitle.php -->
+<!-- layout:page.php -->
 
 # Lets see if this works...
 

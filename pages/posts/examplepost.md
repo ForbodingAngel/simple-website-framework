@@ -6,7 +6,7 @@
 
 <!-- thumbnail:babykitty.webp -->
 
-<!-- layout:page-notitle.php -->
+<!-- layout:page.php -->
 
 # In the Beginning...
 

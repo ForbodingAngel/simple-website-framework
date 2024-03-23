@@ -18,47 +18,6 @@
 		In summary, this HTML code sets the base URL for all relative URLs within the document to either http:// or https:// depending on the current protocol (http or https), followed by the host name from the request headers ($_SERVER['HTTP_HOST']). */
 	?>
 	
-	
-	<!-- Basic Page Needs
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<meta charset="utf-8">
-	<title><?php echo ucwords($pagename); ?> - My Skeleton Website</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-	<!-- Mobile Specific Metas
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<!-- FONT
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<? /* Load the Font via CSS */ ?>
-
-	<!-- CSS
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/skeleton.css">
-	<link rel="stylesheet" href="css/responsivegridsystem.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="themes/<?php echo $theme; ?>/navigation.css">
-	<link rel="stylesheet" href="themes/<?php echo $theme; ?>/custom.css">
-
-	<!-- Favicon
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link rel="icon" type="image/png" href="images/favicon.png">
-	
-	<div class="header">	
-	<?php if ($pagename == "home") { ?>
-		<div class="hero">
-			<h1 class="herotext">Glendora Window and Screen</h1>
-		</div>
-	<?php } else { ?>
-		<div class="herosmall">
-			<h1 class="herotext">Glendora Window and Screen</h1>
-		</div>
-	<?php } ?>
-	</div>
-	
 	<?php
 		/* This looks for and html comment in your markdown file that defines what layout file to use. The format is simply: <!-- pagetitle:My Page Title --> */
 		$markdownContent_pagetitle = file_get_contents("pages/" . $pagename .".md"); 
@@ -80,6 +39,45 @@
 			$layout = trim($matches_layout[1]);
 		}
 	?>
+	
+	<!-- Basic Page Needs
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<title><?php if (isset($pagetitle)) { echo ucwords($pagetitle); } else { echo ucwords($pagename); } ?> - <?php echo $WebsiteTitle; ?></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- FONT
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<?php /* Load the Font via CSS */ ?>
+
+	<!-- CSS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/responsivegridsystem.css">
+	<link rel="stylesheet" href="themes/<?php echo $theme; ?>/navigation.css">
+	<link rel="stylesheet" href="themes/<?php echo $theme; ?>/custom.css">
+
+	<!-- Favicon
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	
+	<div class="header">	
+	<?php if ($pagename == "home") { ?>
+		<div class="hero">
+			<h1 class="herotext"><?php echo $WebsiteTitle; ?></h1>
+		</div>
+	<?php } else { ?>
+		<div class="herosmall">
+			<h1 class="herotext"><?php echo $WebsiteTitle; ?></h1>
+		</div>
+	<?php } ?>
+	</div>
 
 <?php if ($loadplugins == true) { include './plugins/plugins.php'; } ?>
 <?php include 'navigation.php' ?>

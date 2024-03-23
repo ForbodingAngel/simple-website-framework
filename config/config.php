@@ -21,7 +21,7 @@
 
 
     /* Select a Theme */
-	$theme = "manilla";
+	$theme = "skeleton";
 
     /* Do we want any plugins? */
 	$loadplugins = true;

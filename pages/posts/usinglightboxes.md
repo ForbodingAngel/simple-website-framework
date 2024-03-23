@@ -6,7 +6,7 @@
 
 <!-- thumbnail:coding-computer-thumb.webp -->
 
-<!-- layout:page-notitle.php -->
+<!-- layout:page.php -->
 
 # Lightboxes are a thing now
 

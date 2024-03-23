@@ -1,5 +1,5 @@
 <!-- pagetitle:This is just a test page -->
-<!-- layout:page-notitle.php -->
+<!-- layout:page.php -->
 # This is a test page
 
 **This map is testing to see if we can embed reasonably complex html without it messing us up**
