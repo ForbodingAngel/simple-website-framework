@@ -16,6 +16,12 @@ And we just concatenate as we go along.
 
 <?php /* Initialize the variable */ $pluginCalledBelowContent = ""; ?>
 
+<?php /* Include jQuery 3.7.1 */ ?>
+<?php if ($jQuery == true) { ?>
+	<script src="includes/jquery-3.7.1.min.js"></script>
+	<script src="includes/jquery-migrate-3.4.0.min.js"></script>
+<?php } ?>
+
 <?php /* Add a class automatically to anchor links (Typically used for setting scroll-margin-top properties so that navigation bars don't cover the content */ ?>
 <?php if ($anchorLinkAutoClass == true) { ?>
 	<?php $anchorLinkAutoClassContent = '
@@ -41,7 +47,6 @@ And we just concatenate as we go along.
 <?php if ($beforeAndAfterSlider == true) { ?>
 	<?php $beforeAndAfterSliderContent = '
     <link type="text/css" href="plugins/css-before-and-after-image-slider/css/main.css" rel="stylesheet" />
-    <script src="plugins/css-before-and-after-image-slider/js/jquery-3.6.0.min.js"></script>
     <script src="plugins/css-before-and-after-image-slider/js/main.js"></script>
 	';
 	$pluginCalledBelowContent = $pluginCalledBelowContent . $beforeAndAfterSliderContent;

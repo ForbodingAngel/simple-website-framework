@@ -21,7 +21,7 @@
 	
 	/* In summary, this code retrieves the requested URI, extracts the path component, and determines the name of the requested page based on the path. If no specific page is requested (e.g., accessing the root URL), it sets the page name to "home". */
 	
-	
+	include './required/initialize-markdown-parser.php';
 	include './config/config.php';
 	include './themes/' . $theme . '/header.php';
 ?>

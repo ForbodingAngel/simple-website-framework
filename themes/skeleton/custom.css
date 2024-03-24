@@ -1,7 +1,11 @@
 /* Pageload Animations */
+html {
+	background-color: rgba(50,50,50,1);
+}
 body {
-    animation: fadeIn 0.5s;
+    animation: fadeIn 1s;
     margin: 0;
+	background-color: #fff;
 }
 
 @keyframes fadeIn {
@@ -30,7 +34,7 @@ a::before {
     content: '';
     position: absolute;
     width: 100%;
-    height: 4px;
+    height: 2px;
     border-radius: 4px;
     background-color: #18272F;
     bottom: 0;
@@ -65,7 +69,7 @@ img {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-color: rgba(50,50,50,255);
+	background-color: rgba(50,50,50,1);
 	width: 100vmax;
 	max-width: 100%;
 	height: 100vmin;
@@ -77,7 +81,7 @@ img {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-color: rgba(50,50,50,255);
+	background-color: rgba(50,50,50,1);
 	width: 100vmax;
 	max-width: 100%;
 	height: 25vmin;
@@ -112,4 +116,29 @@ h1.herotext {
 	max-width: 960px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.footercontainer {
+	background-color: rgba(50,50,50,1);
+}
+
+.footer {
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+}
+
+.footercolumn {
+	padding: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.footer span.sectiontitle{
+	display: block;
+	text-align: center;
+	font-size: 40px;
+	/* border-bottom: 1px solid #fff; */
+	margin-bottom: 20px;
 }

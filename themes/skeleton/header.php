@@ -80,6 +80,6 @@
 	</div>
 
 <?php if ($loadplugins == true) { include './plugins/plugins.php'; } ?>
-<?php include 'navigation.php' ?>
+<?php include 'navigation.php'; ?>
 <?php include $layout; ?>
-<?php include 'footer.php' ?>
+<?php include 'footer.php'; ?>

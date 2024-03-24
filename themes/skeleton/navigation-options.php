@@ -1,6 +1,5 @@
 <?php /* Navigation Options */?>
 <!-- required -->
-<script type='text/javascript' src="plugins/stellarnav-master/js/jquery_3.3.1.js"></script>
 <script type="text/javascript" src="plugins/stellarnav-master/js/stellarnav.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -24,5 +23,4 @@
 		});
 	});
 </script>
-<script src="plugins/stellarnav-master/js/jquery-migrate-3.0.1.js"></script>
 <!-- required -->
