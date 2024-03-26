@@ -1,6 +1,7 @@
 <!-- pagetitle:My Markdown Tutorial -->
 <!-- layout:page.php -->
 
+Below this is an HTML `<hr>`
 <hr>
 
 ---
