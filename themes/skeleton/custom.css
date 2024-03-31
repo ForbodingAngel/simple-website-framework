@@ -127,6 +127,8 @@ h1.herotext {
 	margin-left: auto;
 	margin-right: auto;
 	color: #fff;
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 .footercolumn {

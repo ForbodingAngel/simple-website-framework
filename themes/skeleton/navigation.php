@@ -2,14 +2,11 @@
 	
         <nav>
         <div class="stellarnav">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="markdown">Markdown</a></li>
-                <li><a href="jac">Jac</a></li>
-                <li><a href="archives">Posts/Archives</a></li>
-                <li><a href="">Item 5</a></li>
-                <li><a href="">Item 6</a></li>
-            </ul>
+			<?php
+				$navigationFilename = "./pages/navigation.md";
+				$navigationOutput = file_get_contents($navigationFilename);
+				echo from_markdown($navigationOutput);
+			?>
         </div><!-- .stellarnav -->
         </nav>
     <div style="clear:both"></div>

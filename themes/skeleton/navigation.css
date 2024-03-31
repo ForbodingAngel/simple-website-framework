@@ -17,12 +17,18 @@
 
 /* * Stellarnav.js 2.5.0 * Responsive, lightweight, multi-level dropdown menu. * Copyright (c) 2018 Vinny Moreira - http://vinnymoreira.com * Released under the MIT license */
 /* all nav */
+ 
+:root {
+	--bottomlevel-bg-color: rgba(50,50,50,1);
+	--firstlevel-bg-color: rgba(40,40,40,1);
+	--secondlevel-bg-color: rgba(30,30,30,1);
+ }
  .stellarnav {
      position: relative;
      width: 100%;
      z-index: 9900;
      line-height: normal;
-     background-color: rgba(50,50,50,1)
+     background-color: var(--bottomlevel-bg-color);
 }
  .stellarnav a {
      color: #fff;
@@ -96,7 +102,7 @@
      z-index: 9900;
      text-align: left;
      display: none;
-     background: #ddd;
+     background-color: var(--firstlevel-bg-color);
 }
  .stellarnav li li {
      display: block;
@@ -106,6 +112,7 @@
      top: 0;
     /* dd animtion - change to auto to remove */
      left: 220px;
+	 background-color: var(--secondlevel-bg-color);
 }
  .stellarnav > ul > li:hover > ul > li:hover > ul {
      opacity: 1;
