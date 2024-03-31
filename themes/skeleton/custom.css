@@ -146,5 +146,5 @@ h1.herotext {
 }
 
 code {
-	overflow-x: scroll;
+	overflow-x: auto;
 }
