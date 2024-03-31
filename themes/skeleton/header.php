@@ -19,7 +19,7 @@
 	?>
 	
 	<?php
-		/* This looks for and html comment in your markdown file that defines what layout file to use. The format is simply: <!-- pagetitle:My Page Title --> */
+		/* This looks for and html comment in your markdown file that defines the page title. The format is simply: <!-- pagetitle:My Page Title --> */
 		$markdownContent_pagetitle = file_get_contents("pages/" . $pagename .".md"); 
 		$pattern_pagetitle = '/<!-- pagetitle:(.*?) -->/';
 		// Match the pattern in the Markdown content
@@ -37,6 +37,28 @@
 		if (preg_match($pattern_layout, $markdownContent_layout, $matches_layout)) {
 			// Extract the layout file from the matched pattern
 			$layout = trim($matches_layout[1]);
+		}
+	?>
+	
+	<?php 
+		/* This looks for and html comment in your markdown file that defines the date. The format is simply: <!-- date:1/1/1900 --> */
+		$markdownContent_date = file_get_contents("pages/" . $pagename .".md"); 
+		$pattern_date = '/<!-- date:(.*?) -->/';
+		// Match the pattern in the Markdown content
+		if (preg_match($pattern_date, $markdownContent_date, $matches_date)) {
+			// Extract the layout file from the matched pattern
+			$pagedate = trim($matches_date[1]);
+		}
+	?>
+	
+	<?php 
+		/* This looks for and html comment in your markdown file that defines who is the author. The format is simply: <!-- Author:John Doe --> */
+		$markdownContent_author = file_get_contents("pages/" . $pagename .".md"); 
+		$pattern_author = '/<!-- author:(.*?) -->/';
+		// Match the pattern in the Markdown content
+		if (preg_match($pattern_author, $markdownContent_author, $matches_author)) {
+			// Extract the layout file from the matched pattern
+			$pageauthor = trim($matches_author[1]);
 		}
 	?>
 	
@@ -79,7 +101,8 @@
 	<?php } ?>
 	</div>
 
-<?php if ($loadplugins == true) { include './plugins/plugins.php'; } ?>
+<?php include 'includes/functions.php'; ?>
+<?php if ($loadplugins == true) { include 'plugins/plugins.php'; } ?>
 <?php include 'navigation.php'; ?>
 <?php include $layout; ?>
 <?php include 'footer.php'; ?>

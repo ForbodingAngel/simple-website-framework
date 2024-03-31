@@ -1,16 +1,30 @@
-<?php /* Currently plugins have to be manually wired here. For toggling plugins on and off, look in the theme header.
+<?php /* 
+In our system, managing plugins involves manual integration. You'll need to incorporate plugins directly into the framework. To control which plugins are active or inactive, set each one to true or false in config/config.php.
 
-Plugins are only loaded if loadplugins in config.php is set to true 
+For a plugin to be operational, it must be loaded. This occurs only when the 'loadplugins' option within the 'config/config.php' file is set to true.
 
-A lot of js/jquery stuff requires the script and whatever else to be called at the end of the page. That's what $pluginCalledBelowContent is for. We can put whatever html is needed to be called at the bottom of the page and store it in $pluginCalledBelowContent and just concatenate with each plugin that needs it by simply doing:
+Now, let's talk about JavaScript and jQuery functionality. To ensure smooth operation and optimal performance, it's often best to call scripts at the end of the page (additionally, a lot of jquery scripts will outright fail if they are not called at the end of the page). This prevents them from delaying the initial page load. To facilitate this practice, we use a special variable named '$pluginCalledBelowContent'.
 
-$myPluginContent = 'HTML crap goes here';
+This variable serves as a container for HTML content that needs to be placed at the bottom of the page. Here's how it works:
 
-And then concatenate it like so:
+1. You store the HTML content you need at the bottom of the page in a variable, let's call it '$myPluginContent'.
+2. Then, you concatenate '$myPluginContent' with '$pluginCalledBelowContent' using the '.=' operator.
+3. This ensures that your HTML content is appended to the content already stored in '$pluginCalledBelowContent'.
 
-$pluginCalledBelowContent = $pluginCalledBelowContent . $myPluginContent
+Here's an example:
 
-And we just concatenate as we go along.
+$myPluginContent = '<div>HTML content specific to your plugin</div>';
+$pluginCalledBelowContent = $pluginCalledBelowContent . $myPluginContent;
+
+You can also concatenate using:
+$pluginCalledBelowContent .= $myPluginContent;
+
+I generally use the more verbose method because it is easier for a novice to understand what is happening.
+
+You repeat this process for each plugin, gradually building up the content in '$pluginCalledBelowContent'. This approach guarantees that your plugins are integrated seamlessly, ensuring efficient execution and optimal performance.
+
+P.S. Make sure that you escape each ' with a backslash, otherwise you will break the page. As an example:
+var href = link.getAttribute(\'href\');
 
 */ ?>
 
@@ -39,6 +53,32 @@ And we just concatenate as we go along.
 	</script>
 	';
 	$pluginCalledBelowContent = $pluginCalledBelowContent . $anchorLinkAutoClassContent;
+	?>
+<?php } ?>
+
+<?php /* Add a class automatically to anchor links and rewrite the target */ ?>
+<?php if ($anchorLinkCurrentURLRewrite == true) { ?>
+	<?php $anchorLinkCurrentURLRewriteContent = '
+	<script>
+		// Get the base URL of the current page
+		var baseURL = window.location.protocol + \'//\' + window.location.host + window.location.pathname;
+
+		// Function to update anchor links
+		function updateAnchorLinks() {
+			var anchorLinks = document.querySelectorAll(\'a[href^="#"]\');
+			anchorLinks.forEach(function(link) {
+				var href = link.getAttribute(\'href\');
+				link.setAttribute(\'href\', baseURL + href);
+			});
+		}
+
+		// Call the function when the DOM is ready
+		document.addEventListener(\'DOMContentLoaded\', function() {
+			updateAnchorLinks();
+		});
+	</script>
+	';
+	$pluginCalledBelowContent = $pluginCalledBelowContent . $anchorLinkCurrentURLRewriteContent;
 	?>
 <?php } ?>
 

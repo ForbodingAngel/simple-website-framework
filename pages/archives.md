@@ -1,2 +1,2 @@
 <!-- pagetitle:Post Archives -->
-<!-- layout:post.php -->
+<!-- layout:postarchives.php -->

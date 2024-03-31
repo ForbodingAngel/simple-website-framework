@@ -4,11 +4,11 @@
 
 <!-- excerpt:Finally, I got the posts page working. I'm trying to be really careful to make the code easy to work with, but sometimes that's really hard. That said, if it's worth doing, it's worth doing it right, the FIRST time. -->
 
-<!-- thumbnail:babykitty.webp -->
+<!-- thumbnail:xkcdstandards.webp -->
 
 <!-- layout:page.php -->
 
-# In the Beginning...
+## In the Beginning...
 
 This whole saga started because I was unhappy with wordpress and wanted something that I could control. At first it was really ingenious and clever (it still is), but then it started taking on a life of it's own. I kept seeing things that I would like to add and I was like "I could code that".
 
@@ -25,3 +25,5 @@ Realistically no one else will ever use this, and that's fine. This entire syste
 I have looked at so many flat file CMS'. Holy jesus I have looked at literally every one. Most of them were pretty neat, but you lost a lot of design control, or they used a templating system that just made thigns more complicated than they needed to be, or they were missing what I consider to be basic features... Etc.
 
 So here we are. As the famous xkcd comic points out, there are 1283234847 CMS' out there. I'm going to make a new one that combines all the best features of all of them. There are now 1283234848 CMS' out there.
+
+[![XKCD: Standards](pages/posts/images/xkcdstandards.webp)](https://xkcd.com/927/)

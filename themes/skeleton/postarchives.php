@@ -60,6 +60,7 @@
 					$fileDetailsPage = array_slice($fileDetails, $startIndex, $itemsPerPage);
 
 					// Output the sorted list of links, images, and excerpts for the current page
+					/* This is where you would set up the classes for styling the post archives page */
 					foreach ($fileDetailsPage as $fileDetail) {
 						$dateFormatted = date('m/d/Y', strtotime($fileDetail['date']));
 						echo '<a href="' . $postsFolder . '/' . basename($fileDetail['filename'], '.md') . '">' . $fileDetail['title'] . '</a> - ' . $dateFormatted . '<br>';
@@ -75,7 +76,7 @@
 
 					// Pagination links
 					$totalPages = ceil(count($fileDetails) / $itemsPerPage);
-					echo '<div>';
+					echo '<div class="pagination">Page: ';
 					for ($i = 1; $i <= $totalPages; $i++) {
 						if ($i == $page) {
 							echo "<span>$i</span> ";

@@ -11,11 +11,18 @@
     if ($loadplugins == true) {
         /* Choose what plugins you want to load here */
 		
+		/* SETTING THIS TO FALSE WILL BREAK ANYTHING THAT RELIES ON JQUERY */
 		/* Do we want to load jQuery? The anser to this is almost always going to be yes. */
 		$jQuery = true;
 		
+		/* SETTING THIS TO FALSE WILL BREAK SMOOTHSCROLL COMPLETELY */
 		/* Add a class automatically to anchor links (Typically used for setting scroll-margin-top properties so that navigation bars don't cover the content */
 		$anchorLinkAutoClass = true;
+		
+		/* SETTING THIS TO FALSE WILL BREAK ANCHOR LINKS COMPLETELY */
+		/* Rewrite anchor link target urls so that they target the current url */
+		/* This script will dynamically update all anchor links that start with "#" to include the base URL of the current page. This way, relative URLs will remain intact, and only the anchor links will be modified to include the current page's path. */
+		$anchorLinkCurrentURLRewrite = true;
         
         /* Before and After Image Slider */
         $beforeAndAfterSlider = true;

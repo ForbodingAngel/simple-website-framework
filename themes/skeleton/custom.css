@@ -144,3 +144,7 @@ h1.herotext {
 	/* border-bottom: 1px solid #fff; */
 	margin-bottom: 20px;
 }
+
+code {
+	overflow-x: scroll;
+}
