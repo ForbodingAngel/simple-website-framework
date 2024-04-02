@@ -8,6 +8,8 @@
 	//echo $requestedPage; /* This line is commented out and is not executed. It appears to be for debugging purposes, possibly to echo/print the value of $requestedPage for testing. */
 	
 	
+	/* Generate list of potential target pages */
+	/* The purpose of this code block is to generate a list of files in the pages folder (and subfolders). If the requested page is not in that list, send it to 404. This can help eliminate some potential attack vectors*/
 	function listFiles($dir) {
 		$files = [];
 		$contents = scandir($dir);
@@ -33,11 +35,10 @@
 	if (!in_array("pages/" . $requestedPage . ".md", $files)) {
 		$pagename = "404";
 	}
+	/* END Generate list of potential target pages */
 	
 	
-	
-
-	/* This is a catchall, just in case. There is also another catchall in the page layout file, just in case this one doesn't do the trick. */
+	/* This is a catchall, just in case. There is also another catchall in the page layout file, just in case this one doesn't do the trick. THis is nowhere near as sophisticated as the approach above, but it still could potentially catch things that fell through the cracks */
 	if (!file_exists("pages/" . $requestedPage .".md")) { 
 		$pagename = "404"; 
 	}
