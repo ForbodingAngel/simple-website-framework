@@ -10,6 +10,7 @@
 	
 	/* Generate list of potential target pages */
 	/* The purpose of this code block is to generate a list of files in the pages folder (and subfolders). If the requested page is not in that list, send it to 404. This can help eliminate some potential attack vectors*/
+	/* This code defines a recursive function listFiles() that traverses through directories and subdirectories, collecting all file paths. Then, it checks if the requested page exists in the list of files. If it doesn't exist, it sets $pagename to "404". */
 	function listFiles($dir) {
 		$files = [];
 		$contents = scandir($dir);
