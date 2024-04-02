@@ -6,6 +6,36 @@
 	$requestedPage = trim(parse_url($requestUri, PHP_URL_PATH), '/'); /* This line parses the requested URI using the parse_url() function and extracts the path component using the PHP_URL_PATH constant. The trim() function is then used to remove any leading or trailing slashes from the path. */
 	
 	//echo $requestedPage; /* This line is commented out and is not executed. It appears to be for debugging purposes, possibly to echo/print the value of $requestedPage for testing. */
+	
+	
+	function listFiles($dir) {
+		$files = [];
+		$contents = scandir($dir);
+		
+		foreach ($contents as $content) {
+			if ($content != '.' && $content != '..') {
+				$path = $dir . '/' . $content;
+				if (is_dir($path)) {
+					$files = array_merge($files, listFiles($path));
+				} else {
+					$files[] = $path;
+				}
+			}
+		}
+		
+		return $files;
+	}
+
+	// Get the list of files in the pages directory and its subdirectories
+	$files = listFiles("pages/");
+
+	// Check if the requested page exists in the list of files
+	if (!in_array("pages/" . $requestedPage . ".md", $files)) {
+		$pagename = "404";
+	}
+	
+	
+	
 
 	/* This is a catchall, just in case. There is also another catchall in the page layout file, just in case this one doesn't do the trick. */
 	if (!file_exists("pages/" . $requestedPage .".md")) { 

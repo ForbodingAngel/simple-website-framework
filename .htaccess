@@ -2,11 +2,24 @@
     RewriteEngine On
     RewriteBase /
 
-    # If the request is not for a valid file or directory
+    # Rewrite requests to index.php if they are not for valid files or directories
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-
-    # Rewrite all requests to index.php
     RewriteRule ^ index.php [L]
-	RewriteRule ^(([A-Za-z0-9\-]+/)*[A-Za-z0-9\-]+)?$ $1.php
+
+    # Rewrite requests for PHP files without extension
+    RewriteRule ^(([A-Za-z0-9\-]+/)*[A-Za-z0-9\-]+)?$ $1.php
+</IfModule>
+
+<IfModule mod_autoindex.c>
+    # Don't show file indexes
+    Options -Indexes
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Set security headers
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header always set Content-Security-Policy "frame-ancestors 'self'"
+	Header always set Referrer-Policy "strict-origin"
 </IfModule>

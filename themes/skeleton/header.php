@@ -66,6 +66,7 @@
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<meta charset="utf-8">
 	<title><?php if (isset($pagetitle)) { echo ucwords($pagetitle); } else { echo ucwords($pagename); } ?> - <?php echo $WebsiteTitle; ?></title>
+	<meta name="referrer" content="strict-origin">
 	<meta name="description" content="">
 	<meta name="author" content="">
 

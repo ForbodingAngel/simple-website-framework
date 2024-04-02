@@ -143,10 +143,10 @@ You can create links by enclosing the link text in square brackets `[ ]` and the
 
 Images can be included using a similar syntax to links, but with an exclamation mark `!` in front.
 
-![Alt text](images/babykitty.webp)
+![Alt text](pages/images/babykitty.webp)
 
 ```markdown
-![Alt text](images/babykitty.webp)
+![Alt text](pages/images/babykitty.webp)
 ```
 
 ## Footnotes
