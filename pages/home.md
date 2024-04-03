@@ -1,5 +1,5 @@
 <!-- layout:page.php -->
-<!-- layout:page.php -->
+
 <hr>
 
 ---

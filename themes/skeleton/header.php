@@ -18,49 +18,40 @@
 		In summary, this HTML code sets the base URL for all relative URLs within the document to either http:// or https:// depending on the current protocol (http or https), followed by the host name from the request headers ($_SERVER['HTTP_HOST']). */
 	?>
 	
+	
 	<?php
-		/* This looks for and html comment in your markdown file that defines the page title. The format is simply: <!-- pagetitle:My Page Title --> */
-		$markdownContent_pagetitle = file_get_contents("pages/" . $pagename .".md"); 
-		$pattern_pagetitle = '/<!-- pagetitle:(.*?) -->/';
-		// Match the pattern in the Markdown content
-		if (preg_match($pattern_pagetitle, $markdownContent_pagetitle, $matches_pagetitle)) {
-			// Extract the layout file from the matched pattern
-			$pagetitle = trim($matches_pagetitle[1]);
+		// This function helps extract special values from a file based on a given pattern
+		function extractValueFromPattern($filename, $pattern) {
+			// Read the content of the Markdown file
+			$markdownContent = file_get_contents("pages/" . $filename . ".md");
+			// Check if the pattern matches any part of the content
+			if (preg_match($pattern, $markdownContent, $matches)) {
+				// If there's a match, return the extracted value (trimmed to remove any extra spaces)
+				return trim($matches[1]);
+			}
+			// If no match is found, return null
+			return null;
+		}
+
+		// Define an array of patterns and their corresponding variable names
+		$patterns = [
+			'pagetitle' => '/<!-- pagetitle:(.*?) -->/',  // Pattern to extract page title
+			'layout' => '/<!-- layout:(.*?) -->/',        // Pattern to extract layout
+			'pagedate' => '/<!-- date:(.*?) -->/',        // Pattern to extract layout
+			'pagethumbnail' => '/<!-- thumbnail:(.*?) -->/',        // Pattern to extract layout
+			'pageexcerpt' => '/<!-- excerpt:(.*?) -->/',        // Pattern to extract layout
+			'pageauthor' => '/<!-- author:(.*?) -->/',        // Pattern to extract layout
+			// You can add more patterns here as needed
+		];
+
+		// Loop through each pattern and extract its value
+		foreach ($patterns as $variableName => $pattern) {
+			// Use the extractValueFromPattern function to extract value based on each pattern
+			// Store the extracted value in a variable with the name specified in $variableName
+			${$variableName} = extractValueFromPattern($pagename, $pattern);
 		}
 	?>
 	
-	<?php 
-		/* This looks for and html comment in your markdown file that defines what layout file to use. The format is simply: <!-- layout:page.php --> */
-		$markdownContent_layout = file_get_contents("pages/" . $pagename .".md"); 
-		$pattern_layout = '/<!-- layout:(.*?) -->/';
-		// Match the pattern in the Markdown content
-		if (preg_match($pattern_layout, $markdownContent_layout, $matches_layout)) {
-			// Extract the layout file from the matched pattern
-			$layout = trim($matches_layout[1]);
-		}
-	?>
-	
-	<?php 
-		/* This looks for and html comment in your markdown file that defines the date. The format is simply: <!-- date:1/1/1900 --> */
-		$markdownContent_date = file_get_contents("pages/" . $pagename .".md"); 
-		$pattern_date = '/<!-- date:(.*?) -->/';
-		// Match the pattern in the Markdown content
-		if (preg_match($pattern_date, $markdownContent_date, $matches_date)) {
-			// Extract the layout file from the matched pattern
-			$pagedate = trim($matches_date[1]);
-		}
-	?>
-	
-	<?php 
-		/* This looks for and html comment in your markdown file that defines who is the author. The format is simply: <!-- Author:John Doe --> */
-		$markdownContent_author = file_get_contents("pages/" . $pagename .".md"); 
-		$pattern_author = '/<!-- author:(.*?) -->/';
-		// Match the pattern in the Markdown content
-		if (preg_match($pattern_author, $markdownContent_author, $matches_author)) {
-			// Extract the layout file from the matched pattern
-			$pageauthor = trim($matches_author[1]);
-		}
-	?>
 	
 	<!-- Basic Page Needs
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
