@@ -50,6 +50,18 @@
 			'pagekeywords' => '/<!--\s+pagekeywords:(.*?)\s+-->/s',        // Pattern to extract keywords
 			'pageauthor' => '/<!--\s+pageauthor:(.*?)\s+-->/s',            // Pattern to extract author
 			'pagetype' => '/<!--\s+pagetype:(.*?)\s+-->/s',                // Pattern to extract page content type (E.G. website, article, blog, profile, video, music, book, product)
+			
+			/* Here is a nice copy pastable list of tags for posts and pages */
+			/*
+				<!-- pagetitle -->
+				<!-- layout -->
+				<!-- pagedate -->
+				<!-- pagethumbnail -->
+				<!-- pageexcerpt -->
+				<!-- pagekeywords -->
+				<!-- pageauthor -->
+				<!-- pagetype: -->
+			*/
 
 			// You can add more patterns here as needed
 		];
