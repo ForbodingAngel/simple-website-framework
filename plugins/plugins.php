@@ -82,7 +82,6 @@ var href = link.getAttribute(\'href\');
 	?>
 <?php } ?>
 
-
 <?php /* CSS Before and After Slider */ ?>
 <?php if ($beforeAndAfterSlider == true) { ?>
 	<?php $beforeAndAfterSliderContent = '

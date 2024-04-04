@@ -10,3 +10,4 @@
   - [Item](javascript:void(0);)
     - [Drop left menu item](n)
     - [Drop left menu item](#)
+- [License](license)

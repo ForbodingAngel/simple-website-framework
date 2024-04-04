@@ -5,13 +5,15 @@
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<div class="container">
 		<div class="pagetitle">
-		<?php if ($pagename != "home") { ?>
+		<?php if ($pagename != "home" || $showhomepagetitle == true) { ?>
 			<?php if (isset($pagetitle)) { ?>
 				<h1><?php echo $pagetitle; ?></h1>
-				<?php if (isset ($pagedate)) { echo "<p class=\"pagedate\">" . formatDate($pagedate) . "</p>"; } ?>
-				<?php if (isset ($pageauthor)) { echo "<p class=\"pageauthor\">" . $pageauthor . "</p>"; } ?>
+					<?php if ($pagetype == "article") { ?>
+						<?php echo "<p class=\"pagedate\">" . formatDate($pagedate) . "</p>"; ?>
+						<?php echo "<p class=\"pageauthor\">" . $pageauthor . "</p>"; ?>
+					<?php } ?>
 			<?php } else { ?>	
-				<h1><?php echo ucwords($pagename); ?></h1>
+					<h1><?php echo ucwords($pagename); ?></h1>
 			<?php } ?>
 		<?php } ?>
 		</div>
