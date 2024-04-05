@@ -53,13 +53,13 @@
 			
 			/* Here is a nice copy pastable list of tags for posts and pages */
 			/*
-				<!-- pagetitle -->
-				<!-- layout -->
-				<!-- pagedate -->
-				<!-- pagethumbnail -->
-				<!-- pageexcerpt -->
-				<!-- pagekeywords -->
-				<!-- pageauthor -->
+				<!-- pagetitle: -->
+				<!-- layout: -->
+				<!-- pagedate: -->
+				<!-- pagethumbnail: -->
+				<!-- pageexcerpt: -->
+				<!-- pagekeywords: -->
+				<!-- pageauthor: -->
 				<!-- pagetype: -->
 			*/
 
@@ -102,8 +102,8 @@
 	<meta property="og:url" content="<?php echo $currentURL; ?>">
 	
 	<?php /* Set a default image */ ?>
-	<?php if ($pagethumbnail == "") { $pagethumbnail = $WebsiteImage; } ?>
-	<meta property="og:image" content="<?php echo $pagethumbnail; ?>">
+	<?php if ($pageimage == "") { $pageimage = $WebsiteImage; } ?>
+	<meta property="og:image" content="<?php echo $pageimage; ?>">
 	
 	<?php /* Set a default pagetype (E.G. website, article, blog, profile, video, music, book, product) */ ?>
 	<?php if ($pagetype == "") { $pagetype = "website"; }?>
@@ -169,7 +169,7 @@
 			<strong>PageTitle:</strong> <?php echo $pagetitle; ?></br>
 			<strong>Layout:</strong> <?php echo $layout; ?></br>
 			<strong>Date:</strong> <?php echo $pagedate; ?></br>
-			<strong>Thumbnail:</strong> <?php echo $pagethumbnail; ?></br>
+			<strong>Thumbnail:</strong> <?php echo $pageimage; ?></br>
 			<strong>Excerpt:</strong> <?php echo $pageexcerpt; ?></br>
 			<strong>Keywords:</strong> <?php echo $pagekeywords; ?></br>
 			<strong>Author:</strong> <?php echo $pageauthor; ?></br>
