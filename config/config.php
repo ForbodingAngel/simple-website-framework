@@ -1,7 +1,8 @@
 <?php
 	
 	$WebsiteTitle = "Skeleton Website Framework";
-	$WebsiteLanguageCountry = "US"; /* Use country codes ( https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry ) */
+	$WebsiteLanguage = "en"; /* Use Language Codes */
+	$WebsiteLanguageCountry = "US"; /* Use country codes */
 	$WebsiteLanguageLocale = "en_US"; /* Use Country Code plus locale */
 	$WebsiteImage = "images/laptop-computer-writing-technology-web-internet.webp"; /* This image will be used as a default thumbnail any time the page image is not defined */
 	$WebsiteDescription = "Creating websites shouldn't be a daunting task. With Skeleton Website Framework, simplicity and functionality merge seamlessly, offering you a hassle-free experience in website development."; /* Set a default description/excerpt for all pages */
