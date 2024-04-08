@@ -45,7 +45,7 @@
 			'pagetitle' => '/<!--\s+pagetitle:(.*?)\s+-->/s',         // Pattern to extract page title
 			'layout' => '/<!--\s+layout:(.*?)\s+-->/s',                // Pattern to extract layout
 			'pagedate' => '/<!--\s+pagedate:(.*?)\s+-->/s',                // Pattern to extract date
-			'pagethumbnail' => '/<!--\s+pagethumbnail:(.*?)\s+-->/s',      // Pattern to extract thumbnail
+			'pageimage' => '/<!--\s+pageimage:(.*?)\s+-->/s',      // Pattern to extract thumbnail
 			'pageexcerpt' => '/<!--\s+pageexcerpt:(.*?)\s+-->/s',          // Pattern to extract excerpt
 			'pagekeywords' => '/<!--\s+pagekeywords:(.*?)\s+-->/s',        // Pattern to extract keywords
 			'pageauthor' => '/<!--\s+pageauthor:(.*?)\s+-->/s',            // Pattern to extract author
@@ -56,7 +56,7 @@
 				<!-- pagetitle: -->
 				<!-- layout: -->
 				<!-- pagedate: -->
-				<!-- pagethumbnail: -->
+				<!-- pageimage: -->
 				<!-- pageexcerpt: -->
 				<!-- pagekeywords: -->
 				<!-- pageauthor: -->
@@ -113,10 +113,10 @@
 	<meta property="og:locale" content="<?php echo $WebsiteLanguageLocale; ?>">
 	
 	<?php /* Convert date to YYYY-MM-DD*/ ?>
-	<?php
+	<?php	
 		if ($pagedate != "") {
-			$convertedDate = convertDateFormat($pagedate);
-			$pagedate = $convertedDate;
+			$outputDateFormat1 = formatDate($pagedate, 'Y-m-d H:i:s');
+			$pagedate = $outputDateFormat1;
 		} else {
 			// Get the last modified time of the file
 			$pagefilename = "pages/" . $pagename .".md";
@@ -161,8 +161,7 @@
 	<?php } ?>
 	</div>
 	
-	<?php $showmetainfo = false;?>
-	<?php if ($showmetainfo == true) { ?>
+	<?php if(isset($_GET['meta'])) { ?>
 	<div id="debug-overlay-container">
 		<div class="debug-content">
 			<strong>Metadata Information for "<?php echo $pagetitle; ?>"</strong></br>
@@ -179,7 +178,7 @@
 			<strong>Current URL:</strong> <?php echo $currentURL; ?></br>
 			<strong>Language/Locale:</strong> <?php echo $WebsiteLanguageLocale; ?></br>
 		</div>
-	</div>
+	</div>	
 	<?php } ?>
 	
 <?php if ($loadplugins == true) { include 'plugins/plugins.php'; } ?>

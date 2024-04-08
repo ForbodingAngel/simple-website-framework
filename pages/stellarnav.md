@@ -1,5 +1,11 @@
 <!-- pagetitle:StellarNav Menu System -->
 <!-- layout:page.php -->
+<!-- pagedate: -->
+<!-- pageimage: -->
+<!-- pageexcerpt:StellarNav is a complete menu system written in CSS and Javascript. -->
+<!-- pagekeywords:StellarNav, navigation, items, navigation.md, lightweight, multi-level, dropdown menu, responsive, long navigation menus, formatting, syntax, headings, horizontal rules, emphasis, bold, italic, strikethrough, underline, blockquotes, lists, ordered, unordered, code, inline, blocks, tables, links, images, footnotes, conclusion, versatile, easy-to-use, documents, options, theme, breakpoint, menuLabel, sticky, position, openingSpeed, closingDelay, showArrows, phoneBtn, phoneLabel, locationBtn, locationLabel, closeBtn, closeLabel, mobileMode, scrollbarFix, mega dropdowns, columns, drop-left. -->
+<!-- pageauthor:Scary le Poo -->
+<!-- pagetype:website -->
 
 ## This framework uses StellarNav
 

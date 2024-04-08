@@ -1,12 +1,11 @@
 <!-- pagetitle:You can make posts now! -->
-
-<!-- date:03/19/2024 -->
-
-<!-- excerpt:Finally, I got the posts page working. I'm trying to be really careful to make the code easy to work with, but sometimes that's really hard. That said, if it's worth doing, it's worth doing it right, the FIRST time. -->
-
-<!-- thumbnail:xkcdstandards.webp -->
-
 <!-- layout:page.php -->
+<!-- pagedate:03/19/2024 -->
+<!-- pageimage:pages/posts/images/xkcdstandards.webp -->
+<!-- pageexcerpt:Finally, I got the posts page working. I'm trying to be really careful to make the code easy to work with, but sometimes that's really hard. That said, if it's worth doing, it's worth doing it right, the FIRST time. -->
+<!-- pagekeywords:wordpress, control, coding, php, template, system, features, plugins, jquery, gallery, markdown, flat file CMS, design, topheavy, image, lightbox -->
+<!-- pageauthor:Scary le Poo -->
+<!-- pagetype:article -->
 
 ## In the Beginning...
 

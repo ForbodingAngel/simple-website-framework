@@ -1,12 +1,11 @@
 <!-- pagetitle:CSS Smoothscrolling -->
-
-<!-- date:03/21/2024 -->
-
-<!-- excerpt:Clicking anchor links should now cause the browser to smoothly scroll to them. -->
-
-<!-- thumbnail:desk-smartphone-mobile-table-coffee-wood.webp -->
-
 <!-- layout:page.php -->
+<!-- pagedate:03/21/2024 -->
+<!-- pageimage:pages/posts/images/desk-smartphone-mobile-table-coffee-wood.webp -->
+<!-- pageexcerpt:Clicking anchor links should now cause the browser to smoothly scroll to them. -->
+<!-- pagekeywords:smoothscroll,anchors,markdown,link -->
+<!-- pageauthor:Scary le Poo -->
+<!-- pagetype:article -->
 
 # Smoothscroll should be working now
 

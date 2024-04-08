@@ -1,5 +1,13 @@
 <!-- pagetitle:Comprehensive Markdown Tutorial -->
 <!-- layout:page.php -->
+<!-- pagetitle:Comprehensive Markdown Tutorial -->
+<!-- layout:page.php -->
+<!-- pagedate: -->
+<!-- pageimage: -->
+<!-- pageexcerpt:Welcome to the comprehensive Markdown tutorial! Markdown is a lightweight markup language with plain-text formatting syntax. It's commonly used for formatting text on the web and is widely supported across various platforms. -->
+<!-- pagekeywords:Markdown, lightweight, markup language, plain-text, formatting, syntax, headings, horizontal rules, emphasis, bold, italic, strikethrough, underline, blockquotes, lists, ordered, unordered, code, inline, blocks, tables, links, images, footnotes, conclusion, versatile, easy-to-use, documents, experiment -->
+<!-- pageauthor:Scary le Poo -->
+<!-- pagetype:website -->
 
 Welcome to the comprehensive Markdown tutorial! Markdown is a lightweight markup language with plain-text formatting syntax. It's commonly used for formatting text on the web and is widely supported across various platforms.
 

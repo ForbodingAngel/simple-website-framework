@@ -32,6 +32,9 @@
 		/* Rewrite anchor link target urls so that they target the current url */
 		/* This script will dynamically update all anchor links that start with "#" to include the base URL of the current page. This way, relative URLs will remain intact, and only the anchor links will be modified to include the current page's path. */
 		$anchorLinkCurrentURLRewrite = true;
+		
+		/* If meta box is active, do we want to rewrite all urls so that we can stay in meta box mode? */
+		$metaInfoBoxRewriteURL = true;
         
         /* Before and After Image Slider */
         $beforeAndAfterSlider = true;

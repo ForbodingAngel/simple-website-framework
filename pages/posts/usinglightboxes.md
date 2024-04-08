@@ -1,12 +1,11 @@
 <!-- pagetitle:Adding Lightbox Support -->
-
-<!-- date:03/20/2024 -->
-
-<!-- excerpt:Now there are lightboxes! Lets explore how to use them. -->
-
-<!-- thumbnail:coding-computer-thumb.webp -->
-
 <!-- layout:page.php -->
+<!-- pagedate:03/20/2024 -->
+<!-- pageimage:pages/posts/images/coding-computer-thumb.webp -->
+<!-- pageexcerpt:Now there are lightboxes! Lets explore how to use them. -->
+<!-- pagekeywords:lightbox,gallery,single,image -->
+<!-- pageauthor:Scary le Poo -->
+<!-- pagetype:article -->
 
 # Lightboxes are a thing now
 

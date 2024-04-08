@@ -1,44 +1,40 @@
 <?php
 
-/* Format date into a prettier string*/
-function formatDate($dateString) {
-    // Check if the input date string is empty
-    if (empty($dateString)) {
-        return ''; // or handle the error as per your requirement
+function formatDate($inputDate, $outputDateFormat) {
+    // Parse input date
+    $dateTime = date_create_from_format('Y-m-d H:i:s', $inputDate);
+    if (!$dateTime) {
+        $dateTime = date_create_from_format('l F jS, Y', $inputDate);
+    }
+    if (!$dateTime) {
+        $dateTime = date_create_from_format('m/d/Y', $inputDate);
     }
     
-    // Attempt to create a DateTime object from the input date string
-    $date1 = DateTime::createFromFormat('m/d/Y', $dateString);
-    
-    // Check if the DateTime object was created successfully
-    if ($date1 === false) {
-        return ''; // or handle the error as per your requirement
+    if (!$dateTime) {
+        // Handle other formats if needed
+        return false;
     }
     
-    // Format the DateTime object into a prettier string
-    return $date1->format('F jS, Y');
+    // Output formatted date
+    switch ($outputDateFormat) {
+        case 'Y-m-d H:i:s':
+            return $dateTime->format('Y-m-d H:i:s');
+        case 'pretty':
+            return $dateTime->format('l F jS, Y');
+        default:
+            return false;
+    }
 }
 
-/* Format date into YYYY-MM-DD format for use in opengraph meta tags */
-function convertDateFormat($date2) {
-    // Split the date into parts using "/"
-    $dateParts = explode('/', $date2);
-    
-    // Rearrange the parts to form the YYYY-MM-DD format
-    $formattedDate_OG = $dateParts[2] . '-' . str_pad($dateParts[0], 2, '0', STR_PAD_LEFT) . '-' . str_pad($dateParts[1], 2, '0', STR_PAD_LEFT);
-    
-    return $formattedDate_OG;
-}
+// Example usage:
 
-/* Example usage:
+/*
+	$inputDate = "4/20/1930";
+	$outputDateFormat1 = formatDate($inputDate, 'Y-m-d H:i:s');
+	$outputDateFormat2 = formatDate($inputDate, 'pretty');
 
-$dateString = '4/1/1900';
-$formattedDate = formatDate($dateString);
-echo $formattedDate; // Output: April 1st, 1900
-
-You can also echo it directly like so:
-echo formatDate($dateString);
-
+	echo "Output Date Format 1:" . $outputDateFormat1;
+	echo "Output Date Format 2:" . $outputDateFormat2";
 */
 
 ?>

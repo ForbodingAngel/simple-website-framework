@@ -37,8 +37,8 @@ var href = link.getAttribute(\'href\');
 <?php } ?>
 
 <?php /* Add a class automatically to anchor links (Typically used for setting scroll-margin-top properties so that navigation bars don't cover the content */ ?>
-<?php if ($anchorLinkAutoClass == true) { ?>
-	<?php $anchorLinkAutoClassContent = '
+<?php if ($anchorLinkAutoClass == true) {
+	$anchorLinkAutoClassContent = '
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			// Get all anchor links
@@ -53,12 +53,11 @@ var href = link.getAttribute(\'href\');
 	</script>
 	';
 	$pluginCalledBelowContent = $pluginCalledBelowContent . $anchorLinkAutoClassContent;
-	?>
-<?php } ?>
+} ?>
 
 <?php /* Add a class automatically to anchor links and rewrite the target */ ?>
-<?php if ($anchorLinkCurrentURLRewrite == true) { ?>
-	<?php $anchorLinkCurrentURLRewriteContent = '
+<?php if ($anchorLinkCurrentURLRewrite == true) {
+	$anchorLinkCurrentURLRewriteContent = '
 	<script>
 		// Get the base URL of the current page
 		var baseURL = window.location.protocol + \'//\' + window.location.host + window.location.pathname;
@@ -79,18 +78,42 @@ var href = link.getAttribute(\'href\');
 	</script>
 	';
 	$pluginCalledBelowContent = $pluginCalledBelowContent . $anchorLinkCurrentURLRewriteContent;
-	?>
-<?php } ?>
+} ?>
+
+<?php /* If meta info is being shown, append ?meta=yes to every link so that you can easily browse the site in meta mode */ ?>
+<?php if ($metaInfoBoxRewriteURL == true) {
+	if(isset($_GET['meta'])) {
+		$metaInfoBoxRewriteURLContent = '
+		<script>
+			// Get all the links on the page
+			const links = document.querySelectorAll(\'a\');
+
+			// Loop through each link
+			links.forEach(link => {
+				// Get the current href attribute value
+				let href = link.getAttribute(\'href\');
+				// Check if href is not null or empty
+				if (href) {
+					// Append "?meta=yes" to the href attribute
+					href += (href.includes(\'?\') ? \'&\' : \'?\') + \'meta=yes\';
+					// Update the href attribute with the modified value
+					link.setAttribute(\'href\', href);
+				}
+			});
+		</script>
+		';
+		$pluginCalledBelowContent = $pluginCalledBelowContent . $metaInfoBoxRewriteURLContent;
+	}
+} ?>
 
 <?php /* CSS Before and After Slider */ ?>
-<?php if ($beforeAndAfterSlider == true) { ?>
-	<?php $beforeAndAfterSliderContent = '
+<?php if ($beforeAndAfterSlider == true) {
+	$beforeAndAfterSliderContent = '
     <link type="text/css" href="plugins/css-before-and-after-image-slider/css/main.css" rel="stylesheet" />
     <script src="plugins/css-before-and-after-image-slider/js/main.js"></script>
 	';
 	$pluginCalledBelowContent = $pluginCalledBelowContent . $beforeAndAfterSliderContent;
-	?>
-<?php } ?>
+} ?>
 
 
 <?php /* FontAwesome 4.7.0 */ ?>
@@ -99,11 +122,10 @@ var href = link.getAttribute(\'href\');
 <?php } ?>
 
 <?php /* yBox 4.7.0 */ ?>
-<?php if ($yBox == true) { ?>
-	<?php $yBoxScriptContent = '
+<?php if ($yBox == true) {
+	$yBoxScriptContent = '
 	<link rel="stylesheet" href="plugins/yBox-main/dist/css/ybox.min.css" />
 	<script type="text/javascript" src="plugins/yBox-main/dist/js/ybox.min.js?lang=he"></script>
 	';
 	$pluginCalledBelowContent = $pluginCalledBelowContent . $yBoxScriptContent;
-	?>
-<?php } ?>
+} ?>

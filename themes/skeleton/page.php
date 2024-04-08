@@ -9,7 +9,8 @@
 			<?php if (isset($pagetitle)) { ?>
 				<h1><?php echo $pagetitle; ?></h1>
 					<?php if ($pagetype == "article") { ?>
-						<?php echo "<p class=\"pagedate\">" . formatDate($pagedate) . "</p>"; ?>
+					
+						<?php echo "<p class=\"pagedate\">" . formatDate($pagedate, 'pretty') . "</p>"; ?>
 						<?php echo "<p class=\"pageauthor\">" . $pageauthor . "</p>"; ?>
 					<?php } ?>
 			<?php } else { ?>	

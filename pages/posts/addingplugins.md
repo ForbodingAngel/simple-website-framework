@@ -1,9 +1,11 @@
 <!-- pagetitle:Adding Plugins -->
-<!-- date:03/30/2024 -->
-<!-- author:Scary le Poo -->
-<!-- excerpt:Come and learn how we can add plugins. It's quite simple really. -->
-<!-- thumbnail:plugins.webp -->
 <!-- layout:page.php -->
+<!-- pagedate:03/30/2024 -->
+<!-- pageimage:pages/posts/images/plugins.webp -->
+<!-- pageexcerpt:Come and learn how we can add plugins. It's quite simple really. -->
+<!-- pagekeywords:Plugin, Structure, File, PHP, CSS, JavaScript, Inclusion, Section, Conditional, Loading, Mechanism, Configuration, Variable, True, Enabled, Include, Files, Concatenate, Script, End, Page, Test, Changes, Development, Environment, Integration, Consistency, Existing, Code, Best Practices, Organizing, Stylesheets -->
+<!-- pageauthor:Scary le Poo -->
+<!-- pagetype:article -->
 
 To add a new plugin to the existing structure provided in the file, follow these steps:
 

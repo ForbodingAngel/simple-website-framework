@@ -1,8 +1,11 @@
 <!-- pagetitle:Styling the Post Archives page -->
-<!-- date:03/31/2024 -->
-<!-- excerpt:This is an overview of how you can set up the post archives page so that you can style all of the elements. -->
-<!-- thumbnail:plugins.webp -->
 <!-- layout:page.php -->
+<!-- pagedate:03/31/2024 -->
+<!-- pageimage:pages/posts/images/cssbeforeandaftersliderexample.gif -->
+<!-- pageexcerpt:This is an overview of how you can set up the post archives page so that you can style all of the elements. -->
+<!-- pagekeywords:HTML, Structure, PHP, CSS, Rules, Styling, Classes, Control, Maintainability, Design, Preferences, Apply, Modify, Echo, Link, Test, Adjust -->
+<!-- pageauthor:Scary le Poo -->
+<!-- pagetype:article -->
 
 Here's how you can rewrite the documentation to style the output by wrapping each piece of content in `<div>` elements with appropriate classes:
 

@@ -1,5 +1,11 @@
 <!-- pagetitle:The Unlicense -->
 <!-- layout:page.php -->
+<!-- pagedate: -->
+<!-- pageimage: -->
+<!-- pageexcerpt:Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means. -->
+<!-- pagekeywords:public domain, free, unencumbered, software, copy, modify, publish, use, compile, sell, distribute, source code, compiled binary, commercial, non-commercial, copyright laws, dedication, relinquishment, warranty, express, implied, merchantability, fitness, purpose, noninfringement, liability, claim, damages, action, contract, tort, connection, use, other dealings, jurisdiction -->
+<!-- pageauthor:Scary le Poo -->
+<!-- pagetype:website -->
 
 This is free and unencumbered software released into the public domain.
 

@@ -1,9 +1,12 @@
 <!-- pagetitle:Basic SEO -->
-<!-- date:04/03/2024 -->
-<!-- author:Scary le Poo -->
-<!-- excerpt:HTML meta tags play a crucial role in search engine optimization (SEO) by providing information about a webpage to search engines. While there isn't an exhaustive list of meta tags that are "needed" for good SEO, there are several important ones that can significantly impact search engine rankings and the visibility of a webpage. -->
-<!-- thumbnail:plugins.webp -->
 <!-- layout:page.php -->
+<!-- pagedate:4/7/2024 -->
+<!-- pageimage:pages/posts/images/plugins.webp -->
+<!-- pageexcerpt:Meta tags and the role that they play in basic SEO. -->
+<!-- pagekeywords:meta,tags,keywords,open,graph -->
+<!-- pageauthor:Scary le Poo -->
+<!-- pagetype:article -->
+
 
 HTML meta tags play a crucial role in search engine optimization (SEO) by providing information about a webpage to search engines. While there isn't an exhaustive list of meta tags that are "needed" for good SEO, there are several important ones that can significantly impact search engine rankings and the visibility of a webpage. Here are some key meta tags commonly used for SEO:
 
