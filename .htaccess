@@ -2,6 +2,10 @@
     RewriteEngine On
     RewriteBase /
 
+    # Redirect HTTP to HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
     # Redirect non-www to www
     RewriteCond %{HTTP_HOST} !^www\. [NC]
     RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
@@ -13,6 +17,7 @@
 
     # Rewrite requests for PHP files without extension
     RewriteRule ^(([A-Za-z0-9\-]+/)*[A-Za-z0-9\-]+)?$ $1.php
+	
 </IfModule>
 
 <IfModule mod_autoindex.c>

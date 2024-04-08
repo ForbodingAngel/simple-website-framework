@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#">
 <head>
-	<?php
-		$currentURL = 'http://' . $_SERVER['HTTP_HOST'] . strtok($_SERVER['REQUEST_URI'], '?'); // Get the URL without the query string
-
-		if (!empty($_SERVER['QUERY_STRING'])) {
-			parse_str($_SERVER['QUERY_STRING'], $queryParams); // Parse query string into array
-			unset($queryParams['meta']); // Remove specific query parameter 'meta'
-			$query = http_build_query($queryParams); // Rebuild the query string without 'meta' parameter
-			if ($query) {
-				$currentURL .= '?' . $query; // Append the modified query string
-			}
-		}
-	?>
-	
 	<base href="<?php echo 'http' . (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 's' : '') . '://' . $_SERVER['HTTP_HOST'] . '/'; ?>">
 	<?php 
 		/* This HTML code snippet sets the base URL for all relative URLs within the document using the <base> element. Here's what each part of the PHP code within the href attribute does:
@@ -29,55 +16,6 @@
 		'/': This part appends a trailing slash to ensure that the base URL is properly formatted.
 
 		In summary, this HTML code sets the base URL for all relative URLs within the document to either http:// or https:// depending on the current protocol (http or https), followed by the host name from the request headers ($_SERVER['HTTP_HOST']). */
-	?>
-	
-	
-	<?php
-		// This function helps extract special values from a file based on a given pattern
-		function extractValueFromPattern($filename, $pattern) {
-			// Read the content of the Markdown file
-			$markdownContent = file_get_contents("pages/" . $filename . ".md");
-			// Check if the pattern matches any part of the content
-			if (preg_match($pattern, $markdownContent, $matches)) {
-				// If there's a match, return the extracted value (trimmed to remove any extra spaces)
-				return trim($matches[1]);
-			}
-			// If no match is found, initialize the variable with an empty string. We do this so that the page doesn't die due to errors.
-			return null;
-		}
-
-		// Define an array of patterns and their corresponding variable names
-		$patterns = [
-			'pagetitle' => '/<!--\s+pagetitle:(.*?)\s+-->/s',         // Pattern to extract page title
-			'pagelayout' => '/<!--\s+pagelayout:(.*?)\s+-->/s',                // Pattern to extract layout
-			'pagedate' => '/<!--\s+pagedate:(.*?)\s+-->/s',                // Pattern to extract date
-			'pageimage' => '/<!--\s+pageimage:(.*?)\s+-->/s',      // Pattern to extract thumbnail
-			'pageexcerpt' => '/<!--\s+pageexcerpt:(.*?)\s+-->/s',          // Pattern to extract excerpt
-			'pagekeywords' => '/<!--\s+pagekeywords:(.*?)\s+-->/s',        // Pattern to extract keywords
-			'pageauthor' => '/<!--\s+pageauthor:(.*?)\s+-->/s',            // Pattern to extract author
-			'pagetype' => '/<!--\s+pagetype:(.*?)\s+-->/s',                // Pattern to extract page content type (E.G. website, article, blog, profile, video, music, book, product)
-			
-			/* Here is a nice copy pastable list of tags for posts and pages */
-			/*
-				<!-- pagetitle: -->
-				<!-- pagelayout: -->
-				<!-- pagedate: -->
-				<!-- pageimage: -->
-				<!-- pageexcerpt: -->
-				<!-- pagekeywords: -->
-				<!-- pageauthor: -->
-				<!-- pagetype: -->
-			*/
-
-			// You can add more patterns here as needed
-		];
-
-		// Loop through each pattern and extract its value
-		foreach ($patterns as $variableName => $pattern) {
-			// Use the extractValueFromPattern function to extract value based on each pattern
-			// Store the extracted value in a variable with the name specified in $variableName
-			${$variableName} = extractValueFromPattern($pagename, $pattern);
-		}
 	?>
 	
 	<!-- Basic Page Needs
@@ -158,35 +96,16 @@
 	<div class="header">	
 	<?php if ($pagename == "home") { ?>
 		<div class="hero">
-			<h1 class="herotext"><?php echo $WebsiteTitle; ?></h1>
+			<span class="herotext"><?php echo $WebsiteTitle; ?></span>
 		</div>
 	<?php } else { ?>
 		<div class="herosmall">
-			<h1 class="herotext"><?php echo $WebsiteTitle; ?></h1>
+			<span class="herotext"><?php echo $WebsiteTitle; ?></span>
 		</div>
 	<?php } ?>
 	</div>
 	
-	<?php if(isset($_GET['meta'])) { ?>
-	<div id="debug-overlay-container">
-		<div class="debug-content">
-			<strong>Metadata Information for "<?php echo $pagetitle; ?>"</strong></br>
-			<strong>PageTitle:</strong> <?php echo $pagetitle; ?></br>
-			<strong>Layout:</strong> <?php echo $pagelayout; ?></br>
-			<strong>Date:</strong> <?php echo $pagedate; ?></br>
-			<strong>Thumbnail:</strong> <?php echo $pageimage; ?></br>
-			<strong>Excerpt:</strong> <?php echo $pageexcerpt; ?></br>
-			<strong>Keywords:</strong> <?php echo $pagekeywords; ?></br>
-			<strong>Author:</strong> <?php echo $pageauthor; ?></br>
-			<strong>Type:</strong> <?php echo $pagetype; ?></br>
-			<strong>Website Title:</strong> <?php echo $WebsiteTitle; ?></br>
-			<strong>Language/Country:</strong> <?php echo $WebsiteLanguageCountry; ?></br>
-			<strong>Current URL:</strong> <?php echo $currentURL; ?></br>
-			<strong>Language/Locale:</strong> <?php echo $WebsiteLanguageLocale; ?></br>
-		</div>
-	</div>	
-	<?php } ?>
-	
+<?php include 'required/metainfo.php'; ?>
 <?php if ($loadplugins == true) { include 'plugins/plugins.php'; } ?>
 <?php include 'navigation.php'; ?>
 <?php include $pagelayout; ?>

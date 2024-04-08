@@ -71,6 +71,7 @@ a:hover::before {
 
 /* END Scrolling underline text effect */
 
+
 .pagetitle h1 {
 	max-width: 100%;
 	border-bottom: 1px solid #E1E1E1;
@@ -137,7 +138,7 @@ ol, ul {
 	/* Both Chrome and FF support vmax */
 }
 
-h1.herotext {
+span.herotext {
 	font-size: 10vmin;
 	color: #fff;
 	text-shadow: 3px 3px 2px #000;

@@ -10,3 +10,7 @@
 <?php include 'navigation-options.php' ?>
 </body>
 </html>
+<?php 
+	// Flush the output buffer and send the content to the client
+	ob_end_flush();
+?>
