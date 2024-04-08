@@ -1,4 +1,4 @@
-<!-- pagetitle:Welcome to Skeleton Website Framework -->
+<!-- pagetitle:Skeleton Website Framework -->
 <!-- pagelayout:page.php -->
 <!-- pagedate: -->
 <!-- pagethumbnail:images/laptop-computer-writing-technology-web-internet.webp -->
