@@ -2,9 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#">
 <head>
 	<?php
-		$currentURL = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+		$currentURL = 'http://' . $_SERVER['HTTP_HOST'] . strtok($_SERVER['REQUEST_URI'], '?'); // Get the URL without the query string
+
 		if (!empty($_SERVER['QUERY_STRING'])) {
-			$currentURL .= '?' . $_SERVER['QUERY_STRING'];
+			parse_str($_SERVER['QUERY_STRING'], $queryParams); // Parse query string into array
+			unset($queryParams['meta']); // Remove specific query parameter 'meta'
+			$query = http_build_query($queryParams); // Rebuild the query string without 'meta' parameter
+			if ($query) {
+				$currentURL .= '?' . $query; // Append the modified query string
+			}
 		}
 	?>
 	
