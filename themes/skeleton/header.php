@@ -43,7 +43,7 @@
 		// Define an array of patterns and their corresponding variable names
 		$patterns = [
 			'pagetitle' => '/<!--\s+pagetitle:(.*?)\s+-->/s',         // Pattern to extract page title
-			'layout' => '/<!--\s+layout:(.*?)\s+-->/s',                // Pattern to extract layout
+			'pagelayout' => '/<!--\s+layout:(.*?)\s+-->/s',                // Pattern to extract layout
 			'pagedate' => '/<!--\s+pagedate:(.*?)\s+-->/s',                // Pattern to extract date
 			'pageimage' => '/<!--\s+pageimage:(.*?)\s+-->/s',      // Pattern to extract thumbnail
 			'pageexcerpt' => '/<!--\s+pageexcerpt:(.*?)\s+-->/s',          // Pattern to extract excerpt
@@ -54,7 +54,7 @@
 			/* Here is a nice copy pastable list of tags for posts and pages */
 			/*
 				<!-- pagetitle: -->
-				<!-- layout: -->
+				<!-- pagelayout: -->
 				<!-- pagedate: -->
 				<!-- pageimage: -->
 				<!-- pageexcerpt: -->

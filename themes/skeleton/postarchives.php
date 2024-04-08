@@ -21,8 +21,6 @@
 					// Folder containing the Article files
 					$postsFolder = 'posts';
 
-					
-
 					// Array to store file details
 					$fileDetails = array();
 

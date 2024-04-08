@@ -1,5 +1,5 @@
 <!-- pagetitle:Welcome to Skeleton Website Framework -->
-<!-- layout:page.php -->
+<!-- pagelayout:page.php -->
 <!-- pagedate: -->
 <!-- pagethumbnail:images/laptop-computer-writing-technology-web-internet.webp -->
 <!-- pageexcerpt:Creating websites shouldn't be a daunting task. With Skeleton Website Framework, simplicity and functionality merge seamlessly, offering you a hassle-free experience in website development. -->

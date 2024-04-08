@@ -1,5 +1,5 @@
 <!-- pagetitle:Site Navigation -->
-<!-- layout:page.php -->
+<!-- pagelayout:page.php -->
 <!-- pagedate: -->
 <!-- pageimage: -->
 <!-- pageexcerpt:This page is the Navigation for the site. -->

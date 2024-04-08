@@ -1,5 +1,5 @@
 <!-- pagetitle:Adding Lightbox Support -->
-<!-- layout:page.php -->
+<!-- pagelayout:page.php -->
 <!-- pagedate:03/20/2024 -->
 <!-- pageimage:pages/posts/images/coding-computer-thumb.webp -->
 <!-- pageexcerpt:Now there are lightboxes! Lets explore how to use them. -->

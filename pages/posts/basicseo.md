@@ -1,5 +1,5 @@
 <!-- pagetitle:Basic SEO -->
-<!-- layout:page.php -->
+<!-- pagelayout:page.php -->
 <!-- pagedate:4/7/2024 -->
 <!-- pageimage:pages/posts/images/plugins.webp -->
 <!-- pageexcerpt:Meta tags and the role that they play in basic SEO. -->

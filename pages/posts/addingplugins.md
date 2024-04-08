@@ -1,5 +1,5 @@
 <!-- pagetitle:Adding Plugins -->
-<!-- layout:page.php -->
+<!-- pagelayout:page.php -->
 <!-- pagedate:03/30/2024 -->
 <!-- pageimage:pages/posts/images/plugins.webp -->
 <!-- pageexcerpt:Come and learn how we can add plugins. It's quite simple really. -->

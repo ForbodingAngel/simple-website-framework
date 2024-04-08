@@ -1,5 +1,5 @@
 <!-- pagetitle:Styling the Post Archives page -->
-<!-- layout:page.php -->
+<!-- pagelayout:page.php -->
 <!-- pagedate:03/31/2024 -->
 <!-- pageimage:pages/posts/images/cssbeforeandaftersliderexample.gif -->
 <!-- pageexcerpt:This is an overview of how you can set up the post archives page so that you can style all of the elements. -->
