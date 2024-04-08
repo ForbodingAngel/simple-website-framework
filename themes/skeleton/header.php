@@ -43,7 +43,7 @@
 		// Define an array of patterns and their corresponding variable names
 		$patterns = [
 			'pagetitle' => '/<!--\s+pagetitle:(.*?)\s+-->/s',         // Pattern to extract page title
-			'pagelayout' => '/<!--\s+layout:(.*?)\s+-->/s',                // Pattern to extract layout
+			'pagelayout' => '/<!--\s+pagelayout:(.*?)\s+-->/s',                // Pattern to extract layout
 			'pagedate' => '/<!--\s+pagedate:(.*?)\s+-->/s',                // Pattern to extract date
 			'pageimage' => '/<!--\s+pageimage:(.*?)\s+-->/s',      // Pattern to extract thumbnail
 			'pageexcerpt' => '/<!--\s+pageexcerpt:(.*?)\s+-->/s',          // Pattern to extract excerpt
@@ -166,7 +166,7 @@
 		<div class="debug-content">
 			<strong>Metadata Information for "<?php echo $pagetitle; ?>"</strong></br>
 			<strong>PageTitle:</strong> <?php echo $pagetitle; ?></br>
-			<strong>Layout:</strong> <?php echo $layout; ?></br>
+			<strong>Layout:</strong> <?php echo $pagelayout; ?></br>
 			<strong>Date:</strong> <?php echo $pagedate; ?></br>
 			<strong>Thumbnail:</strong> <?php echo $pageimage; ?></br>
 			<strong>Excerpt:</strong> <?php echo $pageexcerpt; ?></br>
@@ -183,5 +183,5 @@
 	
 <?php if ($loadplugins == true) { include 'plugins/plugins.php'; } ?>
 <?php include 'navigation.php'; ?>
-<?php include $layout; ?>
+<?php include $pagelayout; ?>
 <?php include 'footer.php'; ?>
