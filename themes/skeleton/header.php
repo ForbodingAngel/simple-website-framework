@@ -22,7 +22,10 @@
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<meta charset="utf-8">
 	<title><?php if ($pagename != "home") { if (isset($pagetitle)) { echo ucwords($pagetitle) . " - "; } else { echo ucwords($pagename) . " - "; }} echo $WebsiteTitle; ?></title>
-	<html lang="<?php echo $WebsiteLanguageCountry; ?>">
+	
+	<?php /* Set Language Country Code */ ?>
+	<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" lang="<?php echo $WebsiteLanguageCountry; ?>">
+	
 	<meta name="referrer" content="strict-origin">
 	<link rel="canonical" href="<?php echo $currentURL; ?>">
 	
