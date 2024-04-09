@@ -1,5 +1,4 @@
 <?php
-	
 	$WebsiteTitle = "Skeleton Website Framework";
 	$WebsiteLanguage = "en"; /* Use Language Codes */
 	$WebsiteLanguageCountry = "US"; /* Use country codes */

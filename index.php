@@ -1,4 +1,13 @@
 <?php
+	$enableHTMLCacheServe = false;
+
+	// Enable Gzip compression for HTML output
+	if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) { // Check if the client supports Gzip compression
+		ob_start("ob_gzhandler"); // Start output buffering with Gzip compression handler
+	} else {
+		ob_start(); // Start regular output buffering
+	}
+
 	// Parse the requested URL
 	
 	$requestUri = $_SERVER['REQUEST_URI']; /* This line retrieves the requested URI from the $_SERVER superglobal array. $_SERVER['REQUEST_URI'] contains the URI (Uniform Resource Identifier) that was requested by the client. */
@@ -52,10 +61,14 @@
 	}
 	
 	/* In summary, this code retrieves the requested URI, extracts the path component, and determines the name of the requested page based on the path. If no specific page is requested (e.g., accessing the root URL), it sets the page name to "home". */
-	
+	if ($enableHTMLCacheServe == true) { include './required/top-cache.php'; }
 	include './required/initialize-markdown-parser.php';
 	include './required/helperfunctions.php';
 	include './config/config.php';
 	include './required/vitalfunctions.php';
 	include './themes/' . $theme . '/header.php';
+	if ($enableHTMLCacheServe == true) { include './required/bottom-cache.php'; }
+	
+	// Flush the output buffer and send the content to the client
+	ob_end_flush();
 ?>

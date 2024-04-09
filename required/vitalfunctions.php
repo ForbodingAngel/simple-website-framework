@@ -1,13 +1,4 @@
 <?php
-	// Enable Gzip compression for HTML output
-	if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) { // Check if the client supports Gzip compression
-		ob_start("ob_gzhandler"); // Start output buffering with Gzip compression handler
-	} else {
-		ob_start(); // Start regular output buffering
-	}
-?>
-
-<?php
 	$currentURL = 'http://' . $_SERVER['HTTP_HOST'] . strtok($_SERVER['REQUEST_URI'], '?'); // Get the URL without the query string
 
 	if (!empty($_SERVER['QUERY_STRING'])) {
