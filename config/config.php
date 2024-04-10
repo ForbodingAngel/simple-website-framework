@@ -1,4 +1,9 @@
 <?php
+<<<<<<< HEAD
+=======
+	
+	$WebsiteURL = "https://" . $_SERVER['HTTP_HOST'];
+>>>>>>> 6b39967 (Add website url I think)
 	$WebsiteTitle = "Skeleton Website Framework";
 	$WebsiteLanguage = "en"; /* Use Language Codes */
 	$WebsiteLanguageCountry = "US"; /* Use country codes */
