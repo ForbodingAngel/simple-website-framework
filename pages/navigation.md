@@ -1,5 +1,5 @@
 <!-- pagetitle:Site Navigation -->
-<!-- pagelayout:page.php -->
+<!-- pagelayout:page -->
 <!-- pagedate: -->
 <!-- pageimage: -->
 <!-- pageexcerpt:This page is the Navigation for the site. -->
@@ -7,14 +7,19 @@
 <!-- pageauthor: -->
 <!-- pagetype:website -->
 - [Home]()
+- [Documentation](javascript:void(0);)
+	- [Introduction](documentation/introduction)
+	- [For End Users](javascript:void(0);)
+		- [Creating Pages](documentation/creatingpages)
+	- [For Developers](javascript:void(0);)
 - [Markdown Tutorial](markdowntutorial)
 - [Jac](jac)
 - [Posts/Archives](archives)
 - [Dropdown Item](javascript:void(0);)<!-- Use javascript:void(0); as the link target on top level items to avoid them being clickable and thus confusing visitors -->
-  - [Navigation Tutorial](stellarnav)
-  - [Site Navigation File](navigation)
-  - [Enable Meta Mode](?meta=yes)
-  - [Item](javascript:void(0);)
-    - [Drop left menu item](n)
-    - [Drop left menu item](#)
+	- [Navigation Tutorial](stellarnav)
+	- [Site Navigation File](navigation)
+	- [Enable Meta Mode](?meta=yes)
+	- [Item](javascript:void(0);)
+		- [Drop left menu item](n)
+		- [Drop left menu item](#)
 - [License](license)

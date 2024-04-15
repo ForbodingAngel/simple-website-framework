@@ -1,5 +1,5 @@
 <!-- pagetitle:Subfolder Test -->
-<!-- pagelayout:page.php -->
+<!-- pagelayout:page -->
 <!-- pagedate: -->
 <!-- pageimage: -->
 <!-- pageexcerpt:This page exists to test pages in subfolders -->

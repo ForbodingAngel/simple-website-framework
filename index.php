@@ -59,8 +59,9 @@
 	} else {
 		$pagename = strtolower($requestedPage);
 	}
-	
 	/* In summary, this code retrieves the requested URI, extracts the path component, and determines the name of the requested page based on the path. If no specific page is requested (e.g., accessing the root URL), it sets the page name to "home". */
+	
+	
 	if ($enableHTMLCacheServe == true) { include './required/top-cache.php'; }
 	include './required/initialize-markdown-parser.php';
 	include './required/helperfunctions.php';

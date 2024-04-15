@@ -1,5 +1,5 @@
 <!-- pagetitle:Comprehensive Markdown Tutorial -->
-<!-- pagelayout:page.php -->
+<!-- pagelayout:page -->
 <!-- pagedate: -->
 <!-- pageimage: -->
 <!-- pageexcerpt:Welcome to the comprehensive Markdown tutorial! Markdown is a lightweight markup language with plain-text formatting syntax. It's commonly used for formatting text on the web and is widely supported across various platforms. -->

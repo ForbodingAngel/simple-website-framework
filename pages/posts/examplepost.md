@@ -1,5 +1,5 @@
 <!-- pagetitle:You can make posts now! -->
-<!-- pagelayout:page.php -->
+<!-- pagelayout:page -->
 <!-- pagedate:03/19/2024 -->
 <!-- pageimage:pages/posts/images/xkcdstandards.webp -->
 <!-- pageexcerpt:Finally, I got the posts page working. I'm trying to be really careful to make the code easy to work with, but sometimes that's really hard. That said, if it's worth doing, it's worth doing it right, the FIRST time. -->

@@ -1,5 +1,5 @@
 <!-- pagetitle:CSS before and after slider -->
-<!-- pagelayout:page.php -->
+<!-- pagelayout:page -->
 <!-- pagedate:03/20/2024 -->
 <!-- pageimage:pages/posts/images/cssbeforeandaftersliderexample.gif -->
 <!-- pageexcerpt:This was the first plugin I added. I never actually tried it though... Whoops? -->

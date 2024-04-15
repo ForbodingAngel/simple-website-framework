@@ -112,5 +112,5 @@
 <?php include 'required/metainfo.php'; ?>
 <?php if ($loadplugins == true) { include 'plugins/plugins.php'; } ?>
 <?php include 'navigation.php'; ?>
-<?php include $pagelayout; ?>
+<?php include $pagelayout . ".php" ?>
 <?php include 'footer.php'; ?>

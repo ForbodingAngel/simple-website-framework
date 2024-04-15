@@ -1,5 +1,5 @@
 <!-- pagetitle:Jac is Awesome! -->
-<!-- pagelayout:page.php -->
+<!-- pagelayout:page -->
 <!-- pagedate: -->
 <!-- pageimage: -->
 <!-- pageexcerpt:Jac is amazing! She is the best girlfriend ever! -->

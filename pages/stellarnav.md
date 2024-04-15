@@ -1,5 +1,5 @@
 <!-- pagetitle:StellarNav Menu System -->
-<!-- pagelayout:page.php -->
+<!-- pagelayout:page -->
 <!-- pagedate: -->
 <!-- pageimage: -->
 <!-- pageexcerpt:StellarNav is a complete menu system written in CSS and Javascript. -->

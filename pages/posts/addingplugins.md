@@ -1,5 +1,5 @@
 <!-- pagetitle:Adding Plugins -->
-<!-- pagelayout:page.php -->
+<!-- pagelayout:page -->
 <!-- pagedate:03/30/2024 -->
 <!-- pageimage:pages/posts/images/plugins.webp -->
 <!-- pageexcerpt:Come and learn how we can add plugins. It's quite simple really. -->
@@ -14,7 +14,7 @@ To add a new plugin to the existing structure provided in the file, follow these
    - Ensure your plugin is compatible with the structure and requirements of the existing code.
 
 **Open the File**:
-   - Open the PHP file where you want to add your plugin. In this case, it is located at plugins/plugins.php.
+   - Open the PHP file where you want to add your plugin. In this case, it is located at plugins/plugins.php
 
 **Identify Plugin Inclusion Section**:
    - Locate the section in the file where other plugins are being included. Plugins are conditionally included based on certain configuration variables like `$jQuery`, `$anchorLinkAutoClass`, `$beforeAndAfterSlider`, `$fontAwesome`, and `$yBox`.

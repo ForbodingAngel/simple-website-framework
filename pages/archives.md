@@ -1,5 +1,5 @@
 <!-- pagetitle:Post Archives -->
-<!-- pagelayout:postarchives.php -->
+<!-- pagelayout:postarchives -->
 <!-- pagedate: -->
 <!-- pageimage: -->
 <!-- pageexcerpt:Post Archives, All Posts -->
