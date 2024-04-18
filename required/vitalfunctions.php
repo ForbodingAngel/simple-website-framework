@@ -1,5 +1,5 @@
 <?php
-	$currentURL = 'http://' . $_SERVER['HTTP_HOST'] . strtok($_SERVER['REQUEST_URI'], '?'); // Get the URL without the query string
+	$currentURL = 'https://' . $_SERVER['HTTP_HOST'] . strtok($_SERVER['REQUEST_URI'], '?'); // Get the URL without the query string
 
 	if (!empty($_SERVER['QUERY_STRING'])) {
 		parse_str($_SERVER['QUERY_STRING'], $queryParams); // Parse query string into array
