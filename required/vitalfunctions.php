@@ -1,6 +1,8 @@
 <?php
-	$currentURL = 'https://' . $_SERVER['HTTP_HOST'] . strtok($_SERVER['REQUEST_URI'], '?'); // Get the URL without the query string
-
+	
+	$protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
+	$currentURL = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+	// Get the URL without the query string
 	if (!empty($_SERVER['QUERY_STRING'])) {
 		parse_str($_SERVER['QUERY_STRING'], $queryParams); // Parse query string into array
 		unset($queryParams['meta']); // Remove specific query parameter 'meta'
