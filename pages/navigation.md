@@ -7,19 +7,19 @@
 <!-- pageauthor: -->
 <!-- pagetype:website -->
 - [Home]()
-- [Documentation](javascript:void(0);)
+- [Documentation](#0)
 	- [Introduction](documentation/introduction)
-	- [For End Users](javascript:void(0);)
+	- [For End Users](#0)
 		- [Creating Pages](documentation/creatingpages)
-	- [For Developers](javascript:void(0);)
+	- [For Developers](#0)
 - [Markdown Tutorial](markdowntutorial)
 - [Jac](jac)
 - [Posts/Archives](archives)
-- [Dropdown Item](javascript:void(0);)<!-- Use javascript:void(0); as the link target on top level items to avoid them being clickable and thus confusing visitors -->
+- [Dropdown Item](#0)<!-- #0 as the link target on top level items to avoid them being clickable and thus confusing visitors -->
 	- [Navigation Tutorial](stellarnav)
 	- [Site Navigation File](navigation)
 	- [Enable Meta Mode](?meta=yes)
-	- [Item](javascript:void(0);)
-		- [Drop left menu item](n)
-		- [Drop left menu item](#)
+	- [Item](#0)
+		- [404 Error Page](404)
+		- [Dropdown menu item](#0)
 - [License](license)
