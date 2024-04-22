@@ -10,7 +10,7 @@ if (strpos($file, '.') !== false) {
     $cachefile = 'cached-' . $file . '.html';
 }
 
-$cachetime = 18000;
+$cachetime = 18000; // Seconds, 18000 is 5 hours
 ?>
 <!-- This is a cached version! -->
 <?php

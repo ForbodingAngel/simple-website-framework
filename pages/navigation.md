@@ -10,10 +10,10 @@
 - [Documentation](#0)
 	- [Introduction](documentation/introduction)
 	- [For End Users](#0)
-		- [Creating Pages](documentation/creatingpages)
+		- [Creating Pages](documentation/endusers/creatingpages)
 	- [For Developers](#0)
+		- [Caching Pages](documentation/developers/caching)
 - [Markdown Tutorial](markdowntutorial)
-- [Jac](jac)
 - [Posts/Archives](archives)
 - [Dropdown Item](#0)<!-- #0 as the link target on top level items to avoid them being clickable and thus confusing visitors -->
 	- [Navigation Tutorial](stellarnav)

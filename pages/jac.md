@@ -1,7 +1,7 @@
 <!-- pagetitle:Jac is Awesome! -->
 <!-- pagelayout:page -->
 <!-- pagedate: -->
-<!-- pageimage: -->
+<!-- pageimage:pages/images/turtlehearts.png -->
 <!-- pageexcerpt:Jac is amazing! She is the best girlfriend ever! -->
 <!-- pagekeywords:jac,girlfriend,amazing,perfect,beautiful -->
 <!-- pageauthor:Scary le Poo -->
@@ -13,8 +13,4 @@ Mwaaaah!
 
 **Smooch**
 
-
-
-Test to see if Marktext removes the comments.
-
-Edit: It doesn't!
+![I love you so much!](pages/images/turtlehearts.png){.small .center .nodecoration}
