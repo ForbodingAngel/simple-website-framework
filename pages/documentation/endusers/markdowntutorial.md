@@ -1,8 +1,8 @@
-<!-- pagetitle:Comprehensive Markdown Tutorial -->
+<!-- pagetitle:Markdown Tutorial -->
 <!-- pagelayout:page -->
 <!-- pagedate: -->
 <!-- pageimage: -->
-<!-- pageexcerpt:Welcome to the comprehensive Markdown tutorial! Markdown is a lightweight markup language with plain-text formatting syntax. It's commonly used for formatting text on the web and is widely supported across various platforms. -->
+<!-- pageexcerpt:Markdown is a lightweight markup language with plain-text formatting syntax. It's commonly used for formatting text on the web and is widely supported across various platforms. -->
 <!-- pagekeywords:Markdown, lightweight, markup language, plain-text, formatting, syntax, headings, horizontal rules, emphasis, bold, italic, strikethrough, underline, blockquotes, lists, ordered, unordered, code, inline, blocks, tables, links, images, footnotes, conclusion, versatile, easy-to-use, documents, experiment -->
 <!-- pageauthor:Scary le Poo -->
 <!-- pagetype:website -->
@@ -16,11 +16,17 @@ You can create headings by using one to six hash symbols (`#`). The number of ha
 # Heading 1
 ## Heading 2
 ### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
 
 ```markdown
 # Heading 1
 ## Heading 2
 ### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
 ```
 
 ## Horizontal Rules
@@ -47,12 +53,12 @@ You can make text **bold** or *italic* using asterisks (`*`) or underscores (`_`
 
 ## Strikethrough
 
-You can strike through text using two tildes (`~~`).
+You can strike through text using html (`<del></del>`).
 
-~~Strikethrough Text~~
+<del>Strikethrough Text</del>
 
 ```markdown
-~~Strikethrough Text~~
+<del>Strikethrough Text</del>
 ```
 
 ## Underline

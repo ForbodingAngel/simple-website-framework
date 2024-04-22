@@ -15,5 +15,5 @@
 		<strong>Current URL:</strong> <?php echo $currentURL; ?></br>
 		<strong>Language/Locale:</strong> <?php echo $WebsiteLanguageLocale; ?></br>
 	</div>
-</div>	
+</div>
 <?php } ?>

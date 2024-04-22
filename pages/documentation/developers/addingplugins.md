@@ -1,35 +1,33 @@
 <!-- pagetitle:Adding Plugins -->
 <!-- pagelayout:page -->
-<!-- pagedate:03/30/2024 -->
+<!-- pagedate: -->
 <!-- pageimage:pages/posts/images/plugins.webp -->
-<!-- pageexcerpt:Come and learn how we can add plugins. It's quite simple really. -->
+<!-- pageexcerpt:To seamlessly add a new plugin to the existing structure, follow these steps. -->
 <!-- pagekeywords:Plugin, Structure, File, PHP, CSS, JavaScript, Inclusion, Section, Conditional, Loading, Mechanism, Configuration, Variable, True, Enabled, Include, Files, Concatenate, Script, End, Page, Test, Changes, Development, Environment, Integration, Consistency, Existing, Code, Best Practices, Organizing, Stylesheets -->
 <!-- pageauthor:Scary le Poo -->
-<!-- pagetype:article -->
+<!-- pagetype:website -->
 
-To add a new plugin to the existing structure provided in the file, follow these steps:
-
-**Prepare Your Plugin**:
+## Prepare Your Plugin
    - Make sure your plugin files (CSS, JavaScript, etc.) are organized and ready to be included.
    - Ensure your plugin is compatible with the structure and requirements of the existing code.
 
-**Open the File**:
+### Open the File
    - Open the PHP file where you want to add your plugin. In this case, it is located at plugins/plugins.php
 
-**Identify Plugin Inclusion Section**:
+### Identify Plugin Inclusion Section
    - Locate the section in the file where other plugins are being included. Plugins are conditionally included based on certain configuration variables like `$jQuery`, `$anchorLinkAutoClass`, `$beforeAndAfterSlider`, `$fontAwesome`, and `$yBox`.
 
-**Understand Conditional Loading**:
+### Understand Conditional Loading
    - Understand the conditional loading mechanism. Each plugin is loaded if its corresponding configuration variable is set to `true`.
 
-**Add Configuration Variable**:
+### Add Configuration Variable
    - Decide on a unique name for your plugin and define a new configuration variable similar to existing ones. For example:
      ```php
      <?php $myPluginEnabled = true; ?>
      ```
    - Ensure to set this variable to `true` if you want your plugin to be loaded.
 
-**Include CSS and JavaScript**:
+### Include CSS and JavaScript
    - Inside the conditional block for your plugin, include the necessary CSS and JavaScript files.
      ```php
      <?php if ($myPluginEnabled == true) { ?>
@@ -41,7 +39,7 @@ To add a new plugin to the existing structure provided in the file, follow these
      <?php } ?>
      ```
 
-**Concatenate Script if Necessary**:
+### Concatenate Script if Necessary
    - If your plugin requires JavaScript to be included at the end of the page, concatenate it with the `$pluginCalledBelowContent` variable.
      ```php
      <?php if ($myPluginEnabled == true) { ?>
@@ -55,10 +53,10 @@ To add a new plugin to the existing structure provided in the file, follow these
      <?php } ?>
      ```
 
-**Test Your Changes**:
+### Test Your Changes
    - Save the file and test your changes on a development environment to ensure your plugin is loaded and functioning correctly.
    
-**Add your Configuration Variable**
+### Add your Configuration Variable
    - Make sure to add your Configuration Variable to config/config.php
 
 By following these steps, you should be able to integrate your own plugin into the provided file structure effectively. Remember to maintain consistency with the existing code structure and adhere to best practices for organizing and including scripts and stylesheets.

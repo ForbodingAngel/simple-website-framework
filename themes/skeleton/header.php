@@ -112,5 +112,6 @@
 <?php include 'required/metainfo.php'; ?>
 <?php if ($loadplugins == true) { include 'plugins/plugins.php'; } ?>
 <?php include 'navigation.php'; ?>
+<?php if (!isset($pagelayout) || $pagelayout == "") { $pagelayout = "page"; } /* Set pagelayout to basic page if it isn't explicitly set */ ?>
 <?php include $pagelayout . ".php" ?>
 <?php include 'footer.php'; ?>
