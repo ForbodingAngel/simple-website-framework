@@ -7,13 +7,15 @@
 	} else {
 		ob_start(); // Start regular output buffering
 	}
-
-	// Parse the requested URL
 	
+	
+/****************************************************/
+/* Protect the entire site from random URL snooping */
+	// Parse the requested URL
 	$requestUri = $_SERVER['REQUEST_URI']; /* This line retrieves the requested URI from the $_SERVER superglobal array. $_SERVER['REQUEST_URI'] contains the URI (Uniform Resource Identifier) that was requested by the client. */
 	
 	$requestedPage = trim(parse_url($requestUri, PHP_URL_PATH), '/'); /* This line parses the requested URI using the parse_url() function and extracts the path component using the PHP_URL_PATH constant. The trim() function is then used to remove any leading or trailing slashes from the path. */
-	
+	if ($requestedPage == "") { $requestedPage = "home"; }
 	//echo $requestedPage; /* This line is commented out and is not executed. It appears to be for debugging purposes, possibly to echo/print the value of $requestedPage for testing. */
 	
 	
@@ -39,11 +41,18 @@
 	}
 
 	// Get the list of files in the pages directory and its subdirectories
-	$files = listFiles("pages/");
+	$files = listFiles("pages");
 
-	// Check if the requested page exists in the list of files
+	/* Sanity testing to make sure this is working the way we want */
+	
+	//	echo '<pre>'; print_r($files); echo '</pre>';
+	//	echo "pages/" . $requestedPage . ".md";
+	
+
+	// Check if the requested page exists in the list of files. If it doesn't, then force it onto a 404 page.
 	if (!in_array("pages/" . $requestedPage . ".md", $files)) {
-		$pagename = "404";
+		header("Location: 404");
+		die();
 	}
 	/* END Generate list of potential target pages */
 	
@@ -52,7 +61,10 @@
 	if (!file_exists("pages/" . $requestedPage .".md")) { 
 		$pagename = "404"; 
 	}
-	
+/* END Protect the entire site from random URL snooping */
+/********************************************************/
+
+
 	if ($requestedPage =="") { 
 	/* This block of code determines the name of the requested page based on the value of $requestedPage. If $requestedPage is empty (i.e., the root URL is requested), the page name is set to "home" and redirected via 301 to it. Otherwise, the page name is set to the value of $requestedPage. */
 		$pagename = "home";
