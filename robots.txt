@@ -1,8 +1,2 @@
 User-agent: *
-Disallow: /config/
-Disallow: /css/
 Disallow: /extras/
-Disallow: /includes/
-Disallow: /plugins/
-Disallow: /required/
-Disallow: /themes/
