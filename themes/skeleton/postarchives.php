@@ -3,7 +3,7 @@
 
 	<!-- Primary Page Layout
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<div class="container">
+	<div class="contentcontainer">
 		<div class="pagetitle">
 		<?php if ($pagename != "home") { ?>
 			<?php if (isset($pagetitle)) { ?>

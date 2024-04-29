@@ -3,7 +3,7 @@
 
 	<!-- Primary Page Layout
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<div class="container">
+	<div class="contentcontainer">
 		<div class="content">
 			<div class="section group">
 					<?php

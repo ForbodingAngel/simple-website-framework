@@ -17,6 +17,7 @@
 		- [SEO and Metainfo](documentation/developers/seo-metainfo)
 		- [Adding Plugins](documentation/developers/addingplugins)
 		- [StellarNav Menu System](documentation/developers/stellarnav)
+		- [Flex Grid System](documentation/developers/flexgridsystem)
 - [Posts/Archives](archives)
 - [Dropdown Item](#0)<!-- #0 as the link target on top level items to avoid them being clickable and thus confusing visitors -->
 	- [Site Navigation File](navigation)

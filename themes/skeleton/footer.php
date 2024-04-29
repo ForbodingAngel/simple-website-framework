@@ -1,6 +1,6 @@
 <div class="footercontainer">
 	<div class="footer">
-		<?php include './includes/footercolumns.php'; ?>
+		<?php include 'includes/footercolumns.php'; ?>
 		<div style="clear:both"></div>
 	</div>
 	<div style="clear:both"></div>

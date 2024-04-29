@@ -1,5 +1,5 @@
 <!-- pagetitle:Post Archives -->
-<!-- pagelayout:postarchives -->
+<!-- pagelayout:postarchives-styled -->
 <!-- pagedate: -->
 <!-- pageimage: -->
 <!-- pageexcerpt:Post Archives, All Posts -->

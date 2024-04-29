@@ -54,7 +54,7 @@
     }
 	
 	/* How many columns in the footer? */
-	/* The Footer files are md files in pages/footer. The names must be footer1.md - footer3.md. If you are wanting more than 3 columns in your footer, you will need to edit footercolumns.php in the includes folder. Alternatively, you can manually do whatever you like in the footer by editing the theme's footer file. I don't necessarily recommend this, because you can do basically anything by using the built in functionallity, but the whole idea behind this project is that you have complete control, so go nuts! :-) */
+	/* The Footer files are md files in pages/footer. The names must be footer1.md, footer2.md, footer3.md, etc. They will be displayed in order from left to right. The footer will try to read as many files as you have number of footer columns set. */
 	
 	$numberFooterColumns = 3;	
 ?>
