@@ -88,7 +88,7 @@
 	<!-- CSS
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/typebase.css">
 	<link rel="stylesheet" href="css/flexgridsystem.css">
 	<link rel="stylesheet" href="themes/<?php echo $theme; ?>/navigation.css">
 	<link rel="stylesheet" href="themes/<?php echo $theme; ?>/custom.css">

@@ -11,7 +11,8 @@
 
 You'll want to just look at the source in this MD file. It shows how to do the anchor in markdown. Keep in mind that if you want to have link text on the anchor itself, just add text in the brackets.
 
-<div class="col span_6_of_12">
+<div class="row">
+<div class="column">
 
 This will result in no text[](#notext){: #notext }:
 
@@ -19,17 +20,18 @@ This will result in no text[](#notext){: #notext }:
 
 </div>
 
-<div class="col span_6_of_12">
+<div class="column">
 
 This will result in [Link Text](#linktext){: #linktext }:
 
 `[Link Text](#linktext){: #linktext }`
 
 </div>
+</div>
 
 ![Random Picture of computer related crap](pages/posts/images/desk-smartphone-mobile-table-coffee-wood.webp)
 
-<div class="col span_2_of_12">
+<div class="align-left padding-50px no-margin">
 
 Link List:
 

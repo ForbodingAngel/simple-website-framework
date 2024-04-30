@@ -9,46 +9,48 @@
 
 Creating websites shouldn't be a daunting task. With Skeleton Website Framework, simplicity and functionality merge seamlessly, offering you a hassle-free experience in website development.
 
-**Building Blocks of Simplicity**
+### **Building Blocks of Simplicity**
 
-Inspired by the elegance of the Skeleton boilerplate, our framework embodies simplicity at its core. We've meticulously crafted every aspect to reflect a clean and minimalistic style, ensuring that your websites look sleek and professional without unnecessary clutter.
+Our framework draws inspiration from the elegant Skeleton boilerplate. At its core, simplicity reigns supreme. We've meticulously crafted every aspect to reflect a clean and minimalistic style. The result? Websites that look sleek and professional without unnecessary clutter.
 
-**Streamlined Development Process**
+### **Streamlined Development Process**
 
-Forget about tedious setup tasks. With Skeleton Website Framework, all the groundwork is already laid out for you. Our framework provides a solid foundation, allowing you to focus on unleashing your creativity rather than getting lost in the complexities of coding.
+Say goodbye to tedious setup tasks. With the Skeleton Website Framework, we've already laid out the groundwork for you. Consider it your solid foundation. Now, instead of wrestling with the complexities of coding, you can focus on unleashing your creativity.
 
-**Effortless Page Creation**
+### **Effortless Page Creation**
 
-Pages and posts are a breeze to create with our framework. Utilizing Markdown, simply place your Markdown files in the designated folders, and they automatically become linkable pages. Navigation options are also Markdown-based, providing an intuitive way to structure your website.
+Creating pages and posts is a breeze. We've leveraged Markdown to simplify the process. Just place your Markdown files in the designated folders, and voilà—they automatically become linkable pages. Navigation options? Also Markdown-based, providing an intuitive way to structure your website.
 
-**Flexibility at Your Fingertips**
+### **Flexibility at Your Fingertips**
 
-Designed with an easy-to-understand templating system, our framework empowers you to customize your website effortlessly. Whether you're a novice developer or a seasoned pro, extending the functionality of your website has never been easier.
+Our framework features an easy-to-understand templating system. Whether you're a novice developer or a seasoned pro, customizing your website is a breeze. Extend its functionality effortlessly, tailoring it to your unique vision.
 
-**12 Column Grid System for Easy Content Positioning**
+### **12 Column Grid System for Easy Content Positioning**
 
-Positioning content has never been simpler. Our framework comes equipped with a 12 column grid system, allowing you to arrange elements with precision and ease. Whether you're creating a landing page or a complex layout, our grid system ensures optimal alignment every time.
+Positioning content has never been simpler. Our 12-column grid system allows you to arrange elements with precision. Whether you're creating a landing page or a complex layout, our grid ensures optimal alignment every time.
 
-**Clone and Customize**
+### **Clone and Customize**
 
-Harness the power of our base theme to kickstart your projects. Developers can clone the base theme and create their own themes, significantly reducing development time and effort. The possibilities are endless, allowing you to tailor your website to suit your unique vision.
+Kickstart your projects using our base theme. Developers can clone it and create their own themes, significantly reducing development time and effort. The possibilities are endless, allowing you to tailor your website exactly as you envision.
 
-**Built for Security**
+### **Built for Security**
 
-Safety is our priority. By forgoing an integral built-in editor, we minimize the risk of penetration attacks. Our framework is hardened against security threats, ensuring peace of mind for you and your users.
+Safety is paramount. By forgoing an integral built-in editor, we minimize the risk of penetration attacks. Our framework is hardened against security threats, ensuring peace of mind for you and your users[^1].
 
-**SEO-Optimized**
+[^1]: There actually is an editor, but it is a php based file manager and editor that is kept separate from the site itself and it is completely optional.
 
-Stay ahead in the digital landscape with our SEO-ready framework. From optimized page structures to metadata management, Skeleton Website Framework is primed for maximum visibility and performance in search engine results.
+### **SEO-Optimized**
 
-**Extend with Ease**
+Stay ahead in the digital landscape. Our SEO-ready framework—from optimized page structures to metadata management—is primed for maximum visibility and performance in search engine results.
 
-Enhance your website's functionality with our easy-to-use and extend plugin system. Whether you're adding new features or integrating third-party plugins, our framework provides a seamless experience without compromising security or stability.
+### **Extend with Ease**
 
-**Editor for Your Convenience**
+Enhance your website's functionality using our easy-to-use, extendable plugin system. Whether you're adding new features or integrating third-party plugins, our framework provides a seamless experience without compromising security or stability.
 
-While an optional editor is available, it remains separate from the core framework. Serving primarily as a standalone tool, it offers advanced editing and file management capabilities alongside your website. With its built-in authentication system, you can rest assured that your files are secure.
+### **Editor for Your Convenience**
 
-**Experience the Ease**
+While an optional editor is available, it remains separate from the core framework. It serves primarily as a standalone tool, offering advanced editing and file management capabilities alongside your website. Rest assured, your files are secure.
 
-Skeleton Website Framework is designed with you in mind. Whether you're a hobbyist website owner or a novice developer, our framework offers a user-friendly experience that simplifies the website development process. Welcome to the future of web development. Welcome to Skeleton Website Framework.
+### **Experience the Ease**
+
+Welcome to the future of web development. The Skeleton Website Framework is designed with you in mind—whether you're a hobbyist website owner or a novice developer. Enjoy a user-friendly experience that simplifies the website development process.

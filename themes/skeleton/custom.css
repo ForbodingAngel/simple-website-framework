@@ -15,35 +15,6 @@ body {
 /* End Pageload Animations */
 
 
-/* Typography */
-html {
-  font-size: 100%; }
-body {
-  font-size: 1rem;
-  line-height: 1.6;
-  font-weight: 400;
-  font-family: "Verdana", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100; }
-
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-weight: 300; }
-h1 { font-size: 2.986rem; line-height: 1.2;  letter-spacing: -.1rem;}
-h2 { font-size: 2.488rem; line-height: 1.25; letter-spacing: -.1rem; }
-h3 { font-size: 2.074rem; line-height: 1.3;  letter-spacing: -.1rem; }
-h4 { font-size: 1.728rem; line-height: 1.35; letter-spacing: -.08rem; }
-h5 { font-size: 1.44rem; line-height: 1.5;  letter-spacing: -.05rem; }
-h6 { font-size: 1.2rem; line-height: 1.6;  letter-spacing: 0; }
-
-p {
-  margin-top: 0; }
-/* END Typography */
-
-
 /* Meta Information Overlay */
 #debug-overlay-container {
     position: fixed;
@@ -84,6 +55,10 @@ a::before {
     transition: transform .3s ease-in-out;
 }
 
+.footercontent a::before {
+    background-color: #fff;
+}
+
 a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
@@ -96,6 +71,27 @@ a:hover::before {
 	border-bottom: 1px solid #E1E1E1;
 	margin-bottom: 40px;
 }
+
+
+h1 {
+    border-bottom: 1px solid #f0f0f0;
+}
+h2 {
+    border-bottom: 1px solid #f0f0f0;
+}
+h3 {
+    border-bottom: 1px solid #f0f0f0;
+}
+h4 {
+    border-bottom: 1px solid #f0f0f0;
+}
+h5 {
+    border-bottom: 1px solid #f0f0f0;
+}
+h6 {
+    border-bottom: 1px solid #f0f0f0;
+}
+
 
 img {
 	width: 100%;
@@ -169,7 +165,40 @@ img.nodecoration, img.nodecoration:hover {
 	display: block;
 	float: left;
 }
+
+.textalign-left {
+	display: block;
+	text-align: left;
+}
+
+.textalign-center {
+	display: block;
+	text-align: center;
+}
+
+.textalign-right {
+	display: block;
+	text-align: right;
+}
 /* End Positioning */
+
+/* Padding */
+.padding-5px {
+	padding:5px;
+}
+
+.padding-10px {
+	padding:10px;
+}
+
+.padding-20px {
+	padding:20px;
+}
+
+.padding-50px {
+	padding:50px;
+}
+/* End Padding */
 
 ul {
 	list-style-type: circle;
@@ -193,7 +222,7 @@ ol, ul {
 	background-color: rgba(50,50,50,1);
 	width: 100vmax;
 	max-width: 100%;
-	height: calc(100vmin - 58px);
+	height: calc(100vmin - 66px);
 	/* Both Chrome and FF support vmax */
 }
 
@@ -205,7 +234,7 @@ ol, ul {
 	background-color: rgba(50,50,50,1);
 	width: 100vmax;
 	max-width: 100%;
-	height: calc(25vmin + 58px); /* We have to counteract what is being done on the home page */
+	height: calc(25vmin + 66px); /* We have to counteract what is being done on the home page */
 	/* Both Chrome and FF support vmax */
 }
 
@@ -222,6 +251,8 @@ span.herotext {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+
 
 .contentcontainer {
     background: #fff;
@@ -247,9 +278,10 @@ span.herotext {
 
 .footercontainer {
 	background-color: rgba(50,50,50,1);
+    padding-top: 40px;
 }
 
-.footer {
+.footercontent {
 	max-width: 90%;
 	margin-left: auto;
 	margin-right: auto;
@@ -259,18 +291,12 @@ span.herotext {
 }
 
  @media only screen and (max-width : 768px) {
-	.footer {
+	.footercontent {
 		max-width: 95%;
 	}
 }
 
-.footercolumn {
-	padding: 5%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.footer span.sectiontitle{
+.footercontent span.sectiontitle{
 	display: block;
 	text-align: center;
 	font-size: 40px;

@@ -175,6 +175,19 @@ Here is a footnote[^1].
 [^1]: This is the footnote text.
 ```
 
+## Adding CSS Classes to Elements
+
+You can add CSS classes to elements using {}
+
+For Example:
+
+![lolwut](pages/images/lolwut.webp){.small .center}
+
+```
+![lolwut](pages/images/lolwut.webp){.small .center}
+```
+
+
 ## Conclusion
 
 Markdown is a versatile and easy-to-use markup language that allows you to create well-formatted documents with minimal effort. With the elements covered in this tutorial, you'll be well-equipped to create a wide range of content using Markdown.

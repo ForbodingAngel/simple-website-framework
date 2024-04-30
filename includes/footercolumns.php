@@ -36,7 +36,7 @@ for ($i = 1; $i <= $numberFooterColumns; $i++) {
 echo '<div class="row">';
 foreach ($footerContents as $index => $footerContent) {
     // Start a column container with appropriate width class
-    echo '<div class="column">';
+    echo '<div class="column" style="flex-basis:300px;">';
     echo '<span class="sectiontitle">' . $sectionTitles[$index] . '</span>';
     echo $footerContent; // Output the footer content from the array
     echo '</div>';

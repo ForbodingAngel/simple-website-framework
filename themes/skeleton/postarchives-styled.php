@@ -59,7 +59,7 @@
 			/* This is where you would set up the classes for styling the post archives page */
 			echo '<div class="row">';
 			foreach ($fileDetailsPage as $fileDetail) {
-				echo '<div class="column col-6">';
+				echo '<div class="column" style="flex-basis:300px;">';
 				$dateFormatted = date('m/d/Y', strtotime($fileDetail['date']));
 				echo '<a href="' . $postsFolder . '/' . basename($fileDetail['filename'], '.md') . '">' . $fileDetail['title'] . '</a> - ' . $dateFormatted . '<br>';
 				if (file_exists($fileDetail['image'])) {
