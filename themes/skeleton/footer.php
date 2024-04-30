@@ -1,5 +1,5 @@
 <div class="footercontainer">
-	<div class="footer">
+	<div class="footercontent">
 		<?php include 'required/footercolumns.php'; ?>
 		<div style="clear:both"></div>
 	</div>
