@@ -14,6 +14,10 @@
   
 }
 
+.flex-basis-300 {
+    flex-basis: 300px;
+}
+
 .col-1 {
   max-width: calc(90% / 12);
 }

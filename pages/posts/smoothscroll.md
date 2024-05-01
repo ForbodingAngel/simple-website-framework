@@ -7,7 +7,7 @@
 <!-- pageauthor:Scary le Poo -->
 <!-- pagetype:article -->
 
-# Smoothscroll should be working now
+## Smoothscroll should be working now
 
 You'll want to just look at the source in this MD file. It shows how to do the anchor in markdown. Keep in mind that if you want to have link text on the anchor itself, just add text in the brackets.
 

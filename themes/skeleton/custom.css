@@ -1,7 +1,30 @@
-/* Pageload Animations */
+/*********************************************
+* INDEX
+**********************************************
+1. Pageload Animations
+2. Meta Information Overlay
+3. Scrolling Underline Link Effect
+4. Page Titles
+5. Headings
+6. Images
+7. Image Sizing
+8. Image Decorations
+9. Positioning
+10. Padding
+11. Lists
+12. Hero Elements
+13. Content Containers
+14. Footer Containers
+15. Code
+**********************************************/
+
+/*********************************************
+* 1. Pageload Animations
+**********************************************/
 html {
 	background-color: rgba(50,50,50,1);
 }
+
 body {
     animation: fadeIn 1s;
     margin: 0;
@@ -12,10 +35,10 @@ body {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
-/* End Pageload Animations */
 
-
-/* Meta Information Overlay */
+/*********************************************
+* 2. Meta Information Overlay
+**********************************************/
 #debug-overlay-container {
     position: fixed;
     bottom: 0;
@@ -32,10 +55,10 @@ body {
     max-width: 800px;
     margin: 0 auto;
 }
-/* END Meta Information Overlay */
 
-
-/* Scrolling underline link effect */
+/*********************************************
+* 3. Scrolling Underline Link Effect
+**********************************************/
 a {
     position: relative;
     text-decoration: none;
@@ -63,43 +86,35 @@ a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
 }
-/* END Scrolling underline text effect */
 
-
+/*********************************************
+* 4. Page Titles
+**********************************************/
 .pagetitle h1 {
 	max-width: 100%;
 	border-bottom: 1px solid #E1E1E1;
 	margin-bottom: 40px;
 }
 
-
-h1 {
-    border-bottom: 1px solid #f0f0f0;
-}
-h2 {
-    border-bottom: 1px solid #f0f0f0;
-}
-h3 {
-    border-bottom: 1px solid #f0f0f0;
-}
-h4 {
-    border-bottom: 1px solid #f0f0f0;
-}
-h5 {
-    border-bottom: 1px solid #f0f0f0;
-}
-h6 {
+/*********************************************
+* 5. Headings
+**********************************************/
+h1, h2, h3, h4, h5, h6 {
     border-bottom: 1px solid #f0f0f0;
 }
 
-
+/*********************************************
+* 6. Images
+**********************************************/
 img {
 	width: 100%;
 	max-width: 100%;
 	height: auto;
 }
 
-/* Image Sizing */
+/*********************************************
+* 7. Image Sizing
+**********************************************/
 img.tiny {
 	max-width: 150px;
 	height: auto;
@@ -119,26 +134,22 @@ img.large {
 	max-width: 1000px;
 	height: auto;
 }
-/* END Image Sizing */
 
-/* Image Decorations */
-
+/*********************************************
+* 8. Image Decorations
+**********************************************/
 img {
-	/* Decoration */
 	border: 1px solid rgba(200, 200, 200, 0.5);
 	border-radius: 0px;
-
 	box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0);
-	transition: box-shadow 0.5s ease-in-out; /* Apply transition to box-shadow */
+	transition: box-shadow 0.5s ease-in-out;
 }
 
 img:hover {
-	/* Decoration/Highlights */
 	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
 }
 
 a img:hover {
-	/* Decoration/Highlights */
 	box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
@@ -147,10 +158,11 @@ img.nodecoration, img.nodecoration:hover {
 	box-shadow: none;
 	transition: none;
 }
-/* END Image Decorations */
 
-/* Positioning */
-.align-left {
+/*********************************************
+* 9. Positioning
+**********************************************/
+.align-left, .align-right {
 	display: block;
 	float: left;
 }
@@ -159,11 +171,6 @@ img.nodecoration, img.nodecoration:hover {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.align-right {
-	display: block;
-	float: left;
 }
 
 .textalign-left {
@@ -180,41 +187,50 @@ img.nodecoration, img.nodecoration:hover {
 	display: block;
 	text-align: right;
 }
-/* End Positioning */
 
-/* Padding */
+/*********************************************
+* 10. Padding
+**********************************************/
 .padding-5px {
-	padding:5px;
+	padding: 5px;
 }
 
 .padding-10px {
-	padding:10px;
+	padding: 10px;
 }
 
 .padding-20px {
-	padding:20px;
+	padding: 20px;
 }
 
 .padding-50px {
-	padding:50px;
+	padding: 50px;
 }
-/* End Padding */
 
+/*********************************************
+* 11. Lists
+**********************************************/
 ul {
 	list-style-type: circle;
 	list-style-position: outside;
 	list-style-image: none;
 }
+
 ol {
 	list-style-type: decimal;
 	list-style-position: outside;
 	list-style-image: none;
 }
+
 ol, ul {
   padding-left: 20px;
-  margin-top: 0; }
+  margin-top: 0;
+}
 
-.hero {
+/*********************************************
+* 12. Hero Elements
+**********************************************/
+.hero, .herosmall {
 	background: url(../../images/laptop-computer-writing-technology-web-internet.webp);
 	background-position: center;
 	background-size: cover;
@@ -223,19 +239,10 @@ ol, ul {
 	width: 100vmax;
 	max-width: 100%;
 	height: calc(100vmin - 66px);
-	/* Both Chrome and FF support vmax */
 }
 
 .herosmall {
-	background: url(../../images/laptop-computer-writing-technology-web-internet.webp);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-color: rgba(50,50,50,1);
-	width: 100vmax;
-	max-width: 100%;
-	height: calc(25vmin + 66px); /* We have to counteract what is being done on the home page */
-	/* Both Chrome and FF support vmax */
+	height: calc(25vmin + 66px);
 }
 
 span.herotext {
@@ -252,23 +259,24 @@ span.herotext {
 	transform: translate(-50%, -50%);
 }
 
-
-
+/*********************************************
+* 13. Content Containers
+**********************************************/
 .contentcontainer {
     background: #fff;
     padding: 30px;
     position: relative;
 	max-width: 1280px;
-	margin-top:20px;
+	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
- @media only screen and (max-width : 1000px) {
+@media only screen and (max-width : 1000px) {
 	.contentcontainer {
 		padding: 10px;
 	}
- }
+}
 
 .content {
 	max-width: 960px;
@@ -276,6 +284,9 @@ span.herotext {
 	margin-right: auto;
 }
 
+/*********************************************
+* 14. Footer Containers
+**********************************************/
 .footercontainer {
 	background-color: rgba(50,50,50,1);
     padding-top: 40px;
@@ -290,7 +301,7 @@ span.herotext {
 	text-justify: inter-word;
 }
 
- @media only screen and (max-width : 768px) {
+@media only screen and (max-width : 768px) {
 	.footercontent {
 		max-width: 95%;
 	}
@@ -300,10 +311,12 @@ span.herotext {
 	display: block;
 	text-align: center;
 	font-size: 40px;
-	/* border-bottom: 1px solid #fff; */
 	margin-bottom: 20px;
 }
 
+/*********************************************
+* 15. Code
+**********************************************/
 code {
 	overflow-x: auto;
 }
