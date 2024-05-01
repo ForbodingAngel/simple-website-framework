@@ -51,7 +51,7 @@
 
 	// Check if the requested page exists in the list of files. If it doesn't, then force it onto a 404 page.
 	if (!in_array("pages/" . $requestedPage . ".md", $files)) {
-		header("Location: 404");
+		header("Location: https://" . $_SERVER['HTTP_HOST'] . "/404");
 		die();
 	}
 	/* END Generate list of potential target pages */
@@ -74,13 +74,13 @@
 	/* In summary, this code retrieves the requested URI, extracts the path component, and determines the name of the requested page based on the path. If no specific page is requested (e.g., accessing the root URL), it sets the page name to "home". */
 	
 	
-	if ($enableHTMLCacheServe == true) { include './required/top-cache.php'; }
-	include './required/initialize-markdown-parser.php';
-	include './required/helperfunctions.php';
-	include './config/config.php';
-	include './required/vitalfunctions.php';
-	include './themes/' . $theme . '/header.php';
-	if ($enableHTMLCacheServe == true) { include './required/bottom-cache.php'; }
+	if ($enableHTMLCacheServe == true) { include 'required/top-cache.php'; }
+	include 'required/initialize-markdown-parser.php';
+	include 'required/helperfunctions.php';
+	include 'config/config.php';
+	include 'required/vitalfunctions.php';
+	include 'themes/' . $theme . '/header.php';
+	if ($enableHTMLCacheServe == true) { include 'required/bottom-cache.php'; }
 	
 	// Flush the output buffer and send the content to the client
 	ob_end_flush();

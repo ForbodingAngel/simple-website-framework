@@ -37,9 +37,6 @@
 		
 		/* If meta box is active, do we want to rewrite all urls so that we can stay in meta box mode? */
 		$metaInfoBoxRewriteURL = true;
-        
-        /* Before and After Image Slider */
-        $beforeAndAfterSlider = true;
             
         /* FontAwesome */
         $fontAwesome = false;

@@ -16,7 +16,7 @@ a:hover {
 /* Copy & Lists */
 p {
   line-height: 1.5rem;
-  margin-top: 1.5rem;
+  margin-top: 1vmin;
   margin-bottom: 0;
 }
 ul,
@@ -49,31 +49,33 @@ h5,
 h6 {
   /* Change heading typefaces here */
   font-family: sans-serif;
-  margin-top: 1.5rem;
   margin-bottom: 0;
   line-height: 1.5rem;
+  margin-top: 1.5rem;
 }
 h1 {
   font-size: 6vmin;
   line-height: 6.5vmin;
-  margin-top: 5vmin;
 }
 h2 {
   font-size: 4vmin;
   line-height: 4.5vmin;
-  margin-top: 5vmin;
 }
 h3 {
-  font-size: 2vmin;
+  font-size: 3.5vmin;
+  line-height: 4vmin;
 }
 h4 {
-  font-size: 1vmin;
+  font-size: 3.25vmin;
+  line-height: 3.75vmin;
 }
 h5 {
-  font-size: 0.7vmin;
+  font-size: 3vmin;
+  line-height: 3.25vmin;
 }
 h6 {
-  font-size: 0.5vmin;
+  font-size: 2.75vmin;
+  line-height: 3.25vmin;
 }
 /* Tables */
 table {
