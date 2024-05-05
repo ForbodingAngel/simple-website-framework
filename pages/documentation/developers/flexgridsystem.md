@@ -16,6 +16,11 @@
 	}
 </style>
 
+It isn't explicit here, but using `column` will allow the flex grid to arrange items however it likes using the flex basis as a guide.
+Alternatively, using `column col-X` means I want this to be X size, taking up X number of column sizes, also using flex basis as a guide.
+
+In general, it's probably best to use column when you can and just let the grid system figure it out.
+
 <div class="row">
 	<div class="column gray">1/1</div>
 </div>

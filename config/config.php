@@ -45,9 +45,10 @@
         $yBox = true;
     }
 
-    /* This is a catchall, just in case. There is also another catchall in the page layout file, just in case this one doesn't do the trick. */
+    /* This is a catchall, just in case */
     if (!file_exists("pages/" . $pagename .".md")) { 
-        $pagename = "404"; 
+        header("Location: https://" . $_SERVER['HTTP_HOST'] . "/404");
+		die();
     }
 	
 	/* How many columns in the footer? */

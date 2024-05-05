@@ -97,6 +97,13 @@
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	
+
+<?php include 'required/metainfo.php'; ?>
+<?php if ($loadplugins == true) { include 'plugins/plugins.php'; } ?>
+
+	
+	<!-- Beginning of actual page layout
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<div class="header">	
 	<?php if ($pagename == "home") { ?>
 		<div class="hero">
@@ -109,8 +116,7 @@
 	<?php } ?>
 	</div>
 	
-<?php include 'required/metainfo.php'; ?>
-<?php if ($loadplugins == true) { include 'plugins/plugins.php'; } ?>
+
 <?php include 'navigation.php'; ?>
 <?php if (!isset($pagelayout) || $pagelayout == "") { $pagelayout = "page"; } /* Set pagelayout to basic page if it isn't explicitly set */ ?>
 <?php include $pagelayout . ".php" ?>

@@ -57,9 +57,10 @@
 	/* END Generate list of potential target pages */
 	
 	
-	/* This is a catchall, just in case. There is also another catchall in the page layout file, just in case this one doesn't do the trick. THis is nowhere near as sophisticated as the approach above, but it still could potentially catch things that fell through the cracks */
+	/* This is a catchall, just in case. There is also another catchall in the config file, just in case this one doesn't do the trick. This is nowhere near as sophisticated as the approach above, but it still could potentially catch things that fell through the cracks */
 	if (!file_exists("pages/" . $requestedPage .".md")) { 
-		$pagename = "404"; 
+		header("Location: https://" . $_SERVER['HTTP_HOST'] . "/404");
+		die();
 	}
 /* END Protect the entire site from random URL snooping */
 /********************************************************/
