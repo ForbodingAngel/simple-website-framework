@@ -1,19 +1,4 @@
 <?php
-	
-	$protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
-	$currentURL = $protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-	// Get the URL without the query string
-	if (!empty($_SERVER['QUERY_STRING'])) {
-		parse_str($_SERVER['QUERY_STRING'], $queryParams); // Parse query string into array
-		unset($queryParams['meta']); // Remove specific query parameter 'meta'
-		$query = http_build_query($queryParams); // Rebuild the query string without 'meta' parameter
-		if ($query) {
-			$currentURL .= '?' . $query; // Append the modified query string
-		}
-	}
-?>
-
-<?php
 	// This function helps extract special values from a file based on a given pattern
 	function extractValueFromPattern($filename, $pattern) {
 		// Read the content of the Markdown file

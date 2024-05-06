@@ -124,24 +124,24 @@ h1 {
 	line-height: 6.5vmin;
 }
 h2 {
+	font-size: 5.5vmin;
+	line-height: 6vmin;
+}
+h3 {
+	font-size: 5vmin;
+	line-height: 5.5vmin;
+}
+h4 {
+	font-size: 4.5vmin;
+	line-height: 5vmin;
+}
+h5 {
 	font-size: 4vmin;
 	line-height: 4.5vmin;
 }
-h3 {
+h6 {
 	font-size: 3.5vmin;
 	line-height: 4vmin;
-}
-h4 {
-	font-size: 3.25vmin;
-	line-height: 3.75vmin;
-}
-h5 {
-	font-size: 3vmin;
-	line-height: 3.25vmin;
-}
-h6 {
-	font-size: 2.75vmin;
-	line-height: 3.25vmin;
 }
 
 /*********************************************

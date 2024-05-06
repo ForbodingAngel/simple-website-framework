@@ -1,6 +1,7 @@
 <?php
-	/* Don't forget to turn on caching in domain/index.php if you're deploying to production! */
-	$WebsiteURL = "https://" . $_SERVER['HTTP_HOST'];
+	/* Don't forget to turn on caching if you're deploying to production! */
+    $enableHTMLCacheServe = false;
+	$WebsiteURL = "https://www.skeleton.localhost"; /* If you don't change this to match your domain, your site won't appear to work at all */
 	$WebsiteTitle = "Skeleton Website Framework";
 	$WebsiteLanguage = "en"; /* Use Language Codes */
 	$WebsiteLanguageCountry = "US"; /* Use country codes */
@@ -9,6 +10,8 @@
 	$WebsiteDescription = "Creating websites shouldn't be a daunting task. With Skeleton Website Framework, simplicity and functionality merge seamlessly, offering you a hassle-free experience in website development."; /* Set a default description/excerpt for all pages */
 	$WebsiteAuthor = "Scary le Poo"; /* Set a default page author */
 	$WebsiteKeywords = "skeleton,framework,development,website,simplicity,security,ease,customize,flexibility"; /* Set default Keywords for site pages */
+
+    $currentURL = $WebsiteURL . $_SERVER['REQUEST_URI'];
 	
     /* Select a Theme */
 	$theme = "skeleton";
@@ -43,14 +46,7 @@
 		
 		/* yBox (Lightbox) */
         $yBox = true;
-    }
-
-    /* This is a catchall, just in case */
-    if (!file_exists("pages/" . $pagename .".md")) { 
-        header("Location: https://" . $_SERVER['HTTP_HOST'] . "/404");
-		die();
-    }
-	
+    }	
 	/* How many columns in the footer? */
 	/* The Footer files are md files in pages/footer. The names must be footer1.md, footer2.md, footer3.md, etc. They will be displayed in order from left to right. The footer will try to read as many files as you have number of footer columns set. */
 	

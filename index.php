@@ -1,13 +1,16 @@
 <?php
-	$enableHTMLCacheServe = false;
-
 	// Enable Gzip compression for HTML output
 	if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) { // Check if the client supports Gzip compression
 		ob_start("ob_gzhandler"); // Start output buffering with Gzip compression handler
 	} else {
 		ob_start(); // Start regular output buffering
 	}
-	
+
+    include 'config/config.php';
+	$CurrentDomainURL = "https://" . $_SERVER['HTTP_HOST'];
+    if ($CurrentDomainURL != $WebsiteURL) {
+        header("Location: " . $WebsiteURL);
+    }
 	
 /****************************************************/
 /* Protect the entire site from random URL snooping */
@@ -78,7 +81,6 @@
 	if ($enableHTMLCacheServe == true) { include 'required/top-cache.php'; }
 	include 'required/initialize-markdown-parser.php';
 	include 'required/helperfunctions.php';
-	include 'config/config.php';
 	include 'required/vitalfunctions.php';
 	include 'themes/' . $theme . '/header.php';
 	if ($enableHTMLCacheServe == true) { include 'required/bottom-cache.php'; }
