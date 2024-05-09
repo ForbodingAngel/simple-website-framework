@@ -7,9 +7,18 @@
 	}
 
     include 'config/config.php';
-	$CurrentDomainURL = "https://" . $_SERVER['HTTP_HOST'];
+	
+	if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+		$protocol = "https://";
+	} else {
+		$protocol = "http://";
+	}
+	$CurrentDomainURL = $protocol . $_SERVER['HTTP_HOST'];
+
+	
     if ($CurrentDomainURL != $WebsiteURL) {
         header("Location: " . $WebsiteURL);
+        die();
     }
 	
 /****************************************************/
@@ -19,7 +28,7 @@
 	
 	$requestedPage = trim(parse_url($requestUri, PHP_URL_PATH), '/'); /* This line parses the requested URI using the parse_url() function and extracts the path component using the PHP_URL_PATH constant. The trim() function is then used to remove any leading or trailing slashes from the path. */
 	if ($requestedPage == "") { $requestedPage = "home"; }
-	//echo $requestedPage; /* This line is commented out and is not executed. It appears to be for debugging purposes, possibly to echo/print the value of $requestedPage for testing. */
+	//echo $requestedPage; /* This line is commented out and is not executed. It's purpose is to echo/print the value of $requestedPage for testing. */
 	
 	
 	/* Generate list of potential target pages */

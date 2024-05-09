@@ -1,7 +1,7 @@
 <?php
 	/* Don't forget to turn on caching if you're deploying to production! */
     $enableHTMLCacheServe = false;
-	$WebsiteURL = "https://www.skeleton.localhost"; /* If you don't change this to match your domain, your site won't appear to work at all */
+	$WebsiteURL = "http://www.skeleton.localhost"; /* If you don't change this to match your domain, your site won't appear to work at all */
 	$WebsiteTitle = "Skeleton Website Framework";
 	$WebsiteLanguage = "en"; /* Use Language Codes */
 	$WebsiteLanguageCountry = "US"; /* Use country codes */
