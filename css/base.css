@@ -144,6 +144,34 @@ h6 {
 	line-height: 4vmin;
 }
 
+@media only screen and (max-width : 480px) {
+/* Mobile */
+    h1 {
+        font-size: 8vmin;
+        line-height: 8.5vmin;
+    }
+    h2 {
+        font-size: 7.5vmin;
+        line-height: 8vmin;
+    }
+    h3 {
+        font-size: 7vmin;
+        line-height: 7.5vmin;
+    }
+    h4 {
+        font-size: 6.5vmin;
+        line-height: 7vmin;
+    }
+    h5 {
+        font-size: 6vmin;
+        line-height: 6.5vmin;
+    }
+    h6 {
+        font-size: 5.5vmin;
+        line-height: 6vmin;
+    }
+}
+
 /*********************************************
 * 6. Tables
 **********************************************/
