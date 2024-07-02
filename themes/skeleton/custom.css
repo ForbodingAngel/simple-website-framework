@@ -40,6 +40,8 @@ body {
 * 2. Meta Information Overlay
 **********************************************/
 #debug-overlay-container {
+	font-size: 12px;
+	line-height: 1.5;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -87,21 +89,23 @@ a:hover::before {
     transform: scaleX(1);
 }
 
+.disable-scrolling-underline::before {
+    content: none;
+    transform: none;
+
+}
+
 /*********************************************
 * 4. Page Titles
 **********************************************/
 .pagetitle h1 {
 	max-width: 100%;
-	border-bottom: 1px solid #E1E1E1;
 	margin-bottom: 40px;
 }
 
 /*********************************************
 * 5. Headings
 **********************************************/
-h1, h2, h3, h4, h5, h6 {
-    border-bottom: 1px solid #f0f0f0;
-}
 
 /*********************************************
 * 6. Images
@@ -239,7 +243,7 @@ ol, ul {
 	width: 100vmax;
 	max-width: 100%;
 	height: calc(100vmin - 66px);
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.2)
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.5)
 }
 
 .herosmall {
@@ -258,6 +262,39 @@ span.herotext {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.herodownarrowcontainer {
+    position: absolute;
+    font-size: 10vmin;
+    left: 50%;
+    bottom: 0%;
+	transition: text-shadow .5s ease-in-out;
+}
+
+.herodownarrowcontainer a {
+    color: #fff;
+}
+
+.herodownarrowcontainer:hover {
+	text-shadow: 3px 3px 2px #000;
+	transition: text-shadow .5s ease-in-out;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 /*********************************************

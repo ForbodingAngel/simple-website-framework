@@ -1,7 +1,7 @@
 <!-- pagetitle:Skeleton Website Framework -->
 <!-- pagelayout:page -->
 <!-- pagedate: -->
-<!-- pagethumbnail:images/laptop-computer-writing-technology-web-internet.webp -->
+<!-- pageimage:images/laptop-computer-writing-technology-web-internet.webp -->
 <!-- pageexcerpt:Creating websites shouldn't be a daunting task. With Skeleton Website Framework, simplicity and functionality merge seamlessly. -->
 <!-- pagekeywords:skeleton,framework,development,website,simplicity,security,ease,customize,flexibility -->
 <!-- pageauthor: -->

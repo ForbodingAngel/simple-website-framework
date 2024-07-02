@@ -104,7 +104,8 @@
 	
 	<!-- Beginning of actual page layout
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<div class="header">	
+	<?php include 'navigation.php'; ?>
+	<div class="header">
 	<?php if ($pagename == "home") { ?>
 		<div class="hero">
 			<span class="herotext"><?php echo $WebsiteTitle; ?></span>
@@ -114,10 +115,17 @@
 			<span class="herotext"><?php echo $WebsiteTitle; ?></span>
 		</div>
 	<?php } ?>
+	
+	<div style="clear:both"></div>
+		<div class="herodownarrowcontainer textalign-center">
+			<div class="arrow bounce">
+				<a href="#maincontent" class="disable-scrolling-underline"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+			</div>
+		</div>
 	</div>
 	
+<a id="maincontent"></a>
 
-<?php include 'navigation.php'; ?>
 <?php if (!isset($pagelayout) || $pagelayout == "") { $pagelayout = "page"; } /* Set pagelayout to basic page if it isn't explicitly set */ ?>
 <?php include $pagelayout . ".php" ?>
 <?php include 'footer.php'; ?>
