@@ -25,7 +25,7 @@
 					$fileDetails = array();
 
 					// Loop through each file in the Article folder
-					foreach (glob("pages/$postsFolder/*.md") as $file) {
+					foreach (glob("pages/$postsFolder/*.html") as $file) {
 						// Read the file contents
 						$contents = file_get_contents($file);
 

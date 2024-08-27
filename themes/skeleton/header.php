@@ -67,7 +67,7 @@
 			$pagedate = $outputDateFormat1;
 		} else {
 			// Get the last modified time of the file
-			$pagefilename = "pages/" . $pagename .".md";
+			$pagefilename = "pages/" . $pagename .".html";
 			$lastModifiedTime = filemtime($pagefilename);
 			$lastModifiedDate = date("Y-m-d H:i:s", $lastModifiedTime);
 			$pagedate = $lastModifiedDate;
@@ -126,6 +126,6 @@
 	
 <a id="maincontent"></a>
 
-<?php if (!isset($pagelayout) || $pagelayout == "") { $pagelayout = "page"; } /* Set pagelayout to basic page if it isn't explicitly set */ ?>
+<?php if (!isset($pagelayout) || $pagelayout == "") { $pagelayout = "page-md"; } /* Set pagelayout to basic page if it isn't explicitly set */ ?>
 <?php include $pagelayout . ".php" ?>
 <?php include 'footer.php'; ?>

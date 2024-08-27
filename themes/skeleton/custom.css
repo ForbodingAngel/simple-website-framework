@@ -269,6 +269,7 @@ span.herotext {
     font-size: 10vmin;
     left: 50%;
     bottom: 0%;
+	text-shadow: 0px 0px 2px #000;
 	transition: text-shadow .5s ease-in-out;
 }
 
@@ -277,7 +278,7 @@ span.herotext {
 }
 
 .herodownarrowcontainer:hover {
-	text-shadow: 3px 3px 2px #000;
+	text-shadow: 0px 0px 10px #000;
 	transition: text-shadow .5s ease-in-out;
 }
 
