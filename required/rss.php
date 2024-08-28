@@ -4,7 +4,7 @@ include 'config/config.php';
 header("Content-Type: application/rss+xml; charset=UTF-8");
 
 function extractValueFromPattern($filename, $pattern) {
-    $markdownContent = file_get_contents("posts/" . $filename . ".md");
+    $markdownContent = file_get_contents("posts/" . $filename . ".html");
     if (preg_match($pattern, $markdownContent, $matches)) {
         return trim($matches[1]);
     }
@@ -20,9 +20,10 @@ $patterns = [
 ];
 
 // Site information
-$siteTitle = "Your Site Title";
-$siteLink = "https://yoursite.com";
-$siteDescription = "Your site description";
+$siteTitle = $WebsiteTitle;
+$siteLink = $WebsiteURL;
+$siteDescription = $WebsiteDescription;
+$defaultImage = $WebsiteImage; // Default image URL
 
 // Initialize the RSS feed
 echo '<?xml version="1.0" encoding="UTF-8" ?>' . "\n";
@@ -35,7 +36,7 @@ echo '<language>en-us</language>' . "\n";
 
 // Channel-wide image
 echo '<image>' . "\n";
-echo '<url>https://yoursite.com/logo.png</url>' . "\n";
+echo '<url>' . $WebsiteImage . '</url>' . "\n";
 echo '<title>' . $siteTitle . '</title>' . "\n";
 echo '<link>' . $siteLink . '</link>' . "\n";
 echo '</image>' . "\n";
@@ -43,7 +44,7 @@ echo '</image>' . "\n";
 // Loop through each Markdown file in the posts directory
 $postsDir = __DIR__ . '/posts';
 foreach (new DirectoryIterator($postsDir) as $fileInfo) {
-    if ($fileInfo->isDot() || $fileInfo->getExtension() !== 'md') continue;
+    if ($fileInfo->isDot() || $fileInfo->getExtension() !== 'html') continue;
 
     $filename = $fileInfo->getBasename('.md');
     $pageData = [];
@@ -57,16 +58,14 @@ foreach (new DirectoryIterator($postsDir) as $fileInfo) {
 
     $url = $siteLink . '/posts/' . $filename . '.html';
     $pubDate = date(DATE_RSS, strtotime($pageData['pagedate']));
-    $imageUrl = !empty($pageData['pageimage']) ? $siteLink . '/' . $pageData['pageimage'] : '';
+    $imageUrl = !empty($pageData['pageimage']) ? $siteLink . '/' . $pageData['pageimage'] : $defaultImage;
 
     // Add the item to the RSS feed
     echo '<item>' . "\n";
     echo '<title>' . htmlspecialchars($pageData['pagetitle']) . '</title>' . "\n";
     echo '<link>' . htmlspecialchars($url) . '</link>' . "\n";
     echo '<description>' . htmlspecialchars($pageData['pageexcerpt']) . '</description>' . "\n";
-    if ($imageUrl) {
-        echo '<enclosure url="' . htmlspecialchars($imageUrl) . '" type="image/jpeg" />' . "\n";
-    }
+    echo '<enclosure url="' . htmlspecialchars($imageUrl) . '" type="image/jpeg" />' . "\n";
     echo '<pubDate>' . $pubDate . '</pubDate>' . "\n";
     echo '</item>' . "\n";
 }
