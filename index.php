@@ -1,4 +1,13 @@
 <?php
+
+	// Check if the 'rss' query parameter is set
+	if (isset($_GET['rss'])) {
+		// Output the RSS feed
+	include 'config/config.php';
+	include 'rss_generator.php';
+		exit; // Stop further execution
+	}
+
 	// Enable Gzip compression for HTML output
 	if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) { // Check if the client supports Gzip compression
 		ob_start("ob_gzhandler"); // Start output buffering with Gzip compression handler
