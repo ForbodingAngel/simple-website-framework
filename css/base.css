@@ -216,8 +216,11 @@ p code {
 **********************************************/
 pre {
 	background-color: #f5f2f0;
-	padding: 20px;
+	padding: 10px 20px;
 	border: 1px solid #ccc;
+	white-space: pre-wrap;
+    word-break: keep-all;
+	font-size: 50%;
 }
 
 /*********************************************

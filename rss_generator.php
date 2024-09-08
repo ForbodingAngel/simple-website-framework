@@ -54,7 +54,8 @@
 	echo '<link>' . htmlspecialchars($siteLink) . '</link>' . "\n";
 	echo '</image>' . "\n";
 
-	// Loop through each html file in the posts directory
+	// Collect all items
+	$items = [];
 	$postsDir = __DIR__ . '/pages/posts';
 	foreach (new DirectoryIterator($postsDir) as $fileInfo) {
 		if ($fileInfo->isDot() || $fileInfo->getExtension() !== 'html') continue;
@@ -70,17 +71,34 @@
 		if (empty($pageData['pagetitle']) || empty($pageData['pagedate'])) continue;
 
 		$url = $siteLink . '/posts/' . $filename;
-		$pubDate = date(DATE_RSS, strtotime($pageData['pagedate']));
+		$pubDate = strtotime($pageData['pagedate']); // Use timestamp for sorting
 		$imageUrl = !empty($pageData['pageimage']) ? $siteLink . '/' . $pageData['pageimage'] : $defaultImage;
 		$mimeType = getMimeType($imageUrl);
 
-		// Add the item to the RSS feed
+		// Add the item to the array
+		$items[] = [
+			'title' => htmlspecialchars($pageData['pagetitle']),
+			'link' => htmlspecialchars($url),
+			'description' => htmlspecialchars($pageData['pageexcerpt']),
+			'enclosure' => '<enclosure url="' . htmlspecialchars($imageUrl) . '" type="' . htmlspecialchars($mimeType) . '" />',
+			'pubDate' => date(DATE_RSS, $pubDate),
+			'timestamp' => $pubDate // Store timestamp for sorting
+		];
+	}
+
+	// Sort items by date, latest first
+	usort($items, function($a, $b) {
+		return $b['timestamp'] - $a['timestamp'];
+	});
+
+	// Output sorted items
+	foreach ($items as $item) {
 		echo '<item>' . "\n";
-		echo '<title>' . htmlspecialchars($pageData['pagetitle']) . '</title>' . "\n";
-		echo '<link>' . htmlspecialchars($url) . '</link>' . "\n";
-		echo '<description>' . htmlspecialchars($pageData['pageexcerpt']) . '</description>' . "\n";
-		echo '<enclosure url="' . htmlspecialchars($imageUrl) . '" type="' . htmlspecialchars($mimeType) . '" />' . "\n";
-		echo '<pubDate>' . $pubDate . '</pubDate>' . "\n";
+		echo '<title>' . $item['title'] . '</title>' . "\n";
+		echo '<link>' . $item['link'] . '</link>' . "\n";
+		echo '<description>' . $item['description'] . '</description>' . "\n";
+		echo $item['enclosure'] . "\n";
+		echo '<pubDate>' . $item['pubDate'] . '</pubDate>' . "\n";
 		echo '</item>' . "\n";
 	}
 
