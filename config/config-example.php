@@ -2,12 +2,12 @@
 	/* Don't forget to turn on caching if you're deploying to production! */
     $enableHTMLCacheServe = false;
 	$WebsiteURL = "http://www.skeleton.localhost"; /* If you don't change this to match your domain, your site won't appear to work at all */
-	$WebsiteTitle = "Skeleton Website Framework";
+	$WebsiteTitle = "Simple Website Framework";
 	$WebsiteLanguage = "en"; /* Use Language Codes */
 	$WebsiteLanguageCountry = "US"; /* Use country codes */
 	$WebsiteLanguageLocale = "en_US"; /* Use Country Code plus locale */
 	$WebsiteImage = "images/laptop-computer-writing-technology-web-internet.webp"; /* This image will be used as a default thumbnail any time the page image is not defined */
-	$WebsiteDescription = "Creating websites shouldn't be a daunting task. With Skeleton Website Framework, simplicity and functionality merge seamlessly, offering you a hassle-free experience in website development."; /* Set a default description/excerpt for all pages */
+	$WebsiteDescription = "Creating websites shouldn't be a daunting task. With Simple Website Framework, simplicity and functionality merge seamlessly, offering you a hassle-free experience in website development."; /* Set a default description/excerpt for all pages */
 	$WebsiteAuthor = "Scary le Poo"; /* Set a default page author */
 	$WebsiteKeywords = "skeleton,framework,development,website,simplicity,security,ease,customize,flexibility"; /* Set default Keywords for site pages */
 
