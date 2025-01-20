@@ -7,8 +7,7 @@
 		<div class="content">
 			<div class="section group">
 
-					<?php
-
+				<?php
 					// Folder containing the Article files
 					$postsFolder = 'posts';
 
@@ -36,10 +35,19 @@
 						}
 					}
 
+					/* SORTING METHODS */
+
 					// Sort the array by date in descending order
 					usort($fileDetails, function ($a, $b) {
 						return strtotime($b['date']) - strtotime($a['date']);
 					});
+					
+					// Sort the array by title in descending order (A-Z)
+					// usort($fileDetails, function ($a, $b) {
+						// return strcmp($a['title'], $b['title']); // strcmp for string comparison (A-Z)
+					// });
+					
+					/* END SORTING METHODS */
 
 					// Pagination
 					$itemsPerPage = 5;
@@ -72,8 +80,7 @@
 						}
 					}
 					echo '</div>';
-
-					?>
+				?>
 
 			</div>
 		</div>
