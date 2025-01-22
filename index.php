@@ -1,5 +1,4 @@
 <?php
-
 	// Check if the 'rss' query parameter is set
 	if (isset($_GET['rss'])) {
 		// Output the RSS feed
@@ -17,19 +16,33 @@
 
     include 'config/config.php';
 	
-	if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
-		$protocol = "https://";
-	} else {
-		$protocol = "http://";
-	}
+	/****************************************************/
+	/* Determine the protocol (http or https): */
+	
+	// - First, check if the `$SSL` variable is explicitly set to indicate HTTPS (useful in custom setups).
+	// - If `$SSL` is not set, fall back to checking `$_SERVER['HTTPS']`:
+	//   - `isset($_SERVER['HTTPS'])`: Verifies if the `HTTPS` key exists in the server environment.
+	//   - `$_SERVER['HTTPS'] === 'on'`: Confirms that HTTPS is enabled by the web server.
+	$protocol = ($SSL ?? (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')) ? "https://" : "http://";
+
+	// Construct the full URL of the current domain:
+	// - Combine the determined protocol (`http://` or `https://`) with the `HTTP_HOST` value from `$_SERVER`.
+	// - `$_SERVER['HTTP_HOST']` contains the hostname of the server handling the request (e.g., `example.com`).
 	$CurrentDomainURL = $protocol . $_SERVER['HTTP_HOST'];
 
-	
-    if ($CurrentDomainURL != $WebsiteURL) {
-        header("Location: " . $WebsiteURL);
-        die();
-    }
-	
+	// Check if the current URL matches the predefined `$WebsiteURL`:
+	// - `$WebsiteURL` is the expected URL (e.g., `https://example.com`).
+	// - If the current URL does not match `$WebsiteURL`, redirect the user to `$WebsiteURL`.
+	if ($CurrentDomainURL !== $WebsiteURL) {
+		// Send an HTTP 302 redirect header to direct the browser to the correct URL.
+		header("Location: " . $WebsiteURL);
+
+		// Terminate the script to ensure no further code is executed after the redirect.
+		exit();
+	}
+	/* This comment exists because as time goes by, I forget exactly how things work and so I am saving everyone some time */
+
+
 /****************************************************/
 /* Protect the entire site from random URL snooping */
 	// Parse the requested URL

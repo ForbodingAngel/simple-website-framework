@@ -1,7 +1,26 @@
 <?php
 	/* Don't forget to turn on caching if you're deploying to production! */
     $enableHTMLCacheServe = false;
-	$WebsiteURL = "http://www.skeleton.localhost"; /* If you don't change this to match your domain, your site won't appear to work at all */
+	$SSL = false; /* Are we using http or https? */
+	$ForceWWW = true;
+	$WebsiteURL = "skeleton.localhost"; /* Put your website DOMAIN name without the http(s) bit here */
+	
+		/* DO NOT edit this block */
+		if ($SSL == true) {
+			if ($ForceWWW == true) {
+				$WebsiteURL = "https://" . "www." . $WebsiteURL;
+			} else {
+				$WebsiteURL = "https://" . $WebsiteURL;
+			}
+			// echo $WebsiteURL;
+		} else {
+			if ($ForceWWW == true) {
+				$WebsiteURL = "http://" . "www." . $WebsiteURL;
+			} else {
+				$WebsiteURL = "http://" . $WebsiteURL;
+			}
+		}
+	
 	$WebsiteTitle = "Simple Website Framework";
 	$WebsiteLanguage = "en"; /* Use Language Codes */
 	$WebsiteLanguageCountry = "US"; /* Use country codes */
