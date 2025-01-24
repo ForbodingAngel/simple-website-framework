@@ -3,24 +3,7 @@
     $enableHTMLCacheServe = false;
 	$SSL = false; /* Are we using http or https? */
 	$ForceWWW = true;
-	$WebsiteURL = "skeleton.localhost"; /* Put your website DOMAIN name without the http(s) bit here */
-	
-		/* DO NOT edit this block */
-		if ($SSL == true) {
-			if ($ForceWWW == true) {
-				$WebsiteURL = "https://" . "www." . $WebsiteURL;
-			} else {
-				$WebsiteURL = "https://" . $WebsiteURL;
-			}
-			// echo $WebsiteURL;
-		} else {
-			if ($ForceWWW == true) {
-				$WebsiteURL = "http://" . "www." . $WebsiteURL;
-			} else {
-				$WebsiteURL = "http://" . $WebsiteURL;
-			}
-		}
-	
+	$WebsiteURL = "skeleton.localhost"; /* Put your website DOMAIN name without the http(s) bit here */	
 	$WebsiteTitle = "Simple Website Framework";
 	$WebsiteLanguage = "en"; /* Use Language Codes */
 	$WebsiteLanguageCountry = "US"; /* Use country codes */
@@ -29,8 +12,6 @@
 	$WebsiteDescription = "Creating websites shouldn't be a daunting task. With Simple Website Framework, simplicity and functionality merge seamlessly, offering you a hassle-free experience in website development."; /* Set a default description/excerpt for all pages */
 	$WebsiteAuthor = "Scary le Poo"; /* Set a default page author */
 	$WebsiteKeywords = "skeleton,framework,development,website,simplicity,security,ease,customize,flexibility"; /* Set default Keywords for site pages */
-
-    $currentURL = $WebsiteURL . $_SERVER['REQUEST_URI'];
 	
     /* Select a Theme */
 	$theme = "skeleton";

@@ -3,18 +3,53 @@
 	if (isset($_GET['rss'])) {
 		// Output the RSS feed
 	include 'config/config.php';
+	/* DO NOT edit this block */
+	if ($SSL == true) {
+		if ($ForceWWW == true) {
+			$WebsiteURL = "https://" . "www." . $WebsiteURL;
+		} else {
+			$WebsiteURL = "https://" . $WebsiteURL;
+		}
+		// echo $WebsiteURL;
+	} else {
+		if ($ForceWWW == true) {
+			$WebsiteURL = "http://" . "www." . $WebsiteURL;
+		} else {
+			$WebsiteURL = "http://" . $WebsiteURL;
+		}
+	}
+	$currentURL = $WebsiteURL . $_SERVER['REQUEST_URI'];
 	include 'rss_generator.php';
 		exit; // Stop further execution
 	}
 
 	// Enable Gzip compression for HTML output
-	if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) { // Check if the client supports Gzip compression
-		ob_start("ob_gzhandler"); // Start output buffering with Gzip compression handler
-	} else {
-		ob_start(); // Start regular output buffering
+	if (!headers_sent() && ob_get_length() === 0) {
+		if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip') && !in_array("ob_gzhandler", ob_list_handlers())) {
+			ob_start("ob_gzhandler");
+		} else {
+			ob_start();
+		}
 	}
 
     include 'config/config.php';
+	/* DO NOT edit this block */
+	if ($SSL == true) {
+		if ($ForceWWW == true) {
+			$WebsiteURL = "https://" . "www." . $WebsiteURL;
+		} else {
+			$WebsiteURL = "https://" . $WebsiteURL;
+		}
+		// echo $WebsiteURL;
+	} else {
+		if ($ForceWWW == true) {
+			$WebsiteURL = "http://" . "www." . $WebsiteURL;
+		} else {
+			$WebsiteURL = "http://" . $WebsiteURL;
+		}
+	}
+	$currentURL = $WebsiteURL . $_SERVER['REQUEST_URI'];
+	
 	
 	/****************************************************/
 	/* Determine the protocol (http or https): */
